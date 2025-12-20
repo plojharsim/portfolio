@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -30,9 +31,9 @@ const Navigation = () => {
       <div className="container px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="text-xl font-bold text-gradient">
+          <Link to="/" className="text-xl font-bold text-gradient">
             plojharsim
-          </a>
+          </Link>
 
           {/* Desktop navigation */}
           <div className="hidden md:flex items-center gap-8">
