@@ -9,13 +9,13 @@ const About = () => {
     },
     {
       icon: Lightbulb,
-      title: "Fascinace AI",
-      description: "Umělá inteligence mě neuvěřitelně baví – sleduji novinky a experimentuji s AI nástroji.",
+      title: "Neustálé učení",
+      description: "Každý den se učím nové technologie a zlepšuji své dovednosti.",
     },
     {
       icon: Rocket,
       title: "Ambiciózní cíle",
-      description: "Chci kombinovat AI a programování a pracovat na inovativních projektech.",
+      description: "Chci se stát profesionálním vývojářem a pracovat na zajímavých projektech.",
     },
   ];
 
@@ -70,8 +70,8 @@ const About = () => {
   vek: 15,
   lokace: "Česká republika 🇨🇿",
   jazyky: ["TypeScript", "JavaScript", "Python"],
-  zajmy: ["AI & Machine Learning", "Web Development", "Open Source"],
-  motto: "AI je budoucnost a já chci být její součástí!"
+  zajmy: ["Web Development", "Open Source", "Gaming"],
+  motto: "Každý den je příležitost naučit se něco nového!"
 };`}
               </code>
             </pre>
