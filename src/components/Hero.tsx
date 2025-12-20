@@ -33,7 +33,7 @@ const Hero = () => {
 
           {/* Description */}
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            Mladý vývojář s vášní pro vytváření moderních webových aplikací a učení se novým technologiím.
+            Mladý vývojář s vášní pro AI, moderní webové aplikace a objevování nových technologií.
           </p>
 
           {/* CTA Buttons */}

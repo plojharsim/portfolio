@@ -10,10 +10,11 @@ const Skills = () => {
       ],
     },
     {
-      title: "Backend",
+      title: "Backend & AI",
       skills: [
         { name: "Node.js", level: 65 },
         { name: "Python", level: 70 },
+        { name: "AI nástroje", level: 75 },
         { name: "SQL", level: 60 },
       ],
     },
@@ -22,7 +23,7 @@ const Skills = () => {
       skills: [
         { name: "Git", level: 75 },
         { name: "VS Code", level: 90 },
-        { name: "Figma", level: 50 },
+        { name: "ChatGPT & AI", level: 85 },
       ],
     },
   ];
