@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { BookOpen, Rocket, Code, Gamepad2, GraduationCap, Heart } from "lucide-react";
+import { BookOpen, Rocket, Code, Gamepad2, GraduationCap, Heart, Sparkles } from "lucide-react";
 
 const MyStory = () => {
   const timeline = [
@@ -29,15 +29,21 @@ const MyStory = () => {
       icon: BookOpen,
     },
     {
+      year: "2023",
+      title: "Objevení světa AI",
+      description: "Fascinuje mě umělá inteligence - od ChatGPT po generování obrázků. AI nástroje mi pomáhají učit se rychleji a vytvářet lepší projekty.",
+      icon: Sparkles,
+    },
+    {
       year: "2024",
       title: "Vlastní projekty",
-      description: "Vytvořil jsem své první skutečné projekty a webové aplikace.",
+      description: "Vytvořil jsem své první skutečné projekty a webové aplikace, často s využitím AI.",
       icon: Rocket,
     },
     {
       year: "Nyní",
       title: "Neustálé učení",
-      description: "Pokračuji v rozvoji svých dovedností a hledám nové výzvy.",
+      description: "Kombinuji programování s AI nástroji a hledám nové způsoby, jak technologie využít kreativně.",
       icon: GraduationCap,
     },
   ];
