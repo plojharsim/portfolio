@@ -38,16 +38,12 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            <Button variant="glow" size="lg" asChild>
-              <a href="#projekty">
-                Moje projekty
-              </a>
+            <Button variant="glow" size="lg" onClick={() => document.getElementById("projekty")?.scrollIntoView({ behavior: "smooth" })}>
+              Moje projekty
             </Button>
-            <Button variant="outline" size="lg" asChild>
-              <a href="#kontakt">
-                <Mail className="mr-2 h-5 w-5" />
-                Kontaktuj mě
-              </a>
+            <Button variant="outline" size="lg" onClick={() => document.getElementById("kontakt")?.scrollIntoView({ behavior: "smooth" })}>
+              <Mail className="mr-2 h-5 w-5" />
+              Kontaktuj mě
             </Button>
           </div>
 
@@ -84,12 +80,12 @@ const Hero = () => {
       </div>
 
       {/* Scroll indicator - absolutely positioned at bottom center */}
-      <a 
-        href="#o-mne" 
-        className="absolute bottom-8 left-0 right-0 flex justify-center animate-bounce z-10 text-muted-foreground hover:text-primary transition-colors"
+      <button 
+        onClick={() => document.getElementById("o-mne")?.scrollIntoView({ behavior: "smooth" })}
+        className="absolute bottom-8 left-0 right-0 flex justify-center animate-bounce z-10 text-muted-foreground hover:text-primary transition-colors cursor-pointer"
       >
         <ArrowDown className="h-6 w-6" />
-      </a>
+      </button>
     </section>
   );
 };
