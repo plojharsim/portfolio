@@ -63,15 +63,16 @@ const Hero = () => {
               <Github className="h-6 w-6" />
             </a>
           </div>
-
-          {/* Scroll indicator */}
-          <div className="mt-10 animate-bounce">
-            <a href="#o-mne" className="inline-flex text-muted-foreground hover:text-primary transition-colors">
-              <ArrowDown className="h-6 w-6" />
-            </a>
-          </div>
         </div>
       </div>
+
+      {/* Scroll indicator - absolutely positioned at bottom center */}
+      <a 
+        href="#o-mne" 
+        className="absolute bottom-8 left-0 right-0 flex justify-center animate-bounce z-10 text-muted-foreground hover:text-primary transition-colors"
+      >
+        <ArrowDown className="h-6 w-6" />
+      </a>
     </section>
   );
 };
