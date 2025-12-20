@@ -4,9 +4,9 @@ const Footer = () => {
   return (
     <footer className="py-8 border-t border-border">
       <div className="container px-4">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2 text-muted-foreground text-sm">
-            <span>© {new Date().getFullYear()} Šimon Plojhar.</span>
+      <div className="flex flex-col items-center gap-3 text-center md:flex-row md:justify-between md:text-left">
+          <div className="flex flex-col items-center gap-1 text-muted-foreground text-sm md:flex-row md:gap-2">
+            <span>© {new Date().getFullYear()} Šimon Plojhar</span>
             <span className="hidden md:inline">|</span>
             <span className="flex items-center gap-1">
               Vytvořeno s <Heart className="h-4 w-4 text-primary fill-primary" /> v České republice
