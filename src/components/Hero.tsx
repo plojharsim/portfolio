@@ -64,13 +64,13 @@ const Hero = () => {
             </a>
           </div>
         </div>
+      </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-          <a href="#o-mne" className="text-muted-foreground hover:text-primary transition-colors">
-            <ArrowDown className="h-6 w-6" />
-          </a>
-        </div>
+      {/* Scroll indicator - moved outside container */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce z-10">
+        <a href="#o-mne" className="text-muted-foreground hover:text-primary transition-colors">
+          <ArrowDown className="h-6 w-6" />
+        </a>
       </div>
     </section>
   );
