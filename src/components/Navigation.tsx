@@ -37,7 +37,10 @@ const Navigation = () => {
     if (location.pathname === "/") {
       document.getElementById("kontakt")?.scrollIntoView({ behavior: "smooth" });
     } else {
-      navigate("/#kontakt");
+      navigate("/");
+      setTimeout(() => {
+        document.getElementById("kontakt")?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
     }
     setIsMobileMenuOpen(false);
   };
