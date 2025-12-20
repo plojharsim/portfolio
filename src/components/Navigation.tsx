@@ -45,9 +45,13 @@ const Navigation = () => {
                 {link.label}
               </a>
             ))}
-            <Button variant="glow" size="sm" asChild>
-              <a href="#kontakt">Kontaktuj mě</a>
-            </Button>
+          <Button 
+            variant="glow" 
+            size="sm" 
+            onClick={() => document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            Kontaktuj mě
+          </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -73,10 +77,15 @@ const Navigation = () => {
                   {link.label}
                 </a>
               ))}
-              <Button variant="glow" size="sm" asChild>
-                <a href="#kontakt" onClick={() => setIsMobileMenuOpen(false)}>
-                  Kontaktuj mě
-                </a>
+              <Button 
+                variant="glow" 
+                size="sm" 
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                Kontaktuj mě
               </Button>
             </div>
           </div>
