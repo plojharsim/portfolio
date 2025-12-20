@@ -4,23 +4,16 @@ import { Button } from "@/components/ui/button";
 const Projects = () => {
   const projects = [
     {
-      title: "Portfolio Web",
-      description: "Moje osobní portfolio vytvořené pomocí React a Tailwind CSS. Moderní design s animacemi.",
-      tags: ["React", "TypeScript", "Tailwind"],
-      github: "#",
-      demo: "#",
+      title: "Seply",
+      description: "Web pro servis plynových kotlů. Profesionální prezentace služeb.",
+      tags: ["Web"],
+      demo: "https://seply.cz",
     },
     {
-      title: "Todo Aplikace",
-      description: "Jednoduchá ale funkční todo aplikace s možností ukládání úkolů do local storage.",
-      tags: ["JavaScript", "HTML", "CSS"],
-      github: "#",
-    },
-    {
-      title: "Discord Bot",
-      description: "Multifunkční Discord bot pro správu serveru a zábavné příkazy.",
-      tags: ["Python", "Discord.py"],
-      github: "#",
+      title: "Učení bylo mučení",
+      description: "Web na učení s AI. Moderní vzdělávací platforma.",
+      tags: ["AI", "Vzdělávání"],
+      demo: "https://uceni.plojharsim.cz",
     },
   ];
 
@@ -42,7 +35,7 @@ const Projects = () => {
           </div>
 
           {/* Projects grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {projects.map((project, index) => (
               <div
                 key={project.title}
@@ -52,16 +45,6 @@ const Projects = () => {
                 <div className="flex items-center justify-between mb-4">
                   <Folder className="h-10 w-10 text-primary" />
                   <div className="flex gap-2">
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        className="text-muted-foreground hover:text-primary transition-colors"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Github className="h-5 w-5" />
-                      </a>
-                    )}
                     {project.demo && (
                       <a
                         href={project.demo}

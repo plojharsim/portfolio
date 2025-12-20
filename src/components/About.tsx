@@ -69,7 +69,7 @@ const About = () => {
   prezdivka: "plojharsim",
   vek: 15,
   lokace: "Česká republika 🇨🇿",
-  jazyky: ["TypeScript", "JavaScript", "Python"],
+  jazyky: ["Python", "HTML", "Batch"],
   zajmy: ["Web Development", "Open Source", "Gaming"],
   motto: "Každý den je příležitost naučit se něco nového!"
 };`}
