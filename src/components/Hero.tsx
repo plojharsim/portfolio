@@ -16,8 +16,7 @@ const Hero = () => {
       <div className="container relative z-10 px-4">
         <div className="max-w-4xl mx-auto text-center">
           {/* Tag */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-8 animate-fade-in">
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+          <div className="inline-flex items-center px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-8 animate-fade-in">
             <span className="text-sm font-mono text-primary">15 let • Programátor</span>
           </div>
 
