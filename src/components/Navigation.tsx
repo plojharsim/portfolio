@@ -20,6 +20,7 @@ const Navigation = () => {
   const navLinks = [
     { href: "/", label: "Domů" },
     { href: "/muj-pribeh", label: "Můj příběh" },
+    { href: "/pohled-na-ai", label: "Pohled na AI" },
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
