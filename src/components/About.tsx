@@ -62,7 +62,7 @@ const About = () => {
               <div className="w-3 h-3 rounded-full bg-primary/80" />
               <span className="ml-2 text-muted-foreground">about.ts</span>
             </div>
-            <pre className="text-muted-foreground overflow-x-auto">
+            <pre className="text-primary/80 overflow-x-auto">
               <code>
 {`const plojharsim = {
   jmeno: "Šimon Plojhar",
