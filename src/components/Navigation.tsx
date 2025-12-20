@@ -34,8 +34,7 @@ const Navigation = () => {
     setIsMobileMenuOpen(false);
   };
 
-  const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
+  const handleContactClick = () => {
     if (location.pathname === "/") {
       document.getElementById("kontakt")?.scrollIntoView({ behavior: "smooth" });
     } else {
@@ -78,8 +77,8 @@ const Navigation = () => {
                 {link.label}
               </a>
             ))}
-            <Button variant="glow" size="sm" asChild>
-              <a href="/#kontakt" onClick={handleContactClick}>Kontaktuj mě</a>
+            <Button variant="glow" size="sm" onClick={handleContactClick}>
+              Kontaktuj mě
             </Button>
           </div>
 
@@ -106,10 +105,8 @@ const Navigation = () => {
                   {link.label}
                 </a>
               ))}
-              <Button variant="glow" size="sm" asChild>
-                <a href="/#kontakt" onClick={handleContactClick}>
-                  Kontaktuj mě
-                </a>
+              <Button variant="glow" size="sm" onClick={handleContactClick}>
+                Kontaktuj mě
               </Button>
             </div>
           </div>
