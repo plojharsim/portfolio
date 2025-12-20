@@ -1,13 +1,8 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { BookOpen, Rocket, Code, Gamepad2, GraduationCap, Heart } from "lucide-react";
-import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const MyStory = () => {
-  const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation();
-  const { ref: timelineRef, isVisible: timelineVisible } = useScrollAnimation();
-  const { ref: quoteRef, isVisible: quoteVisible } = useScrollAnimation();
-
   const timeline = [
     {
       year: "2009",
@@ -52,8 +47,8 @@ const MyStory = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4" ref={heroRef}>
-        <div className={`container max-w-4xl mx-auto text-center ${heroVisible ? "animate-slide-up" : "opacity-0"}`}>
+      <section className="pt-32 pb-16 px-4">
+        <div className="container max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Můj <span className="text-gradient">Příběh</span>
           </h1>
@@ -64,25 +59,22 @@ const MyStory = () => {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-16 px-4" ref={timelineRef}>
+      <section className="py-16 px-4">
         <div className="container max-w-4xl mx-auto">
           <div className="relative">
             {/* Timeline line */}
-            <div className={`absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-primary/50 to-transparent transition-all duration-1000 ${
-              timelineVisible ? "opacity-100" : "opacity-0"
-            }`} />
+            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-primary/50 to-transparent" />
             
             {timeline.map((item, index) => (
               <div
                 key={index}
                 className={`relative flex items-start gap-8 mb-12 ${
                   index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                } ${timelineVisible ? "animate-slide-up" : "opacity-0"}`}
-                style={{ animationDelay: `${0.2 + index * 0.15}s` }}
+                }`}
               >
                 {/* Content */}
                 <div className={`flex-1 ml-20 md:ml-0 ${index % 2 === 0 ? "md:text-right md:pr-16" : "md:pl-16"}`}>
-                  <div className="p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 group hover:-translate-y-1">
+                  <div className="p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 group">
                     <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-mono mb-3">
                       {item.year}
                     </span>
@@ -94,9 +86,7 @@ const MyStory = () => {
                 </div>
 
                 {/* Icon */}
-                <div className={`absolute left-4 md:left-1/2 md:-translate-x-1/2 w-10 h-10 rounded-full bg-background border-2 border-primary flex items-center justify-center z-10 transition-all duration-300 ${
-                  timelineVisible ? "scale-100" : "scale-0"
-                }`} style={{ transitionDelay: `${0.3 + index * 0.15}s` }}>
+                <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 w-10 h-10 rounded-full bg-background border-2 border-primary flex items-center justify-center z-10">
                   <item.icon className="h-5 w-5 text-primary" />
                 </div>
 
@@ -109,8 +99,8 @@ const MyStory = () => {
       </section>
 
       {/* Quote Section */}
-      <section className="py-16 px-4" ref={quoteRef}>
-        <div className={`container max-w-3xl mx-auto text-center ${quoteVisible ? "animate-scale-up" : "opacity-0"}`}>
+      <section className="py-16 px-4">
+        <div className="container max-w-3xl mx-auto text-center">
           <div className="p-8 rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20">
             <blockquote className="text-2xl md:text-3xl font-medium italic text-foreground mb-4">
               "Každý expert byl kdysi začátečník."

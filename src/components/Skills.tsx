@@ -1,8 +1,4 @@
-import useScrollAnimation from "@/hooks/useScrollAnimation";
-
 const Skills = () => {
-  const { ref, isVisible } = useScrollAnimation();
-
   const skillCategories = [
     {
       title: "Frontend",
@@ -32,11 +28,11 @@ const Skills = () => {
   ];
 
   return (
-    <section id="dovednosti" className="py-24 relative" ref={ref}>
+    <section id="dovednosti" className="py-24 relative">
       <div className="container relative z-10 px-4">
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
-          <div className={`text-center mb-16 ${isVisible ? "animate-slide-up" : "opacity-0"}`}>
+          <div className="text-center mb-16">
             <h2 className="text-sm font-mono text-primary mb-4">// DOVEDNOSTI</h2>
             <h3 className="text-4xl md:text-5xl font-bold mb-6">
               Moje <span className="text-gradient">technologie</span>
@@ -51,10 +47,7 @@ const Skills = () => {
             {skillCategories.map((category, catIndex) => (
               <div
                 key={category.title}
-                className={`p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm ${
-                  isVisible ? "animate-scale-up" : "opacity-0"
-                }`}
-                style={{ animationDelay: `${0.2 + catIndex * 0.15}s` }}
+                className="p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm"
               >
                 <h4 className="text-xl font-semibold mb-6 text-primary">{category.title}</h4>
                 <div className="space-y-5">
@@ -68,8 +61,8 @@ const Skills = () => {
                         <div
                           className="h-full bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-1000"
                           style={{
-                            width: isVisible ? `${skill.level}%` : "0%",
-                            transitionDelay: `${0.4 + catIndex * 0.2 + skillIndex * 0.1}s`,
+                            width: `${skill.level}%`,
+                            animationDelay: `${catIndex * 0.2 + skillIndex * 0.1}s`,
                           }}
                         />
                       </div>

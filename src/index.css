@@ -112,50 +112,6 @@
   51%, 100% { border-color: transparent; }
 }
 
-@keyframes slide-up {
-  0% { 
-    opacity: 0; 
-    transform: translateY(40px); 
-  }
-  100% { 
-    opacity: 1; 
-    transform: translateY(0); 
-  }
-}
-
-@keyframes slide-left {
-  0% { 
-    opacity: 0; 
-    transform: translateX(-40px); 
-  }
-  100% { 
-    opacity: 1; 
-    transform: translateX(0); 
-  }
-}
-
-@keyframes slide-right {
-  0% { 
-    opacity: 0; 
-    transform: translateX(40px); 
-  }
-  100% { 
-    opacity: 1; 
-    transform: translateX(0); 
-  }
-}
-
-@keyframes scale-up {
-  0% { 
-    opacity: 0; 
-    transform: scale(0.9); 
-  }
-  100% { 
-    opacity: 1; 
-    transform: scale(1); 
-  }
-}
-
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
@@ -171,36 +127,6 @@
   border-right: 3px solid hsl(var(--primary));
   animation: typing 3s steps(30) forwards, blink 1s infinite;
 }
-
-.animate-slide-up {
-  animation: slide-up 0.6s ease-out forwards;
-}
-
-.animate-slide-left {
-  animation: slide-left 0.6s ease-out forwards;
-}
-
-.animate-slide-right {
-  animation: slide-right 0.6s ease-out forwards;
-}
-
-.animate-scale-up {
-  animation: scale-up 0.5s ease-out forwards;
-}
-
-.animate-on-scroll {
-  opacity: 0;
-}
-
-.animate-on-scroll.visible {
-  animation: slide-up 0.6s ease-out forwards;
-}
-
-.animate-stagger-1 { animation-delay: 0.1s; }
-.animate-stagger-2 { animation-delay: 0.2s; }
-.animate-stagger-3 { animation-delay: 0.3s; }
-.animate-stagger-4 { animation-delay: 0.4s; }
-.animate-stagger-5 { animation-delay: 0.5s; }
 
 /* Scrollbar */
 ::-webkit-scrollbar {

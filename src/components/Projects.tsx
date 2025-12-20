@@ -1,10 +1,7 @@
 import { ExternalLink, Github, Folder } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const Projects = () => {
-  const { ref, isVisible } = useScrollAnimation();
-
   const projects = [
     {
       title: "Portfolio Web",
@@ -28,13 +25,13 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projekty" className="py-24 relative" ref={ref}>
+    <section id="projekty" className="py-24 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
       
       <div className="container relative z-10 px-4">
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
-          <div className={`text-center mb-16 ${isVisible ? "animate-slide-up" : "opacity-0"}`}>
+          <div className="text-center mb-16">
             <h2 className="text-sm font-mono text-primary mb-4">// PROJEKTY</h2>
             <h3 className="text-4xl md:text-5xl font-bold mb-6">
               Na čem <span className="text-gradient">pracuji</span>
@@ -49,10 +46,7 @@ const Projects = () => {
             {projects.map((project, index) => (
               <div
                 key={project.title}
-                className={`group p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 flex flex-col hover:-translate-y-2 ${
-                  isVisible ? "animate-scale-up" : "opacity-0"
-                }`}
-                style={{ animationDelay: `${0.2 + index * 0.15}s` }}
+                className="group p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 flex flex-col"
               >
                 {/* Header */}
                 <div className="flex items-center justify-between mb-4">
@@ -105,7 +99,7 @@ const Projects = () => {
           </div>
 
           {/* View more */}
-          <div className={`text-center mt-12 ${isVisible ? "animate-slide-up" : "opacity-0"}`} style={{ animationDelay: "0.6s" }}>
+          <div className="text-center mt-12">
             <Button variant="outline" asChild>
               <a href="https://github.com/plojharsim" target="_blank" rel="noopener noreferrer">
                 <Github className="mr-2 h-5 w-5" />
