@@ -32,9 +32,8 @@ const Navigation = () => {
       <div className="container px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="text-xl font-bold">
-            <span className="text-gradient">plojhar</span>
-            <span className="text-foreground">sim</span>
+          <a href="#" className="text-xl font-bold text-gradient">
+            plojharsim
           </a>
 
           {/* Desktop navigation */}
