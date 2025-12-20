@@ -64,7 +64,7 @@ const Navigation = () => {
               </a>
             ))}
             <Button variant="glow" size="sm" asChild>
-              <a href="/#kontakt">Kontaktuj mě</a>
+              <a href="#kontakt">Kontaktuj mě</a>
             </Button>
           </div>
 
@@ -92,7 +92,7 @@ const Navigation = () => {
                 </a>
               ))}
               <Button variant="glow" size="sm" asChild>
-                <a href="/#kontakt" onClick={() => setIsMobileMenuOpen(false)}>
+                <a href="#kontakt" onClick={() => setIsMobileMenuOpen(false)}>
                   Kontaktuj mě
                 </a>
               </Button>
