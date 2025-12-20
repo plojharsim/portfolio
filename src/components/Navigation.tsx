@@ -34,14 +34,14 @@ const Navigation = () => {
     setIsMobileMenuOpen(false);
   };
 
-  const handleSectionClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+  const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     if (location.pathname === "/") {
-      document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+      document.getElementById("kontakt")?.scrollIntoView({ behavior: "smooth" });
     } else {
       navigate("/");
       setTimeout(() => {
-        document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+        document.getElementById("kontakt")?.scrollIntoView({ behavior: "smooth" });
       }, 100);
     }
     setIsMobileMenuOpen(false);
@@ -79,7 +79,7 @@ const Navigation = () => {
               </a>
             ))}
             <Button variant="glow" size="sm" asChild>
-              <a href="/" onClick={(e) => handleSectionClick(e, "kontakt")}>Kontaktuj mě</a>
+              <a href="/#kontakt" onClick={handleContactClick}>Kontaktuj mě</a>
             </Button>
           </div>
 
@@ -107,7 +107,7 @@ const Navigation = () => {
                 </a>
               ))}
               <Button variant="glow" size="sm" asChild>
-                <a href="/" onClick={(e) => handleSectionClick(e, "kontakt")}>
+                <a href="/#kontakt" onClick={handleContactClick}>
                   Kontaktuj mě
                 </a>
               </Button>
