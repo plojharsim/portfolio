@@ -5,13 +5,13 @@ import { BookOpen, Rocket, Code, Gamepad2, GraduationCap, Heart } from "lucide-r
 const MyStory = () => {
   const timeline = [
     {
-      year: "2009",
+      year: "2010",
       title: "Narodil jsem se",
       description: "Můj příběh začíná v České republice.",
       icon: Heart,
     },
     {
-      year: "2018",
+      year: "2017",
       title: "První setkání s počítači",
       description: "Začal jsem objevovat svět technologií a her.",
       icon: Gamepad2,

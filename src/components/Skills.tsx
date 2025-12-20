@@ -3,26 +3,23 @@ const Skills = () => {
     {
       title: "Frontend",
       skills: [
-        { name: "React", level: 80 },
-        { name: "TypeScript", level: 75 },
-        { name: "Tailwind CSS", level: 85 },
-        { name: "HTML/CSS", level: 90 },
+        { name: "HTML", level: 65 },
+        { name: "Tailwind", level: 30 },
       ],
     },
     {
       title: "Backend",
       skills: [
-        { name: "Node.js", level: 65 },
-        { name: "Python", level: 70 },
-        { name: "SQL", level: 60 },
+        { name: "Python", level: 85 },
       ],
     },
     {
       title: "Nástroje",
       skills: [
-        { name: "Git", level: 75 },
+        { name: "Git", level: 60 },
         { name: "VS Code", level: 90 },
-        { name: "Figma", level: 50 },
+        { name: "Figma", level: 45 },
+        { name: "AI", level: 85 },
       ],
     },
   ];
