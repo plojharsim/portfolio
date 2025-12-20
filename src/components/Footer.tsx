@@ -9,7 +9,7 @@ const Footer = () => {
             <span>© {new Date().getFullYear()} Šimon Plojhar.</span>
             <span className="hidden md:inline">|</span>
             <span className="flex items-center gap-1">
-              Vytvořeno s <Heart className="h-4 w-4 text-red-500 fill-red-500" /> v České republice
+              Vytvořeno s <Heart className="h-4 w-4 text-primary fill-primary" /> v České republice
             </span>
           </div>
           
