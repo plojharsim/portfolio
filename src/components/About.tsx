@@ -64,7 +64,7 @@ const About = () => {
             </div>
             <pre className="text-muted-foreground overflow-x-auto">
               <code>
-{`const simon = {
+{`const plojharsim = {
   jmeno: "Šimon Plojhar",
   prezdivka: "plojharsim",
   vek: 15,
