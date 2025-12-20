@@ -28,6 +28,7 @@ const Navigation = () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       navigate(href);
+      window.scrollTo({ top: 0, behavior: "instant" });
     }
     setIsMobileMenuOpen(false);
   };
