@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,20 +30,20 @@ const Navigation = () => {
       <div className="container px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="text-xl font-bold text-gradient">
+          <a href="#" className="text-xl font-bold text-gradient">
             plojharsim
-          </Link>
+          </a>
 
           {/* Desktop navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <Link
+              <a
                 key={link.href}
-                to={link.href}
+                href={link.href}
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 {link.label}
-              </Link>
+              </a>
             ))}
             <Button variant="glow" size="sm" asChild>
               <a href="#kontakt">Kontaktuj mě</a>
@@ -65,14 +64,14 @@ const Navigation = () => {
           <div className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.href}
-                  to={link.href}
+                  href={link.href}
                   className="text-muted-foreground hover:text-primary transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
-                </Link>
+                </a>
               ))}
               <Button variant="glow" size="sm" asChild>
                 <a href="#kontakt" onClick={() => setIsMobileMenuOpen(false)}>
