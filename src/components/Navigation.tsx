@@ -15,11 +15,8 @@ const Navigation = () => {
   }, []);
 
   const navLinks = [
-    { href: "#o-mne", label: "O mně" },
+    { href: "/", label: "Domů" },
     { href: "/muj-pribeh", label: "Můj příběh" },
-    { href: "#dovednosti", label: "Dovednosti" },
-    { href: "#projekty", label: "Projekty" },
-    { href: "#kontakt", label: "Kontakt" },
   ];
 
   return (
