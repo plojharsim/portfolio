@@ -40,15 +40,13 @@ const YouTube = () => {
         const data = await response.json();
         
         if (data.status === 'ok' && data.items && data.items.length > 0) {
-          // Načteme všechna dostupná videa a odfiltrujeme streamy
           const filteredVideos = data.items
             .filter((item: any) => {
               const title = item.title.toLowerCase();
-              // Seznam slov, která obvykle značí stream nebo záznam streamu
               const streamKeywords = ["live", "stream", "živě", "🔴", "záznam"];
               return !streamKeywords.some(keyword => title.includes(keyword));
             })
-            .slice(0, 2) // Po filtraci vezmeme jen první 2
+            .slice(0, 2)
             .map((item: any) => ({
               title: item.title,
               link: item.link,
@@ -59,7 +57,6 @@ const YouTube = () => {
 
           setVideos(filteredVideos);
           
-          // Pokud po filtraci nezbyla žádná videa
           if (filteredVideos.length === 0) {
             setError(true);
           }
@@ -157,12 +154,18 @@ const YouTube = () => {
                       alt={video.title}
                       className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    {/* Klikatelný overlay s play tlačítkem */}
+                    <a 
+                      href={video.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-20"
+                    >
                       <div className="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center text-white scale-75 group-hover:scale-100 transition-transform shadow-xl">
                         <Play className="h-8 w-8 fill-current" />
                       </div>
-                    </div>
-                    <div className="absolute top-4 left-4">
+                    </a>
+                    <div className="absolute top-4 left-4 z-10">
                        <span className="px-2 py-1 rounded bg-black/60 backdrop-blur-md text-[10px] font-mono text-white">
                          {video.pubDate}
                        </span>
