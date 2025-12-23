@@ -2,13 +2,31 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { ExternalLink, Github, Folder, Code2, Layout, Database, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 const ProjectsPage = () => {
-  // Seznam všech projektů
+  // Definice barev pro statusy
+  const getStatusDetails = (status: string) => {
+    switch (status) {
+      case "Vydáno":
+        return "bg-emerald-500/10 text-emerald-500 border-emerald-500/20";
+      case "Ve vývoji":
+        return "bg-amber-500/10 text-amber-500 border-amber-500/20";
+      case "Plánováno":
+        return "bg-blue-500/10 text-blue-500 border-blue-500/20";
+      case "Dokončeno":
+        return "bg-primary/10 text-primary border-primary/20";
+      default:
+        return "bg-muted text-muted-foreground border-border";
+    }
+  };
+
+  // Seznam všech projektů se statusy
   const allProjects = [
     {
       title: "Seply",
       description: "Profesionální webová prezentace pro servis plynových kotlů. Zaměřeno na konverzi a přehlednost služeb.",
+      status: "Vydáno",
       tags: ["Web", "React", "Tailwind"],
       demo: "https://seply.cz",
       icon: Layout,
@@ -16,6 +34,7 @@ const ProjectsPage = () => {
     {
       title: "Učení bylo mučení",
       description: "Moderní vzdělávací platforma využívající AI pro zefektivnění učení a tvorbu studijních materiálů.",
+      status: "Ve vývoji",
       tags: ["AI", "Vzdělávání", "React"],
       demo: "https://uceni.plojharsim.cz",
       icon: Code2,
@@ -23,6 +42,7 @@ const ProjectsPage = () => {
     {
       title: "Portfolio v1",
       description: "Moje první verze portfolia, kde jsem se učil základy webového vývoje a animací.",
+      status: "Dokončeno",
       tags: ["HTML", "CSS", "JS"],
       github: "https://github.com/plojharsim",
       icon: Folder,
@@ -30,6 +50,7 @@ const ProjectsPage = () => {
     {
       title: "Discord Bot",
       description: "Vlastní bot pro správu komunity s funkcemi pro moderování a zábavu.",
+      status: "Ve vývoji",
       tags: ["Python", "API"],
       github: "https://github.com/plojharsim",
       icon: Database,
@@ -37,6 +58,7 @@ const ProjectsPage = () => {
     {
       title: "Batch Tools",
       description: "Sada užitečných skriptů pro Windows, které mi usnadňují každodenní práci se soubory.",
+      status: "Vydáno",
       tags: ["Batch", "Automation"],
       github: "https://github.com/plojharsim",
       icon: Smartphone,
@@ -47,7 +69,6 @@ const ProjectsPage = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      {/* Header Section */}
       <section className="pt-32 pb-16 px-4">
         <div className="container max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -59,7 +80,6 @@ const ProjectsPage = () => {
         </div>
       </section>
 
-      {/* Projects Grid */}
       <section className="py-16 px-4">
         <div className="container max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -98,6 +118,12 @@ const ProjectsPage = () => {
                     </div>
                   </div>
 
+                  <div className="mb-3">
+                    <Badge variant="outline" className={`font-mono text-[10px] uppercase tracking-wider ${getStatusDetails(project.status)}`}>
+                      {project.status}
+                    </Badge>
+                  </div>
+
                   <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
@@ -122,7 +148,6 @@ const ProjectsPage = () => {
         </div>
       </section>
 
-      {/* GitHub Call to Action */}
       <section className="py-24 px-4 bg-primary/5">
         <div className="container max-w-2xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">Chceš vidět víc?</h2>

@@ -1,20 +1,34 @@
 import { ExternalLink, Folder, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { Badge } from "@/components/ui/badge";
 
 const Projects = () => {
   const navigate = useNavigate();
   
+  const getStatusDetails = (status: string) => {
+    switch (status) {
+      case "Vydáno":
+        return "bg-emerald-500/10 text-emerald-500 border-emerald-500/20";
+      case "Ve vývoji":
+        return "bg-amber-500/10 text-amber-500 border-amber-500/20";
+      default:
+        return "bg-muted text-muted-foreground border-border";
+    }
+  };
+
   const projects = [
     {
       title: "Seply",
       description: "Web pro servis plynových kotlů. Profesionální prezentace služeb.",
+      status: "Vydáno",
       tags: ["Web"],
       demo: "https://seply.cz",
     },
     {
       title: "Učení bylo mučení",
       description: "Web na učení s AI. Moderní vzdělávací platforma.",
+      status: "Ve vývoji",
       tags: ["AI", "Vzdělávání"],
       demo: "https://uceni.plojharsim.cz",
     },
@@ -31,7 +45,6 @@ const Projects = () => {
       
       <div className="container relative z-10 px-4">
         <div className="max-w-4xl mx-auto">
-          {/* Section header */}
           <div className="text-center mb-16">
             <h2 className="text-sm font-mono text-primary mb-4">// PROJEKTY</h2>
             <h3 className="text-4xl md:text-5xl font-bold mb-6">
@@ -42,14 +55,12 @@ const Projects = () => {
             </p>
           </div>
 
-          {/* Projects grid */}
           <div className="grid md:grid-cols-2 gap-6">
             {projects.map((project, index) => (
               <div
                 key={project.title}
                 className="group p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 flex flex-col"
               >
-                {/* Header */}
                 <div className="flex items-center justify-between mb-4">
                   <Folder className="h-10 w-10 text-primary" />
                   <div className="flex gap-2">
@@ -66,7 +77,12 @@ const Projects = () => {
                   </div>
                 </div>
 
-                {/* Content */}
+                <div className="mb-2">
+                  <Badge variant="outline" className={`font-mono text-[10px] uppercase tracking-wider ${getStatusDetails(project.status)}`}>
+                    {project.status}
+                  </Badge>
+                </div>
+
                 <h4 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
                   {project.title}
                 </h4>
@@ -74,7 +90,6 @@ const Projects = () => {
                   {project.description}
                 </p>
 
-                {/* Tags */}
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span
@@ -89,7 +104,6 @@ const Projects = () => {
             ))}
           </div>
 
-          {/* View more */}
           <div className="text-center mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button variant="glow" onClick={handleShowAllProjects}>
               Zobrazit všechny projekty
