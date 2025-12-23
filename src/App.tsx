@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import MyStory from "./pages/MyStory";
 import AIView from "./pages/AIView";
 import MyFuture from "./pages/MyFuture";
+import ProjectsPage from "./pages/ProjectsPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,6 +21,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/muj-pribeh" element={<MyStory />} />
+          <Route path="/projekty" element={<ProjectsPage />} />
           <Route path="/pohled-na-ai" element={<AIView />} />
           <Route path="/moje-budoucnost" element={<MyFuture />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

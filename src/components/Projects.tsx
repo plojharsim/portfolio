@@ -1,7 +1,10 @@
-import { ExternalLink, Github, Folder } from "lucide-react";
+import { ExternalLink, Folder, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const Projects = () => {
+  const navigate = useNavigate();
+  
   const projects = [
     {
       title: "Seply",
@@ -30,7 +33,7 @@ const Projects = () => {
               Na čem <span className="text-gradient">pracuji</span>
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Ukázka mých projektů, na kterých jsem pracoval nebo právě pracuji.
+              Ukázka mých nejzajímavějších projektů.
             </p>
           </div>
 
@@ -82,10 +85,13 @@ const Projects = () => {
           </div>
 
           {/* View more */}
-          <div className="text-center mt-12">
+          <div className="text-center mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button variant="glow" onClick={() => navigate("/projekty")}>
+              Zobrazit všechny projekty
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
             <Button variant="outline" asChild>
               <a href="https://github.com/plojharsim" target="_blank" rel="noopener noreferrer">
-                <Github className="mr-2 h-5 w-5" />
                 Více na GitHubu
               </a>
             </Button>
