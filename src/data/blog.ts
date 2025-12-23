@@ -12,7 +12,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: "proc-jsem-zacal-programovat",
-    title: "Proč jsem začal programovat v 15 letech",
+    title: "Proč jsem začal programovat v 12 letech",
     excerpt: "Moje cesta k prvnímu řádku kódu a co mě na tom nejvíc baví.",
     date: "15. března 2024",
     readTime: "5 min čtení",
@@ -33,46 +33,6 @@ export const blogPosts: BlogPost[] = [
       
       <h2>Co dál?</h2>
       <p>Mým cílem je neustále se zlepšovat v Reactu a TypeScriptu. Každý projekt mě posouvá o kus dál a těším se na to, co přinese budoucnost.</p>
-    `,
-  },
-  {
-    id: "python-vs-javascript",
-    title: "Python vs JavaScript: Co si vybrat?",
-    excerpt: "Srovnání dvou nejoblíbenějších jazyků pro začátečníky z mého pohledu.",
-    date: "10. března 2024",
-    readTime: "8 min čtení",
-    category: "Technologie",
-    author: "Šimon Plojhar",
-    content: `
-      <p>Pokud začínáte, pravděpodobně narazíte na tyto dva giganty. Oba mají své pro a proti.</p>
-      <h2>Python</h2>
-      <p>Skvělý pro začátečníky díky své čitelnosti. Je to král v oblasti AI a analýzy dat.</p>
-      <h2>JavaScript</h2>
-      <p>Nezbytný pro každého, kdo chce tvořit weby. Vidíte výsledky okamžitě v prohlížeči.</p>
-    `,
-  },
-  {
-    id: "budoucnost-web-vyvoje",
-    title: "Jak vidím budoucnost webového vývoje",
-    excerpt: "Trendy, které mě zaujaly, a kam si myslím, že web směřuje.",
-    date: "1. března 2024",
-    readTime: "6 min čtení",
-    category: "Vize",
-    author: "Šimon Plojhar",
-    content: `
-      <p>Web se mění neskutečným tempem. Od statických stránek jsme se posunuli k vysoce interaktivním aplikacím.</p>
-    `,
-  },
-  {
-    id: "ai-na-youtube",
-    title: "Jaký mám názor na používání AI na YouTube!?",
-    excerpt: "Proč se bojím, že pokud s AI YouTube nezačne nic dělat, tak to bude obrovský problém?",
-    date: "23. prosince 2025",
-    readTime: "1 min čtení",
-    category: "YouTube",
-    author: "Šimon Plojhar",
-    content: `
-      <p>YouTube a AI. Je to velká věc, která může platformu změnit k nepoznání...</p>
     `,
   },
 ];
