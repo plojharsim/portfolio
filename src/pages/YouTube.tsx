@@ -135,8 +135,8 @@ const YouTube = () => {
           ) : (
             <div className="grid md:grid-cols-2 gap-8">
               {videos.map((video, index) => (
-                <div key={index} className="group relative rounded-2xl overflow-hidden border border-border bg-card transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5">
-                  <div className="aspect-video relative overflow-hidden">
+                <div key={index} className="group flex flex-col relative rounded-2xl overflow-hidden border border-border bg-card transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5">
+                  <div className="aspect-video relative overflow-hidden shrink-0">
                     <img 
                       src={video.thumbnail} 
                       alt={video.title}
@@ -153,13 +153,15 @@ const YouTube = () => {
                        </span>
                     </div>
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-4 group-hover:text-primary transition-colors line-clamp-2">{video.title}</h3>
-                    <Button variant="outline" size="sm" className="w-full gap-2 group-hover:bg-primary group-hover:text-primary-foreground transition-all" asChild>
-                      <a href={video.link} target="_blank" rel="noopener noreferrer">
-                        Přehrát video <ExternalLink className="h-4 w-4" />
-                      </a>
-                    </Button>
+                  <div className="p-6 flex flex-col flex-grow">
+                    <h3 className="text-xl font-bold mb-6 group-hover:text-primary transition-colors line-clamp-2">{video.title}</h3>
+                    <div className="mt-auto">
+                      <Button variant="outline" size="sm" className="w-full gap-2 group-hover:bg-primary group-hover:text-primary-foreground transition-all" asChild>
+                        <a href={video.link} target="_blank" rel="noopener noreferrer">
+                          Přehrát video <ExternalLink className="h-4 w-4" />
+                        </a>
+                      </Button>
+                    </div>
                   </div>
                 </div>
               ))}
