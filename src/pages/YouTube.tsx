@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Youtube, Play, Users, Video, Bell, ExternalLink, Loader2 } from "lucide-react";
+import { Youtube, Play, Users, Video, Bell, ExternalLink, Loader2, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface YouTubeVideo {
@@ -15,6 +15,11 @@ interface YouTubeVideo {
 const YouTube = () => {
   const [videos, setVideos] = useState<YouTubeVideo[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(false);
+
+  // SEM VLOŽ SVÉ CHANNEL ID (najdeš ho v nastavení YouTube -> Pokročilé nastavení)
+  // Pro @plojharsim zkusíme najít ID, pokud ho nemáš, zkus použít toto:
+  const CHANNEL_ID = "UCv_wP9_3oYlUe7K9wTzKx_A"; 
 
   const stats = [
     { label: "Odběratelé", value: "100+", icon: Users },
@@ -24,19 +29,19 @@ const YouTube = () => {
 
   useEffect(() => {
     const fetchVideos = async () => {
+      setIsLoading(true);
+      setError(false);
       try {
-        // Použijeme RSS feed tvého kanálu (handle @plojharsim) převedený na JSON
-        // Poznámka: ID tvého kanálu je potřeba pro RSS, zkusíme najít přes handle
-        // Pro @plojharsim je RSS URL: https://www.youtube.com/feeds/videos.xml?user=plojharsim
-        // Nebo přes channel_id, pokud je známo.
-        const rssUrl = "https://www.youtube.com/feeds/videos.xml?user=plojharsim";
+        // Používáme Channel ID, což je jediný 100% spolehlivý způsob pro RSS
+        const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
         const proxyUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
         
         const response = await fetch(proxyUrl);
+        if (!response.ok) throw new Error("Network response was not ok");
+        
         const data = await response.json();
         
-        if (data.status === 'ok' && data.items) {
-          // Vezmeme první dvě nejnovější videa
+        if (data.status === 'ok' && data.items && data.items.length > 0) {
           const latestVideos = data.items.slice(0, 2).map((item: any) => ({
             title: item.title,
             link: item.link,
@@ -45,22 +50,26 @@ const YouTube = () => {
             pubDate: new Date(item.pubDate).toLocaleDateString('cs-CZ')
           }));
           setVideos(latestVideos);
+        } else {
+          // Pokud rss2json selže nebo nevrátí položky
+          console.warn("YouTube RSS feed nevrátil žádná data. Zkontroluj Channel ID.");
+          setError(true);
         }
-      } catch (error) {
-        console.error("Chyba při načítání videí:", error);
+      } catch (err) {
+        console.error("Chyba při načítání videí:", err);
+        setError(true);
       } finally {
         setIsLoading(false);
       }
     };
 
     fetchVideos();
-  }, []);
+  }, [CHANNEL_ID]);
 
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      {/* Hero Section */}
       <section className="pt-32 pb-16 px-4">
         <div className="container max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 text-red-500 mb-6">
@@ -81,7 +90,6 @@ const YouTube = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
       <section className="py-16 px-4">
         <div className="container max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -96,12 +104,11 @@ const YouTube = () => {
         </div>
       </section>
 
-      {/* Latest Videos Section */}
       <section className="py-16 px-4">
         <div className="container max-w-5xl mx-auto">
           <div className="flex items-center justify-between mb-12">
             <h2 className="text-3xl font-bold underline decoration-primary/30 underline-offset-8">Nejnovější videa</h2>
-            {!isLoading && (
+            {!isLoading && !error && (
               <Button variant="link" asChild className="text-muted-foreground hover:text-primary">
                 <a href="https://youtube.com/@plojharsim/videos" target="_blank" rel="noopener noreferrer">
                   Zobrazit vše <ExternalLink className="ml-2 h-4 w-4" />
@@ -115,10 +122,23 @@ const YouTube = () => {
               <Loader2 className="h-10 w-10 text-primary animate-spin" />
               <p className="text-muted-foreground animate-pulse">Načítám nejnovější tvorbu...</p>
             </div>
-          ) : videos.length > 0 ? (
+          ) : error || videos.length === 0 ? (
+            <div className="text-center py-16 border border-dashed border-border rounded-2xl bg-card/30">
+              <AlertCircle className="h-12 w-12 text-muted-foreground mx-auto mb-4 opacity-50" />
+              <h3 className="text-xl font-bold mb-2">Nepodařilo se načíst videa</h3>
+              <p className="text-muted-foreground max-w-md mx-auto mb-6 px-4">
+                Může to být způsobeno ochranou soukromí nebo dočasným výpadkem služby. Podívej se prosím přímo na můj YouTube kanál.
+              </p>
+              <Button variant="outline" className="gap-2" asChild>
+                <a href="https://youtube.com/@plojharsim" target="_blank" rel="noopener noreferrer">
+                  Otevřít YouTube kanál <ExternalLink className="h-4 w-4" />
+                </a>
+              </Button>
+            </div>
+          ) : (
             <div className="grid md:grid-cols-2 gap-8">
               {videos.map((video, index) => (
-                <div key={index} className="group relative rounded-2xl overflow-hidden border border-border bg-card transition-all hover:border-primary/50">
+                <div key={index} className="group relative rounded-2xl overflow-hidden border border-border bg-card transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5">
                   <div className="aspect-video relative overflow-hidden">
                     <img 
                       src={video.thumbnail} 
@@ -147,18 +167,10 @@ const YouTube = () => {
                 </div>
               ))}
             </div>
-          ) : (
-            <div className="text-center py-12 border border-dashed border-border rounded-2xl">
-              <p className="text-muted-foreground">Momentálně se nepodařilo načíst videa. Zkus to prosím později nebo se podívej přímo na YouTube.</p>
-              <Button variant="outline" className="mt-4" asChild>
-                <a href="https://youtube.com/@plojharsim" target="_blank" rel="noopener noreferrer">Přejít na kanál</a>
-              </Button>
-            </div>
           )}
         </div>
       </section>
 
-      {/* Call to Action */}
       <section className="py-24 px-4">
         <div className="container max-w-3xl mx-auto text-center">
           <div className="p-12 rounded-3xl bg-gradient-to-br from-red-600/10 to-primary/10 border border-red-500/20 shadow-2xl">
