@@ -23,7 +23,7 @@ const YouTube = () => {
   const stats = [
     { label: "Odběratelé", value: "15+", icon: Users },
     { label: "Nahraná videa", value: "2+", icon: Video },
-    { label: "Pravidelnost", value: "Prozatím nepravidelná", icon: Bell },
+    { label: "Pravidelnost", value: "Nepravidelně", icon: Bell },
   ];
 
   useEffect(() => {
