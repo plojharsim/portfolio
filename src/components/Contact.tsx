@@ -1,12 +1,11 @@
-import { Mail, Github, Send, Copy } from "lucide-react";
+import { Github, Send, Copy } from "lucide-react";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { toast } from "sonner";
 
 const Contact = () => {
   const emailAddress = "kontakt@plojharsim.cz";
 
-  const handleCopyEmail = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    // Zabráníme standardní akci mailto, pokud je to možné, aby se spustilo kopírování
+  const handleCopyEmail = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault(); 
     
     navigator.clipboard.writeText(emailAddress).then(() => {
@@ -34,15 +33,15 @@ const Contact = () => {
 
           {/* Contact options */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            {/* Tlačítko pro kopírování e-mailu */}
-            <a 
-              href={`mailto:${emailAddress}`}
+            {/* Tlačítko pro kopírování e-mailu - nyní je to čistý Button */}
+            <Button 
+              variant="glow" 
+              size="lg" 
               onClick={handleCopyEmail}
-              className={buttonVariants({ variant: "glow", size: "lg" })}
             >
               <Copy className="mr-2 h-5 w-5" />
               Kopírovat e-mail
-            </a>
+            </Button>
             
             <Button variant="outline" size="lg" asChild>
               <a href="https://github.com/plojharsim" target="_blank" rel="noopener noreferrer">
