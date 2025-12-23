@@ -1,5 +1,5 @@
 import { Mail, Github, Send } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button"; // Importujeme i buttonVariants pro stylování
 
 const Contact = () => {
   return (
@@ -18,12 +18,15 @@ const Contact = () => {
 
           {/* Contact options */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button variant="glow" size="lg" asChild>
-              <a href="mailto:kontakt@plojharsim.cz">
-                <Mail className="mr-2 h-5 w-5" />
-                Napsat email
-              </a>
-            </Button>
+            {/* Používáme čistý <a> element se styly Buttonu pro maximální spolehlivost mailto */}
+            <a 
+              href="mailto:kontakt@plojharsim.cz"
+              className={buttonVariants({ variant: "glow", size: "lg" })}
+            >
+              <Mail className="mr-2 h-5 w-5" />
+              Napsat email
+            </a>
+            
             <Button variant="outline" size="lg" asChild>
               <a href="https://github.com/plojharsim" target="_blank" rel="noopener noreferrer">
                 <Github className="mr-2 h-5 w-5" />
