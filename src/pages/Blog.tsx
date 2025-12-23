@@ -2,35 +2,9 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { blogPosts } from "@/data/blog";
 
 const Blog = () => {
-  const posts = [
-    {
-      id: "proc-jsem-zacal-programovat",
-      title: "Proč jsem začal programovat v 15 letech",
-      excerpt: "Moje cesta k prvnímu řádku kódu a co mě na tom nejvíc baví.",
-      date: "15. března 2024",
-      readTime: "5 min čtení",
-      category: "Osobní",
-    },
-    {
-      id: "python-vs-javascript",
-      title: "Python vs JavaScript: Co si vybrat?",
-      excerpt: "Srovnání dvou nejoblíbenějších jazyků pro začátečníky z mého pohledu.",
-      date: "10. března 2024",
-      readTime: "8 min čtení",
-      category: "Technologie",
-    },
-    {
-      id: "budoucnost-web-vyvoje",
-      title: "Jak vidím budoucnost webového vývoje",
-      excerpt: "Trendy, které mě zaujaly, a kam si myslím, že web směřuje.",
-      date: "1. března 2024",
-      readTime: "6 min čtení",
-      category: "Vize",
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -49,7 +23,7 @@ const Blog = () => {
       <section className="py-16 px-4">
         <div className="container max-w-4xl mx-auto">
           <div className="grid gap-8">
-            {posts.map((post) => (
+            {blogPosts.map((post) => (
               <article
                 key={post.id}
                 className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300"

@@ -1,28 +1,13 @@
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { blogPosts } from "@/data/blog";
 
 const BlogSection = () => {
   const navigate = useNavigate();
   
-  const featuredPosts = [
-    {
-      id: "proc-jsem-zacal-programovat",
-      title: "Proč jsem začal programovat v 15 letech",
-      excerpt: "Moje cesta k prvnímu řádku kódu a co mě na tom nejvíc baví.",
-      date: "15. března 2024",
-      readTime: "5 min",
-      category: "Osobní",
-    },
-    {
-      id: "python-vs-javascript",
-      title: "Python vs JavaScript: Co si vybrat?",
-      excerpt: "Srovnání dvou nejoblíbenějších jazyků pro začátečníky z mého pohledu.",
-      date: "10. března 2024",
-      readTime: "8 min",
-      category: "Technologie",
-    },
-  ];
+  // Zobrazíme pouze první 2 nejnovější články
+  const featuredPosts = blogPosts.slice(0, 2);
 
   const handleShowAllPosts = () => {
     navigate("/blog");

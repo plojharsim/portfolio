@@ -1,35 +1,17 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, Navigate } from "react-router-dom";
 import { Calendar, Clock, ArrowLeft, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { blogPosts } from "@/data/blog";
 
 const BlogPost = () => {
   const { id } = useParams();
+  const post = blogPosts.find((p) => p.id === id);
 
-  // V reálné aplikaci by se data načítala z API nebo CMS na základě ID
-  const post = {
-    title: "Proč jsem začal programovat v 15 letech",
-    date: "15. března 2024",
-    readTime: "5 min čtení",
-    author: "Šimon Plojhar",
-    content: `
-      <p>Programování pro mě nebylo jen o psaní kódu. Byla to cesta k pochopení toho, jak funguje svět kolem nás, který je stále více digitální.</p>
-      
-      <h2>Začátek cesty</h2>
-      <p>Všechno to začalo, když jsem se začal zajímat o to, jak se vlastně tvoří webové stránky, které denně navštěvuji. Ta možnost vytvořit něco z ničeho jen pomocí klávesnice mě naprosto fascinovala.</p>
-      
-      <h2>Proč právě teď?</h2>
-      <p>Věřím, že čím dříve člověk začne, tím přirozenější pro něj technologie budou. V 15 letech mám dostatek času na experimentování a učení se z chyb, aniž by mě tlačily pracovní termíny.</p>
-      
-      <blockquote>
-        "Programování je nejbližší věc k magii, kterou v našem světě máme."
-      </blockquote>
-      
-      <h2>Co dál?</h2>
-      <p>Mým cílem je neustále se zlepšovat v Reactu a TypeScriptu. Každý projekt mě posouvá o kus dál a těším se na to, co přinese budoucnost.</p>
-    `,
-  };
+  if (!post) {
+    return <Navigate to="/blog" replace />;
+  }
 
   return (
     <div className="min-h-screen bg-background">
