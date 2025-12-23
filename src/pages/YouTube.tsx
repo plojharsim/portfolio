@@ -31,7 +31,8 @@ const YouTube = () => {
       setIsLoading(true);
       setError(false);
       try {
-        const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
+        // Přidáváme timestamp (?t=...), aby rss2json nenačítalo stará (neveřejná) videa z mezipaměti
+        const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}&t=${Date.now()}`;
         const proxyUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
         
         const response = await fetch(proxyUrl);
@@ -40,13 +41,17 @@ const YouTube = () => {
         const data = await response.json();
         
         if (data.status === 'ok' && data.items && data.items.length > 0) {
-          const latestVideos = data.items.slice(0, 2).map((item: any) => ({
-            title: item.title,
-            link: item.link,
-            guid: item.guid,
-            thumbnail: item.thumbnail || `https://i.ytimg.com/vi/${item.guid.split(':')[2]}/maxresdefault.jpg`,
-            pubDate: new Date(item.pubDate).toLocaleDateString('cs-CZ')
-          }));
+          // Odfiltrujeme případné Shorts (pokud bys je nechtěl) a bereme jen první 2
+          const latestVideos = data.items
+            .filter((item: any) => !item.title.toLowerCase().includes("#shorts"))
+            .slice(0, 2)
+            .map((item: any) => ({
+              title: item.title,
+              link: item.link,
+              guid: item.guid,
+              thumbnail: item.thumbnail || `https://i.ytimg.com/vi/${item.guid.split(':')[2]}/maxresdefault.jpg`,
+              pubDate: new Date(item.pubDate).toLocaleDateString('cs-CZ')
+            }));
           setVideos(latestVideos);
         } else {
           console.warn("YouTube RSS feed nevrátil žádná data.");
