@@ -14,8 +14,6 @@ const ProjectsPage = () => {
         return "bg-amber-500/10 text-amber-500 border-amber-500/20";
       case "Plánováno":
         return "bg-blue-500/10 text-blue-500 border-blue-500/20";
-      case "Dokončeno":
-        return "bg-primary/10 text-primary border-primary/20";
       default:
         return "bg-muted text-muted-foreground border-border";
     }
@@ -50,7 +48,7 @@ const ProjectsPage = () => {
     {
       title: "Portfolio v1",
       description: "Moje první verze portfolia, kde jsem se učil základy webového vývoje a animací.",
-      status: "Dokončeno",
+      status: "Vydáno", // Změněno z 'Dokončeno' na 'Vydáno'
       tags: ["HTML", "CSS", "JS"],
       github: "https://github.com/plojharsim",
       icon: Folder,
@@ -76,8 +74,7 @@ const ProjectsPage = () => {
   const sortOrder: { [key: string]: number } = {
     "Vydáno": 1,
     "Ve vývoji": 2,
-    "Dokončeno": 3,
-    "Plánováno": 4,
+    "Plánováno": 3,
   };
 
   const sortedProjects = allProjects.sort((a, b) => {
