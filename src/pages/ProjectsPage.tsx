@@ -65,6 +65,17 @@ const ProjectsPage = () => {
     },
   ];
 
+  const sortOrder: { [key: string]: number } = {
+    "Vydáno": 1,
+    "Ve vývoji": 2,
+    "Dokončeno": 3,
+    "Plánováno": 4,
+  };
+
+  const sortedProjects = allProjects.sort((a, b) => {
+    return (sortOrder[a.status] || 99) - (sortOrder[b.status] || 99);
+  });
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -83,7 +94,7 @@ const ProjectsPage = () => {
       <section className="py-16 px-4">
         <div className="container max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {allProjects.map((project, index) => {
+            {sortedProjects.map((project, index) => {
               const Icon = project.icon;
               return (
                 <div
