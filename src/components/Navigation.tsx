@@ -48,8 +48,11 @@ const Navigation = () => {
     setIsMobileMenuOpen(false);
   };
 
+  // Přidáme blur vždy, když je mobilní menu otevřené, nebo když uživatel scrollovat
+  const shouldHaveBlur = isScrolled || isMobileMenuOpen;
+
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/80 backdrop-blur-md border-b border-border" : "bg-transparent"}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${shouldHaveBlur ? "bg-background/80 backdrop-blur-md border-b border-border" : "bg-transparent"}`}>
       <div className="container px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
