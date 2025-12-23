@@ -59,7 +59,7 @@ const ProjectsPage = () => {
       title: "Batch Tools",
       description: "Sada užitečných skriptů pro Windows, které mi usnadňují každodenní práci se soubory.",
       status: "Plánováno",
-      tags: ["Batch", "Automation"],
+      tags: ["Batch", "Automatizace"],
       github: "https://github.com/plojharsim",
       icon: Smartphone,
     },
