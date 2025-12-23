@@ -5,8 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import MyStory from "./pages/MyStory";
-import AIView from "./pages/AIView";
-import MyFuture from "./pages/MyFuture";
+// import AIView from "./pages/AIView"; // Odstraněno
+// import MyFuture from "./pages/MyFuture"; // Odstraněno
 import ProjectsPage from "./pages/ProjectsPage";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
@@ -28,8 +28,10 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/youtube" element={<YouTube />} />
+          {/* Odstraněné routy:
           <Route path="/pohled-na-ai" element={<AIView />} />
           <Route path="/moje-budoucnost" element={<MyFuture />} />
+          */}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -20,11 +20,11 @@ const Navigation = () => {
   const navLinks = [
     { href: "/", label: "Domů" },
     { href: "/muj-pribeh", label: "Můj příběh" },
-    { href: "/moje-budoucnost", label: "Moje budoucnost" },
+    // { href: "/moje-budoucnost", label: "Moje budoucnost" }, // Odstraněno
     { href: "/projekty", label: "Projekty" },
     { href: "/blog", label: "Blog" },
     { href: "/youtube", label: "YouTube" },
-    { href: "/pohled-na-ai", label: "Pohled na AI" },
+    // { href: "/pohled-na-ai", label: "Pohled na AI" }, // Odstraněno
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
