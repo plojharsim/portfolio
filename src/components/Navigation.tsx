@@ -21,6 +21,7 @@ const Navigation = () => {
     { href: "/", label: "Domů" },
     { href: "/muj-pribeh", label: "Můj příběh" },
     { href: "/projekty", label: "Projekty" },
+    { href: "/blog", label: "Blog" },
     { href: "/pohled-na-ai", label: "Pohled na AI" },
     { href: "/moje-budoucnost", label: "Moje budoucnost" },
   ];
