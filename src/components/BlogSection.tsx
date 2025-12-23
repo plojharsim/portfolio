@@ -6,8 +6,8 @@ import { blogPosts } from "@/data/blog";
 const BlogSection = () => {
   const navigate = useNavigate();
   
-  // Zobrazíme pouze první 2 nejnovější články
-  const featuredPosts = blogPosts.slice(0, 2);
+  // Seřadíme články tak, aby ty naposledy přidané byly nahoře a vezmeme první dva
+  const featuredPosts = [...blogPosts].reverse().slice(0, 2);
 
   const handleShowAllPosts = () => {
     navigate("/blog");

@@ -4,7 +4,7 @@ export interface BlogPost {
   excerpt: string;
   date: string;
   readTime: string;
-  category: "Osobní" | "Technologie" | "Vize";
+  category: "Osobní" | "Technologie" | "Vize" | "YouTube";
   author: string;
   content: string;
 }
@@ -61,6 +61,18 @@ export const blogPosts: BlogPost[] = [
     author: "Šimon Plojhar",
     content: `
       <p>Web se mění neskutečným tempem. Od statických stránek jsme se posunuli k vysoce interaktivním aplikacím.</p>
+    `,
+  },
+  {
+    id: "ai-na-youtube",
+    title: "Jaký mám názor na používání AI na YouTube!?",
+    excerpt: "Proč se bojím, že pokud s AI YouTube nezačne nic dělat, tak to bude obrovský problém?",
+    date: "23. prosince 2025",
+    readTime: "1 min čtení",
+    category: "YouTube",
+    author: "Šimon Plojhar",
+    content: `
+      <p>YouTube a AI. Je to velká věc, která může platformu změnit k nepoznání...</p>
     `,
   },
 ];
