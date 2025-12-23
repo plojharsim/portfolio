@@ -21,9 +21,9 @@ const YouTube = () => {
   const CHANNEL_ID = "UCg_pZatTxh3HceWuh9_av5Q"; 
 
   const stats = [
-    { label: "Odběratelé", value: "100+", icon: Users },
-    { label: "Nahraná videa", value: "10+", icon: Video },
-    { label: "Pravidelnost", value: "Týdně", icon: Bell },
+    { label: "Odběratelé", value: "15+", icon: Users },
+    { label: "Nahraná videa", value: "2+", icon: Video },
+    { label: "Pravidelnost", value: "Prozatím nepravidelná", icon: Bell },
   ];
 
   useEffect(() => {
