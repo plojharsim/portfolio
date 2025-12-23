@@ -20,6 +20,11 @@ const Projects = () => {
     },
   ];
 
+  const handleShowAllProjects = () => {
+    navigate("/projekty");
+    window.scrollTo({ top: 0, behavior: "instant" });
+  };
+
   return (
     <section id="projekty" className="py-24 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
@@ -86,7 +91,7 @@ const Projects = () => {
 
           {/* View more */}
           <div className="text-center mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button variant="glow" onClick={() => navigate("/projekty")}>
+            <Button variant="glow" onClick={handleShowAllProjects}>
               Zobrazit všechny projekty
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
