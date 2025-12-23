@@ -25,7 +25,19 @@ const MyStory = () => {
     {
       year: "2022",
       title: "Základy webu (HTML/JS)",
-      description: "Absolvoval jsem kroužek základů programování HTML a JavaScriptu.",
+      description: (
+        <>
+          Absolvoval jsem kroužek základů programování HTML a JavaScriptu.
+          <a 
+            href="/certifikaty/html_js_certifikat.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center gap-1 text-primary hover:underline mt-2 text-sm"
+          >
+            <FileText className="h-4 w-4" /> Zobrazit certifikát
+          </a>
+        </>
+      ),
       icon: Monitor,
     },
     {
