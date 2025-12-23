@@ -17,7 +17,7 @@ const MyStory = () => {
       icon: Gamepad2,
     },
     {
-      year: "2020",
+      year: "2021",
       title: "První řádky kódu",
       description: "Napsal jsem svůj první program a okamžitě mě to chytlo.",
       icon: Code,
