@@ -53,7 +53,7 @@ const MyStory = () => {
         <>
           Online kroužek zaměřený na základy Javy. Naučil jsem se základní syntaxi a objektově orientované programování.
           <a 
-            href="/assets/certificates/java_certifikat.pdf" 
+            href="/certifikaty/java_certifikat.pdf" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center gap-1 text-primary hover:underline mt-2 text-sm"
@@ -71,7 +71,7 @@ const MyStory = () => {
         <>
           Online kroužek Programování 2D a 3D her v Unity. Zaměřili jsme se hlavně na práci s UI Unity, přičemž C# kódy byly poskytovány.
           <a 
-            href="/assets/certificates/unity_certifikat.pdf" 
+            href="/certifikaty/unity_certifikat.pdf" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center gap-1 text-primary hover:underline mt-2 text-sm"
