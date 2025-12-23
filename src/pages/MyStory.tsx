@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { BookOpen, Rocket, Code, Gamepad2, GraduationCap, Heart } from "lucide-react";
+import { BookOpen, Rocket, Code, Gamepad2, GraduationCap, Heart, Monitor, Printer, Keyboard, FileText } from "lucide-react";
 
 const MyStory = () => {
   const timeline = [
@@ -17,27 +17,63 @@ const MyStory = () => {
       icon: Gamepad2,
     },
     {
-      year: "2021",
-      title: "První řádky kódu",
-      description: "Napsal jsem svůj první program a okamžitě mě to chytlo.",
+      year: "2021/22",
+      title: "První řádky kódu (Python)",
+      description: "Napsal jsem svůj první program na online kroužku Pythonu od vzdelanibudoucnosti.cz. Okamžitě mě to chytlo.",
       icon: Code,
     },
     {
       year: "2022",
-      title: "Vážnější programování",
-      description: "Začal jsem se učit webové technologie - HTML, CSS, JavaScript.",
+      title: "Základy webu (HTML/JS)",
+      description: "Absolvoval jsem kroužek základů programování HTML a JavaScriptu.",
+      icon: Monitor,
+    },
+    {
+      year: "2022/23",
+      title: "Navazující Python 2",
+      description: "Pokračoval jsem v online kroužku programování Python 2, opět od vzdelanibudoucnosti.cz.",
       icon: BookOpen,
     },
     {
-      year: "2024",
-      title: "Vlastní projekty",
-      description: "Vytvořil jsem své první skutečné projekty a webové aplikace.",
-      icon: Rocket,
+      year: "2023",
+      title: "Kurz Psaní všemi deseti",
+      description: "Absolvoval jsem kurz Psaní všemi deseti, což výrazně zrychlilo mou práci s kódem.",
+      icon: Keyboard,
+    },
+    {
+      year: "2023",
+      title: "Kroužek 3D tisku",
+      description: "Chodil jsem na kroužek 3D tisku v Techaku, kde jsem se naučil pracovat s modely a tiskárnou.",
+      icon: Printer,
+    },
+    {
+      year: "2023/24",
+      title: "Programování her v Unity",
+      description: (
+        <>
+          Online kroužek Programování 2D a 3D her v Unity. Zaměřili jsme se hlavně na práci s UI Unity, přičemž C# kódy byly poskytovány.
+          <a 
+            href="/assets/certificates/unity_certifikat.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center gap-1 text-primary hover:underline mt-2 text-sm"
+          >
+            <FileText className="h-4 w-4" /> Zobrazit certifikát
+          </a>
+        </>
+      ),
+      icon: Gamepad2,
+    },
+    {
+      year: "Jaro 2024",
+      title: "První kroky s Linuxem",
+      description: "Poprvé jsem zkoušel využívat operační systém Linux pro vývoj a experimentování.",
+      icon: Code,
     },
     {
       year: "Nyní",
       title: "Neustálé učení",
-      description: "Pokračuji v rozvoji svých dovedností a hledám nové výzvy.",
+      description: "Pokračuji v rozvoji svých dovedností a hledám nové výzvy, zejména v Reactu a TypeScriptu.",
       icon: GraduationCap,
     },
   ];
