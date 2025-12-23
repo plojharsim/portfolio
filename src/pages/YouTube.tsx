@@ -40,14 +40,29 @@ const YouTube = () => {
         const data = await response.json();
         
         if (data.status === 'ok' && data.items && data.items.length > 0) {
-          const latestVideos = data.items.slice(0, 2).map((item: any) => ({
-            title: item.title,
-            link: item.link,
-            guid: item.guid,
-            thumbnail: item.thumbnail || `https://i.ytimg.com/vi/${item.guid.split(':')[2]}/maxresdefault.jpg`,
-            pubDate: new Date(item.pubDate).toLocaleDateString('cs-CZ')
-          }));
-          setVideos(latestVideos);
+          // Načteme všechna dostupná videa a odfiltrujeme streamy
+          const filteredVideos = data.items
+            .filter((item: any) => {
+              const title = item.title.toLowerCase();
+              // Seznam slov, která obvykle značí stream nebo záznam streamu
+              const streamKeywords = ["live", "stream", "živě", "🔴", "záznam"];
+              return !streamKeywords.some(keyword => title.includes(keyword));
+            })
+            .slice(0, 2) // Po filtraci vezmeme jen první 2
+            .map((item: any) => ({
+              title: item.title,
+              link: item.link,
+              guid: item.guid,
+              thumbnail: item.thumbnail || `https://i.ytimg.com/vi/${item.guid.split(':')[2]}/maxresdefault.jpg`,
+              pubDate: new Date(item.pubDate).toLocaleDateString('cs-CZ')
+            }));
+
+          setVideos(filteredVideos);
+          
+          // Pokud po filtraci nezbyla žádná videa
+          if (filteredVideos.length === 0) {
+            setError(true);
+          }
         } else {
           console.warn("YouTube RSS feed nevrátil žádná data.");
           setError(true);
@@ -124,7 +139,7 @@ const YouTube = () => {
               <AlertCircle className="h-12 w-12 text-muted-foreground mx-auto mb-4 opacity-50" />
               <h3 className="text-xl font-bold mb-2">Nepodařilo se načíst videa</h3>
               <p className="text-muted-foreground max-w-md mx-auto mb-6 px-4">
-                Může to být způsobeno ochranou soukromí nebo dočasným výpadkem služby. Podívej se prosím přímo na můj YouTube kanál.
+                Momentálně nejsou k dispozici žádná nová videa (nebo jsou všechna skryta filtrem streamů). Podívej se přímo na můj kanál.
               </p>
               <Button variant="outline" className="gap-2" asChild>
                 <a href="https://youtube.com/@plojharsim" target="_blank" rel="noopener noreferrer">
