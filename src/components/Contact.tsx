@@ -19,7 +19,7 @@ const Contact = () => {
           {/* Contact options */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button variant="glow" size="lg" asChild>
-              <a href="mailto:kontakt@plojharsim.cz">
+              <a href="mailto:kontakt@plojharsim.cz" target="_blank" rel="noopener noreferrer">
                 <Mail className="mr-2 h-5 w-5" />
                 Napsat email
               </a>
