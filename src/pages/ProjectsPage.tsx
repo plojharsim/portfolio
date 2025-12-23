@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { ExternalLink, Github, Folder, Code2, Layout, Database, Smartphone } from "lucide-react";
+import { ExternalLink, Github, Folder, Code2, Layout, Database, Smartphone, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
@@ -38,6 +38,14 @@ const ProjectsPage = () => {
       tags: ["AI", "Vzdělávání", "React"],
       demo: "https://uceni.plojharsim.cz",
       icon: Code2,
+    },
+    {
+      title: "E-commerce Platforma",
+      description: "Kompletní e-commerce řešení s moderním designem a rychlým checkoutem.",
+      status: "Ve vývoji",
+      tags: ["React", "TypeScript", "Stripe"],
+      github: "https://github.com/plojharsim/ecommerce-platform",
+      icon: ShoppingCart,
     },
     {
       title: "Portfolio v1",
