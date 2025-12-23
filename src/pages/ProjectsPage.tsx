@@ -38,14 +38,6 @@ const ProjectsPage = () => {
       icon: Code2,
     },
     {
-      title: "E-commerce Platforma",
-      description: "Kompletní e-commerce řešení s moderním designem a rychlým checkoutem.",
-      status: "Ve vývoji",
-      tags: ["React", "TypeScript", "Stripe"],
-      github: "https://github.com/plojharsim/ecommerce-platform",
-      icon: ShoppingCart,
-    },
-    {
       title: "Portfolio v1",
       description: "Moje první verze portfolia, kde jsem se učil základy webového vývoje a animací.",
       status: "Vydáno", // Změněno z 'Dokončeno' na 'Vydáno'
