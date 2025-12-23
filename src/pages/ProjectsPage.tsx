@@ -42,7 +42,7 @@ const ProjectsPage = () => {
       description: "Vánoční webová stránka s odpočtem a interaktivními prvky, vytvořená pro sváteční náladu.",
       status: "Vydáno",
       tags: ["Next.js", "React", "TypeScript"],
-      demo: "https://vanoce.plojharsim.cz", // Předpokládám demo URL
+      demo: "https://advent.plojharsim.cz", // Předpokládám demo URL
       icon: Gift,
     },
     {
