@@ -70,7 +70,7 @@ const Hero = () => {
               <Instagram className="h-6 w-6" />
             </a>
             <a
-              href="https://discord.gg/plojharsim"
+              href="https://discord.plojharsim.cz"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full border border-border bg-card hover:border-primary hover:bg-primary/10 transition-all duration-300"
