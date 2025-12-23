@@ -21,6 +21,7 @@ const Navigation = () => {
     { href: "/", label: "Domů" },
     { href: "/muj-pribeh", label: "Můj příběh" },
     { href: "/pohled-na-ai", label: "Pohled na AI" },
+    { href: "/moje-budoucnost", label: "Moje budoucnost" },
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -48,21 +49,11 @@ const Navigation = () => {
   };
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/80 backdrop-blur-md border-b border-border"
-          : "bg-transparent"
-      }`}
-    >
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/80 backdrop-blur-md border-b border-border" : "bg-transparent"}`}>
       <div className="container px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a 
-            href="/" 
-            onClick={(e) => handleNavClick(e, "/")}
-            className="text-xl font-bold text-gradient"
-          >
+          <a href="/" onClick={(e) => handleNavClick(e, "/")} className="text-xl font-bold text-gradient">
             plojharsim
           </a>
 
@@ -84,10 +75,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile menu button */}
-          <button
-            className="md:hidden p-2 text-foreground"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
+          <button className="md:hidden p-2 text-foreground" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
