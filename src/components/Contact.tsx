@@ -1,7 +1,23 @@
-import { Mail, Github, Send } from "lucide-react";
-import { Button, buttonVariants } from "@/components/ui/button"; // Importujeme i buttonVariants pro stylování
+import { Mail, Github, Send, Copy } from "lucide-react";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { toast } from "sonner";
 
 const Contact = () => {
+  const emailAddress = "kontakt@plojharsim.cz";
+
+  const handleCopyEmail = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    // Zabráníme standardní akci mailto, pokud je to možné, aby se spustilo kopírování
+    e.preventDefault(); 
+    
+    navigator.clipboard.writeText(emailAddress).then(() => {
+      toast.success("E-mailová adresa zkopírována!", {
+        description: emailAddress,
+      });
+    }).catch(() => {
+      toast.error("Nepodařilo se zkopírovat e-mail.");
+    });
+  };
+
   return (
     <section id="kontakt" className="py-24 relative">
       <div className="container relative z-10 px-4">
@@ -18,13 +34,14 @@ const Contact = () => {
 
           {/* Contact options */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            {/* Používáme čistý <a> element se styly Buttonu pro maximální spolehlivost mailto */}
+            {/* Tlačítko pro kopírování e-mailu */}
             <a 
-              href="mailto:kontakt@plojharsim.cz"
+              href={`mailto:${emailAddress}`}
+              onClick={handleCopyEmail}
               className={buttonVariants({ variant: "glow", size: "lg" })}
             >
-              <Mail className="mr-2 h-5 w-5" />
-              Napsat email
+              <Copy className="mr-2 h-5 w-5" />
+              Kopírovat e-mail
             </a>
             
             <Button variant="outline" size="lg" asChild>
@@ -38,7 +55,7 @@ const Contact = () => {
           {/* Email display */}
           <div className="inline-flex items-center gap-3 px-6 py-4 rounded-xl border border-border bg-card/50 backdrop-blur-sm">
             <Send className="h-5 w-5 text-primary" />
-            <span className="font-mono text-muted-foreground">kontakt@plojharsim.cz</span>
+            <span className="font-mono text-muted-foreground">{emailAddress}</span>
           </div>
         </div>
       </div>
