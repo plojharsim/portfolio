@@ -17,9 +17,8 @@ const YouTube = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
 
-  // SEM VLOŽ SVÉ CHANNEL ID (najdeš ho v nastavení YouTube -> Pokročilé nastavení)
-  // Pro @plojharsim zkusíme najít ID, pokud ho nemáš, zkus použít toto:
-  const CHANNEL_ID = "UCv_wP9_3oYlUe7K9wTzKx_A"; 
+  // Tvé ověřené Channel ID
+  const CHANNEL_ID = "UCg_pZatTxh3HceWuh9_av5Q"; 
 
   const stats = [
     { label: "Odběratelé", value: "100+", icon: Users },
@@ -32,7 +31,6 @@ const YouTube = () => {
       setIsLoading(true);
       setError(false);
       try {
-        // Používáme Channel ID, což je jediný 100% spolehlivý způsob pro RSS
         const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
         const proxyUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
         
@@ -51,8 +49,7 @@ const YouTube = () => {
           }));
           setVideos(latestVideos);
         } else {
-          // Pokud rss2json selže nebo nevrátí položky
-          console.warn("YouTube RSS feed nevrátil žádná data. Zkontroluj Channel ID.");
+          console.warn("YouTube RSS feed nevrátil žádná data.");
           setError(true);
         }
       } catch (err) {
