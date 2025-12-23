@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { ExternalLink, Github, Folder, Code2, Layout, Database, Smartphone, ShoppingCart } from "lucide-react";
+import { ExternalLink, Github, Folder, Code2, Layout, Database, Smartphone, ShoppingCart, Gift } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
@@ -38,12 +38,12 @@ const ProjectsPage = () => {
       icon: Code2,
     },
     {
-      title: "Portfolio v1",
-      description: "Moje první verze portfolia, kde jsem se učil základy webového vývoje a animací.",
-      status: "Vydáno", // Změněno z 'Dokončeno' na 'Vydáno'
-      tags: ["HTML", "CSS", "JS"],
-      github: "https://github.com/plojharsim",
-      icon: Folder,
+      title: "Veselé Vánoce",
+      description: "Vánoční webová stránka s odpočtem a interaktivními prvky, vytvořená pro sváteční náladu.",
+      status: "Vydáno",
+      tags: ["Next.js", "React", "TypeScript"],
+      demo: "https://vanoce.plojharsim.cz", // Předpokládám demo URL
+      icon: Gift,
     },
     {
       title: "Discord Bot",
