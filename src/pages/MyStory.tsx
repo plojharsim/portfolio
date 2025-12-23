@@ -48,6 +48,24 @@ const MyStory = () => {
     },
     {
       year: "2023/24",
+      title: "Základy programovacího jazyka Java",
+      description: (
+        <>
+          Online kroužek zaměřený na základy Javy. Naučil jsem se základní syntaxi a objektově orientované programování.
+          <a 
+            href="/assets/certificates/java_certifikat.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center gap-1 text-primary hover:underline mt-2 text-sm"
+          >
+            <FileText className="h-4 w-4" /> Zobrazit certifikát
+          </a>
+        </>
+      ),
+      icon: Code,
+    },
+    {
+      year: "2023/24",
       title: "Programování her v Unity",
       description: (
         <>
