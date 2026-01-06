@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 
 const Projects = () => {
   const navigate = useNavigate();
-  
+
   const getStatusDetails = (status: string) => {
     switch (status) {
       case "Vydáno":
@@ -25,13 +25,6 @@ const Projects = () => {
       tags: ["Web"],
       demo: "https://seply.cz",
     },
-    {
-      title: "Učení bylo mučení",
-      description: "Web na učení s AI. Moderní vzdělávací platforma.",
-      status: "Ve vývoji",
-      tags: ["AI", "Vzdělávání"],
-      demo: "https://uceni.plojharsim.cz",
-    },
   ];
 
   const handleShowAllProjects = () => {
@@ -42,7 +35,7 @@ const Projects = () => {
   return (
     <section id="projekty" className="py-24 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
-      
+
       <div className="container relative z-10 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
