@@ -22,6 +22,14 @@ const ProjectsPage = () => {
   // Seznam všech projektů se statusy
   const allProjects = [
     {
+      title: "Panorama house Brdy",
+      description: "Webová prezentace pro soukromé ubytování v Brdech. Zaměřeno na přehlednost a jednoduchost rezervace.",
+      status: "Vydáno",
+      tags: ["Web", "React", "Tailwind"],
+      demo: "https://panoramahousebrdy.cz",
+      icon: Layout,
+    },
+    {
       title: "Seply",
       description: "Profesionální webová prezentace pro servis plynových kotlů. Zaměřeno na konverzi a přehlednost služeb.",
       status: "Vydáno",

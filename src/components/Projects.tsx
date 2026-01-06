@@ -19,6 +19,13 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "Panorama house Brdy",
+      description: "Webová prezentace pro soukromé ubytování v Brdech. Zaměřeno na přehlednost a jednoduchost rezervace.",
+      status: "Vydáno",
+      tags: ["Web", "React", "Tailwind"],
+      demo: "https://panoramahousebrdy.cz",
+    },
+    {
       title: "Seply",
       description: "Web pro servis plynových kotlů. Profesionální prezentace služeb.",
       status: "Vydáno",
