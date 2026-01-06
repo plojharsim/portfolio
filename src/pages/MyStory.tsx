@@ -24,6 +24,12 @@ const MyStory = () => {
     },
     {
       year: "2022",
+      title: "První Python terminálová aplikace",
+      description: "Vytvořil jsem svou první čistě Python terminálovou aplikaci na učení slovíček na angličtinu. Byla to moje první praktická aplikace.",
+      icon: Code,
+    },
+    {
+      year: "2022",
       title: "Základy webu (HTML/JS)",
       description: (
         <>

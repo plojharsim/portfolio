@@ -30,19 +30,11 @@ const ProjectsPage = () => {
       icon: Layout,
     },
     {
-      title: "Učení bylo mučení",
-      description: "Moderní vzdělávací platforma využívající AI pro zefektivnění učení a tvorbu studijních materiálů.",
-      status: "Ve vývoji",
-      tags: ["AI", "Vzdělávání", "React"],
-      demo: "https://uceni.plojharsim.cz",
-      icon: Code2,
-    },
-    {
       title: "Veselé Vánoce",
       description: "Vánoční webová stránka s odpočtem a interaktivními prvky, vytvořená pro sváteční náladu.",
       status: "Vydáno",
       tags: ["Next.js", "React", "TypeScript"],
-      demo: "https://advent.plojharsim.cz", // Předpokládám demo URL
+      demo: "https://vanoce.plojharsim.cz", // Předpokládám demo URL
       icon: Gift,
     },
     {
