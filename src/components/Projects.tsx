@@ -2,6 +2,7 @@ import { ExternalLink, Folder, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
+import { projects } from "@/data/projects";
 
 const Projects = () => {
   const navigate = useNavigate();
@@ -17,22 +18,9 @@ const Projects = () => {
     }
   };
 
-  const projects = [
-    {
-      title: "Panorama house Brdy",
-      description: "Webová prezentace pro soukromé ubytování v Brdech. Zaměřeno na přehlednost a jednoduchost rezervace.",
-      status: "Vydáno",
-      tags: ["Web", "React", "Tailwind"],
-      demo: "https://panoramahousebrdy.cz",
-    },
-    {
-      title: "Seply",
-      description: "Web pro servis plynových kotlů. Profesionální prezentace služeb.",
-      status: "Vydáno",
-      tags: ["Web"],
-      demo: "https://seply.cz",
-    },
-  ];
+  const featuredProjects = projects.filter(project =>
+    project.status === "Vydáno" && project.title !== "Veselé Vánoce"
+  );
 
   const handleShowAllProjects = () => {
     navigate("/projekty");
@@ -56,7 +44,7 @@ const Projects = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {projects.map((project, index) => (
+            {featuredProjects.map((project, index) => (
               <div
                 key={project.title}
                 className="group p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 flex flex-col"

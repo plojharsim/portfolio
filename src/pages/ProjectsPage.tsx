@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { ExternalLink, Github, Folder, Code2, Layout, Database, Smartphone, ShoppingCart, Gift } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { projects } from "@/data/projects";
 
 const ProjectsPage = () => {
   // Definice barev pro statusy
@@ -19,49 +20,14 @@ const ProjectsPage = () => {
     }
   };
 
-  // Seznam všech projektů se statusy
-  const allProjects = [
-    {
-      title: "Panorama house Brdy",
-      description: "Webová prezentace pro soukromé ubytování v Brdech. Zaměřeno na přehlednost a jednoduchost rezervace.",
-      status: "Vydáno",
-      tags: ["Web", "React", "Tailwind"],
-      demo: "https://panoramahousebrdy.cz",
-      icon: Layout,
-    },
-    {
-      title: "Seply",
-      description: "Profesionální webová prezentace pro servis plynových kotlů. Zaměřeno na konverzi a přehlednost služeb.",
-      status: "Vydáno",
-      tags: ["Web", "React", "Tailwind"],
-      demo: "https://seply.cz",
-      icon: Layout,
-    },
-    {
-      title: "Veselé Vánoce",
-      description: "Vánoční webová stránka s odpočtem a interaktivními prvky, vytvořená pro sváteční náladu.",
-      status: "Vydáno",
-      tags: ["Next.js", "React", "TypeScript"],
-      demo: "https://vanoce.plojharsim.cz", // Předpokládám demo URL
-      icon: Gift,
-    },
-    {
-      title: "Discord Bot",
-      description: "Vlastní bot pro správu komunity s funkcemi pro moderování a zábavu.",
-      status: "Ve vývoji",
-      tags: ["Python", "API"],
-      github: "https://github.com/plojharsim",
-      icon: Database,
-    },
-    {
-      title: "Batch Tools",
-      description: "Sada užitečných skriptů pro Windows, které mi usnadňují každodenní práci se soubory.",
-      status: "Plánováno",
-      tags: ["Batch", "Automatizace"],
-      github: "https://github.com/plojharsim",
-      icon: Smartphone,
-    },
-  ];
+  // Definice ikon pro projekty
+  const projectIcons: Record<string, React.ComponentType<{ className?: string }>> = {
+    "Panorama house Brdy": Layout,
+    "Seply": Layout,
+    "Veselé Vánoce": Gift,
+    "Discord Bot": Database,
+    "Batch Tools": Smartphone,
+  };
 
   const sortOrder: { [key: string]: number } = {
     "Vydáno": 1,
@@ -69,7 +35,7 @@ const ProjectsPage = () => {
     "Plánováno": 3,
   };
 
-  const sortedProjects = allProjects.sort((a, b) => {
+  const sortedProjects = [...projects].sort((a, b) => {
     return (sortOrder[a.status] || 99) - (sortOrder[b.status] || 99);
   });
 
@@ -92,7 +58,7 @@ const ProjectsPage = () => {
         <div className="container max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {sortedProjects.map((project, index) => {
-              const Icon = project.icon;
+              const Icon = projectIcons[project.title] || Layout;
               return (
                 <div
                   key={index}
