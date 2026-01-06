@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { ExternalLink, Github, Folder, Code2, Layout, Database, Smartphone, ShoppingCart, Gift } from "lucide-react";
+import { ExternalLink, Github, Folder, Code2, Layout, Database, Smartphone, ShoppingCart, Gift, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { projects } from "@/data/projects";
@@ -22,7 +22,7 @@ const ProjectsPage = () => {
 
   // Definice ikon pro projekty
   const projectIcons: Record<string, React.ComponentType<{ className?: string }>> = {
-    "Panorama house Brdy": Layout,
+    "Panorama house Brdy": Home,
     "Seply": Layout,
     "Veselé Vánoce": Gift,
     "Discord Bot": Database,
