@@ -10,6 +10,13 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Edu | by plojharsim",
+    description: "Moderní vzdělávací platforma, která mění učení v interaktivní zážitek. S chytrou správou znalostí a cloudovou synchronizací pomáhá studentům efektivněji zvládat studium.",
+    status: "Vydáno",
+    tags: ["Web", "React", "Cloud", "Education"],
+    demo: "https://edu.plojharsim.cz",
+  },
+  {
     title: "Panorama house Brdy",
     description: "Webová prezentace pro soukromé ubytování v Brdech. Zaměřeno na přehlednost a jednoduchost rezervace.",
     status: "Vydáno",
