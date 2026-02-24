@@ -18,8 +18,9 @@ const Projects = () => {
     }
   };
 
+  // Vybereme pouze Edu a Seply pro zobrazení na hlavní stránce
   const featuredProjects = projects.filter(project =>
-    project.status === "Vydáno" && project.title !== "Veselé Vánoce"
+    project.title === "Edu | by plojharsim" || project.title === "Seply"
   );
 
   const handleShowAllProjects = () => {
