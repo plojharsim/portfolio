@@ -1,73 +1,51 @@
-# Welcome to your Lovable project
+# Šimon Plojhar | Portfólio
 
-## Project info
+Moderní webové portfólio 15letého programátora z České republiky. Tento web slouží k prezentaci mých projektů, dovedností a mé osobní cesty světem vývoje softwaru.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🚀 Technologie
 
-## How can I edit this code?
+Projekt je postaven na moderním stacku pro zajištění rychlosti, bezpečnosti a skvělého uživatelského zážitku:
 
-There are several ways of editing your application.
+- **Frontend**: [React 18](https://reactjs.org/) s [TypeScriptem](https://www.typescriptlang.org/)
+- **Sestavení**: [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) + [shadcn/ui](https://ui.shadcn.com/)
+- **Ikony**: [Lucide React](https://lucide.dev/)
+- **Animace**: Tailwind CSS keyframes & transitions
+- **Správa dat**: TanStack Query (React Query)
 
-**Use Lovable**
+## 📁 Struktura projektu
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- `src/components/` - Znovupoužitelné UI komponenty a sekce stránek.
+- `src/pages/` - Hlavní stránky webu (Domů, Můj příběh, Projekty, Blog).
+- `src/data/` - Statická data pro projekty a blogové příspěvky.
+- `src/hooks/` - Vlastní React hooky pro specifickou logiku.
+- `src/lib/` - Pomocné funkce a konfigurace (utils).
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠️ Instalace a spuštění
 
-**Use your preferred IDE**
+Pokud si chcete projekt spustit lokálně, postupujte následovně:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1. **Klonování repozitáře**
+   ```bash
+   git clone <url-repozitáře>
+   cd <název-složky>
+   ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+2. **Instalace závislostí**
+   ```bash
+   npm install
+   ```
 
-Follow these steps:
+3. **Spuštění vývojového serveru**
+   ```bash
+   npm run dev
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Web bude dostupný na `http://localhost:8080`.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 📝 Licence
 
-# Step 3: Install the necessary dependencies.
-npm i
+Tento projekt je vytvořen jako osobní portfólio. Kód je volně k nahlédnutí pro inspiraci, ale obsah (texty a specifické grafické prvky) patří autorovi.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+Vytvořeno s ❤️ v České republice.
