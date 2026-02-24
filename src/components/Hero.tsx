@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-12 md:py-0">
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-secondary/20" />
       
@@ -13,26 +13,26 @@ const Hero = () => {
       {/* Grid pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--primary)/0.03)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--primary)/0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
 
-      <div className="container relative z-10 px-4 pt-20 md:pt-0">
+      <div className="container relative z-10 px-4 pt-16 md:pt-0">
         <div className="max-w-4xl mx-auto text-center">
           {/* Tag */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-8 animate-fade-in">
+          <div className="inline-flex items-center px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-6 md:mb-8 animate-fade-in">
             <span className="text-sm font-mono text-primary">15 let • Programátor</span>
           </div>
 
           {/* Name */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4 md:mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
             <span className="text-foreground">Šimon</span>{" "}
             <span className="text-gradient">Plojhar</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4 font-mono animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <p className="text-xl md:text-2xl text-muted-foreground mb-3 md:mb-4 font-mono animate-fade-in" style={{ animationDelay: "0.2s" }}>
             @plojharsim
           </p>
 
           {/* Description */}
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 md:mb-10 animate-fade-in" style={{ animationDelay: "0.3s" }}>
             Mladý vývojář s vášní pro vytváření moderních webových aplikací a učení se novým technologiím.
           </p>
 
@@ -52,7 +52,7 @@ const Hero = () => {
           </div>
 
           {/* Social links */}
-          <div className="flex justify-center gap-4 mt-10 animate-fade-in" style={{ animationDelay: "0.5s" }}>
+          <div className="flex justify-center gap-4 mt-8 md:mt-10 animate-fade-in" style={{ animationDelay: "0.5s" }}>
             <a
               href="https://github.com/plojharsim"
               target="_blank"
@@ -83,10 +83,10 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll indicator - absolutely positioned at bottom center */}
+      {/* Scroll indicator - positioned higher on mobile to avoid overlap */}
       <a 
         href="#o-mne" 
-        className="absolute bottom-8 left-0 right-0 flex justify-center animate-bounce z-10 text-muted-foreground hover:text-primary transition-colors"
+        className="absolute bottom-4 md:bottom-8 left-0 right-0 flex justify-center animate-bounce z-10 text-muted-foreground hover:text-primary transition-colors"
       >
         <ArrowDown className="h-6 w-6" />
       </a>
