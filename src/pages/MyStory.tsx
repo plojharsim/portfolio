@@ -3,6 +3,17 @@ import Footer from "@/components/Footer";
 import { BookOpen, Rocket, Code, Gamepad2, GraduationCap, Heart, Monitor, Printer, Keyboard, FileText } from "lucide-react";
 
 const MyStory = () => {
+  const vzdelaniBudoucnostiLink = (
+    <a 
+      href="https://vzdelanibudoucnosti.cz" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="text-primary hover:underline"
+    >
+      Vzdělání budoucnosti
+    </a>
+  );
+
   const timeline = [
     {
       year: "2010",
@@ -19,7 +30,11 @@ const MyStory = () => {
     {
       year: "2021/22",
       title: "První řádky kódu (Python)",
-      description: "Napsal jsem svůj první program na online kroužku Pythonu od vzdelanibudoucnosti.cz. Okamžitě mě to chytlo.",
+      description: (
+        <>
+          Napsal jsem svůj první program na online kroužku Pythonu od {vzdelaniBudoucnostiLink}. Okamžitě mě to chytlo.
+        </>
+      ),
       icon: Code,
     },
     {
@@ -49,7 +64,11 @@ const MyStory = () => {
     {
       year: "2022/23",
       title: "Navazující Python 2",
-      description: "Pokračoval jsem v online kroužku programování Python 2, opět od vzdelanibudoucnosti.cz.",
+      description: (
+        <>
+          Pokračoval jsem v online kroužku programování Python 2, opět od {vzdelaniBudoucnostiLink}.
+        </>
+      ),
       icon: BookOpen,
     },
     {
@@ -67,7 +86,11 @@ const MyStory = () => {
     {
       year: "2023/24",
       title: "Navazující Python 3",
-      description: "Další stupeň vzdělávání v Pythonu opět od vzdelanibudoucnosti.cz, kde jsem prohluboval své znalosti a řešil složitější logické úlohy.",
+      description: (
+        <>
+          Další stupeň vzdělávání v Pythonu opět od {vzdelaniBudoucnostiLink}, kde jsem prohluboval své znalosti a řešil složitější logické úlohy.
+        </>
+      ),
       icon: BookOpen,
     },
     {
@@ -159,7 +182,7 @@ const MyStory = () => {
                     <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
                       {item.title}
                     </h3>
-                    <p className="text-muted-foreground">{item.description}</p>
+                    <div className="text-muted-foreground">{item.description}</div>
                   </div>
                 </div>
 
