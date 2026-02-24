@@ -170,18 +170,6 @@ const MyStory = () => {
         </div>
       </section>
 
-      {/* Quote Section */}
-      <section className="py-16 px-4">
-        <div className="container max-w-3xl mx-auto text-center">
-          <div className="p-8 rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20">
-            <blockquote className="text-2xl md:text-3xl font-medium italic text-foreground mb-4">
-              "Každý expert byl kdysi začátečník."
-            </blockquote>
-            <p className="text-muted-foreground">— Moje motto</p>
-          </div>
-        </div>
-      </section>
-
       <Footer />
     </div>
   );

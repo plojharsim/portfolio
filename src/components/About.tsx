@@ -70,8 +70,7 @@ const About = () => {
   vek: 15,
   lokace: "Česká republika 🇨🇿",
   jazyky: ["Python", "HTML", "JavaScript"],
-  zajmy: ["Programování", "Selfhosting", "Turistika"],
-  motto: "Každý den je příležitost naučit se něco nového!"
+  zajmy: ["Programování", "Selfhosting", "Turistika"]
 };`}
               </code>
             </pre>
