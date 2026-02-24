@@ -13,7 +13,7 @@ export const projects: Project[] = [
     title: "Edu | by plojharsim",
     description: "Moderní vzdělávací platforma, která mění učení v interaktivní zážitek. S chytrou správou znalostí a cloudovou synchronizací pomáhá studentům efektivněji zvládat studium.",
     status: "Vydáno",
-    tags: ["Web", "React", "Cloud", "Education"],
+    tags: ["Web", "Android", "React", "Supabase"],
     demo: "https://edu.plojharsim.cz",
   },
   {
