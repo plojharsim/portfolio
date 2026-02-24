@@ -13,7 +13,7 @@ const Hero = () => {
       {/* Grid pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--primary)/0.03)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--primary)/0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
 
-      <div className="container relative z-10 px-4">
+      <div className="container relative z-10 px-4 pt-32 md:pt-0">
         <div className="max-w-4xl mx-auto text-center">
           {/* Tag */}
           <div className="inline-flex items-center px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-8 animate-fade-in">
