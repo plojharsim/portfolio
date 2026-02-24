@@ -34,21 +34,7 @@ export const projects: Project[] = [
     title: "Veselé Vánoce",
     description: "Vánoční webová stránka s odpočtem a interaktivními prvky, vytvořená pro sváteční náladu.",
     status: "Vydáno",
-    tags: ["Next.js", "React", "TypeScript"],
+    tags: ["Next.js", "React", "TypeScript", "Firebase"],
     demo: "https://vanoce.plojharsim.cz",
-  },
-  {
-    title: "Discord Bot",
-    description: "Vlastní bot pro správu komunity s funkcemi pro moderování a zábavu.",
-    status: "Ve vývoji",
-    tags: ["Python", "API"],
-    github: "https://github.com/plojharsim",
-  },
-  {
-    title: "Batch Tools",
-    description: "Sada užitečných skriptů pro Windows, které mi usnadňují každodenní práci se soubory.",
-    status: "Plánováno",
-    tags: ["Batch", "Automatizace"],
-    github: "https://github.com/plojharsim",
   },
 ];
