@@ -67,7 +67,7 @@ const MyStory = () => {
     {
       year: "2023/24",
       title: "Navazující Python 3",
-      description: "Další stupeň vzdělávání v Pythonu, kde jsem prohluboval své znalosti a řešil složitější logické úlohy.",
+      description: "Další stupeň vzdělávání v Pythonu opět od vzdelanibudoucnosti.cz, kde jsem prohluboval své znalosti a řešil složitější logické úlohy.",
       icon: BookOpen,
     },
     {
