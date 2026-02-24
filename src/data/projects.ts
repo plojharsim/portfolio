@@ -27,7 +27,7 @@ export const projects: Project[] = [
     title: "Seply",
     description: "Profesionální webová prezentace pro servis plynových kotlů. Zaměřeno na konverzi a přehlednost služeb.",
     status: "Vydáno",
-    tags: ["Web", "React", "Tailwind"],
+    tags: ["Web", "HTML", "CSS"],
     demo: "https://seply.cz",
   },
   {
