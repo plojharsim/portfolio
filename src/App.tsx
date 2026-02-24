@@ -10,7 +10,6 @@ import MyStory from "./pages/MyStory";
 import ProjectsPage from "./pages/ProjectsPage";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
-import YouTube from "./pages/YouTube";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,8 +26,8 @@ const App = () => (
           <Route path="/projekty" element={<ProjectsPage />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogPost />} />
-          <Route path="/youtube" element={<YouTube />} />
           {/* Odstraněné routy:
+          <Route path="/youtube" element={<YouTube />} />
           <Route path="/pohled-na-ai" element={<AIView />} />
           <Route path="/moje-budoucnost" element={<MyFuture />} />
           */}

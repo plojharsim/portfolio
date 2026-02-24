@@ -23,7 +23,7 @@ const Navigation = () => {
     // { href: "/moje-budoucnost", label: "Moje budoucnost" }, // Odstraněno
     { href: "/projekty", label: "Projekty" },
     { href: "/blog", label: "Blog" },
-    { href: "/youtube", label: "YouTube" },
+    // { href: "/youtube", label: "YouTube" }, // Odstraněno
     // { href: "/pohled-na-ai", label: "Pohled na AI" }, // Odstraněno
   ];
 
