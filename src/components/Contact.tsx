@@ -1,9 +1,9 @@
 import { Github, Send, Copy } from "lucide-react";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 
 const Contact = () => {
-  const emailAddress = "kontakt@plojharsim.cz";
+  const emailAddress = "plojharsim@gmail.com";
 
   const handleCopyEmail = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault(); 
