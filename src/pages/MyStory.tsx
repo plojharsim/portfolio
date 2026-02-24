@@ -14,6 +14,17 @@ const MyStory = () => {
     </a>
   );
 
+  const CertificateLink = ({ href }: { href: string }) => (
+    <a 
+      href={href} 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="flex items-center gap-1 text-primary hover:underline mt-2 text-sm"
+    >
+      <FileText className="h-4 w-4" /> Zobrazit certifikát
+    </a>
+  );
+
   const timeline = [
     {
       year: "2010",
@@ -33,6 +44,7 @@ const MyStory = () => {
       description: (
         <>
           Napsal jsem svůj první program na online kroužku Pythonu od {vzdelaniBudoucnostiLink}. Okamžitě mě to chytlo.
+          <CertificateLink href="/certifikaty/python1_certifikat.pdf" />
         </>
       ),
       icon: Code,
@@ -67,6 +79,7 @@ const MyStory = () => {
       description: (
         <>
           Pokračoval jsem v online kroužku programování Python 2, opět od {vzdelaniBudoucnostiLink}.
+          <CertificateLink href="/certifikaty/python2_certifikat.pdf" />
         </>
       ),
       icon: BookOpen,
@@ -89,6 +102,7 @@ const MyStory = () => {
       description: (
         <>
           Další stupeň vzdělávání v Pythonu opět od {vzdelaniBudoucnostiLink}, kde jsem prohluboval své znalosti a řešil složitější logické úlohy.
+          <CertificateLink href="/certifikaty/python3_certifikat.pdf" />
         </>
       ),
       icon: BookOpen,
