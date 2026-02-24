@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { BookOpen, Rocket, Code, Gamepad2, GraduationCap, Heart, Monitor, Printer, Keyboard, FileText } from "lucide-react";
+import { BookOpen, Rocket, Code, Gamepad2, GraduationCap, Heart, Monitor, Printer, Keyboard, FileText, Server, MonitorIcon } from "lucide-react";
 
 const MyStory = () => {
   const vzdelaniBudoucnostiLink = (
@@ -37,6 +37,12 @@ const MyStory = () => {
       title: "První setkání s počítači",
       description: "Začal jsem objevovat svět technologií a her.",
       icon: Gamepad2,
+    },
+    {
+      year: "Vánoce 2021",
+      title: "První kroky se serverovým Linuxem",
+      description: "Dostal jsem své první Raspberry Pi. To byl můj vstup do světa serverů, příkazové řádky a Linuxu jako takového.",
+      icon: Server,
     },
     {
       year: "2021/22",
@@ -145,9 +151,9 @@ const MyStory = () => {
     },
     {
       year: "Jaro 2024",
-      title: "První kroky s Linuxem",
-      description: "Poprvé jsem zkoušel využívat operační systém Linux pro vývoj a experimentování.",
-      icon: Code,
+      title: "První kroky s desktopovým Linuxem",
+      description: "Začal jsem využívat Linux jako svůj hlavní operační systém pro běžnou práci a vývoj, což mi otevřelo nové možnosti přizpůsobení.",
+      icon: MonitorIcon,
     },
     {
       year: "Nyní",
