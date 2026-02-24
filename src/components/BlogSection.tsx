@@ -1,4 +1,4 @@
-import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { Calendar, Clock, ArrowRight, BookOpen } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { blogPosts } from "@/data/blog";
@@ -35,7 +35,7 @@ const BlogSection = () => {
             </p>
           </div>
 
-          {/* Posts grid */}
+          {/* Posts grid or Empty State */}
           {postCount > 0 ? (
             <div className={gridClasses}>
               {featuredPosts.map((post) => (
@@ -79,8 +79,14 @@ const BlogSection = () => {
               ))}
             </div>
           ) : (
-            <div className="text-center text-muted-foreground py-10">
-              Zatím zde nejsou žádné publikované články.
+            <div className="text-center py-20 px-6 rounded-2xl border border-dashed border-border bg-card/30 backdrop-blur-sm mb-12">
+              <div className="w-16 h-16 rounded-full bg-primary/5 flex items-center justify-center mx-auto mb-6">
+                <BookOpen className="h-8 w-8 text-primary/40" />
+              </div>
+              <h4 className="text-xl font-bold mb-2">Blog se připravuje</h4>
+              <p className="text-muted-foreground max-w-md mx-auto">
+                Zatím zde nejsou žádné publikované články. Brzy se zde ale objeví zajímavé texty z mé cesty programátora.
+              </p>
             </div>
           )}
 
