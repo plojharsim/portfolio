@@ -1,12 +1,12 @@
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { ExternalLink, Github, Folder, Code2, Layout, Database, Smartphone, ShoppingCart, Gift, Home, GraduationCap } from "lucide-react";
+import { ExternalLink, Github, Layout, Database, Smartphone, Gift, Home, GraduationCap, Cpu, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { projects } from "@/data/projects";
 
 const ProjectsPage = () => {
-  // Definice barev pro statusy
   const getStatusDetails = (status: string) => {
     switch (status) {
       case "Vydáno":
@@ -20,14 +20,12 @@ const ProjectsPage = () => {
     }
   };
 
-  // Definice ikon pro projekty
   const projectIcons: Record<string, React.ComponentType<{ className?: string }>> = {
     "Edu | by plojharsim": GraduationCap,
     "Panorama house Brdy": Home,
     "Seply": Layout,
     "Veselé Vánoce": Gift,
-    "Discord Bot": Database,
-    "Batch Tools": Smartphone,
+    "IoT Meteostanice": Cpu,
   };
 
   const sortOrder: { [key: string]: number } = {
@@ -50,7 +48,7 @@ const ProjectsPage = () => {
             Moje <span className="text-gradient">Projekty</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Kompletní seznam mých prací, od webových aplikací až po drobné skripty a experimenty.
+            Kompletní seznam mých prací, od webových aplikací až po hardwarové projekty a experimenty.
           </p>
         </div>
       </section>
@@ -60,6 +58,8 @@ const ProjectsPage = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {sortedProjects.map((project, index) => {
               const Icon = projectIcons[project.title] || Layout;
+              const hasNoDemo = !project.demo;
+
               return (
                 <div
                   key={index}
@@ -102,39 +102,34 @@ const ProjectsPage = () => {
                   <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-muted-foreground mb-6 flex-grow">
+                  <p className="text-muted-foreground mb-6 flex-grow line-clamp-3">
                     {project.description}
                   </p>
 
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2 py-1 text-xs font-mono bg-primary/10 text-primary rounded"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+                  <div className="space-y-4 mt-auto">
+                    <div className="flex flex-wrap gap-2">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-2 py-1 text-xs font-mono bg-primary/10 text-primary rounded"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    
+                    {hasNoDemo && (
+                      <Button variant="ghost" size="sm" asChild className="w-full text-primary hover:text-primary hover:bg-primary/5 p-0 justify-start">
+                        <Link to={`/projekty/${project.id}`}>
+                          Zobrazit detail <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                      </Button>
+                    )}
                   </div>
                 </div>
               );
             })}
           </div>
-        </div>
-      </section>
-
-      <section className="py-24 px-4 bg-primary/5">
-        <div className="container max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Chceš vidět víc?</h2>
-          <p className="text-muted-foreground mb-8 text-lg">
-            Většinu svého kódu sdílím jako open-source na GitHubu. Sleduj moji aktivitu a přispěj k mým projektům.
-          </p>
-          <Button variant="glow" size="lg" asChild>
-            <a href="https://github.com/plojharsim" target="_blank" rel="noopener noreferrer">
-              <Github className="mr-2 h-5 w-5" />
-              Můj GitHub profil
-            </a>
-          </Button>
         </div>
       </section>
 

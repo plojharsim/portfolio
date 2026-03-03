@@ -1,6 +1,6 @@
-import { ExternalLink, Folder, ArrowRight } from "lucide-react";
+import { ExternalLink, Folder, ArrowRight, Cpu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { projects } from "@/data/projects";
 
@@ -18,9 +18,9 @@ const Projects = () => {
     }
   };
 
-  // Vybereme pouze Edu a Seply pro zobrazení na hlavní stránce
+  // Vybereme Edu a novou IoT stanici pro zobrazení na hlavní stránce
   const featuredProjects = projects.filter(project =>
-    project.title === "Edu | by plojharsim" || project.title === "Seply"
+    project.id === "edu" || project.id === "iot-station"
   );
 
   const handleShowAllProjects = () => {
@@ -40,18 +40,18 @@ const Projects = () => {
               Na čem <span className="text-gradient">pracuji</span>
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Ukázka mých nejzajímavějších projektů.
+              Ukázka mých nejzajímavějších projektů, od webu po hardware.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {featuredProjects.map((project, index) => (
+            {featuredProjects.map((project) => (
               <div
-                key={project.title}
+                key={project.id}
                 className="group p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 flex flex-col"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <Folder className="h-10 w-10 text-primary" />
+                  {project.id === "iot-station" ? <Cpu className="h-10 w-10 text-primary" /> : <Folder className="h-10 w-10 text-primary" />}
                   <div className="flex gap-2">
                     {project.demo && (
                       <a
@@ -79,29 +79,32 @@ const Projects = () => {
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-2 py-1 text-xs font-mono bg-primary/10 text-primary rounded"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                <div className="space-y-4">
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-2 py-1 text-xs font-mono bg-primary/10 text-primary rounded"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  {!project.demo && (
+                    <Link to={`/projekty/${project.id}`} className="text-primary text-sm font-medium flex items-center gap-1 hover:gap-2 transition-all">
+                      Zobrazit více <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  )}
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="text-center mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="text-center mt-12">
             <Button variant="glow" onClick={handleShowAllProjects}>
               Zobrazit všechny projekty
               <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-            <Button variant="outline" asChild>
-              <a href="https://github.com/plojharsim" target="_blank" rel="noopener noreferrer">
-                Více na GitHubu
-              </a>
             </Button>
           </div>
         </div>
