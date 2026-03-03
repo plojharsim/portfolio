@@ -1,12 +1,12 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { ExternalLink, Github, Folder, Code2, Layout, Database, Smartphone, ShoppingCart, Gift, Home, GraduationCap } from "lucide-react";
+import { ExternalLink, Github, Layout, Home, GraduationCap, Cpu, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { projects } from "@/data/projects";
+import { Link } from "react-router-dom";
 
 const ProjectsPage = () => {
-  // Definice barev pro statusy
   const getStatusDetails = (status: string) => {
     switch (status) {
       case "Vydáno":
@@ -20,14 +20,12 @@ const ProjectsPage = () => {
     }
   };
 
-  // Definice ikon pro projekty
   const projectIcons: Record<string, React.ComponentType<{ className?: string }>> = {
     "Edu | by plojharsim": GraduationCap,
     "Panorama house Brdy": Home,
     "Seply": Layout,
-    "Veselé Vánoce": Gift,
-    "Discord Bot": Database,
-    "Batch Tools": Smartphone,
+    "Veselé Vánoce": Layout,
+    "Smart Home Node": Cpu,
   };
 
   const sortOrder: { [key: string]: number } = {
@@ -50,7 +48,7 @@ const ProjectsPage = () => {
             Moje <span className="text-gradient">Projekty</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Kompletní seznam mých prací, od webových aplikací až po drobné skripty a experimenty.
+            Kompletní seznam mých prací, od webových aplikací až po hardwarové experimenty.
           </p>
         </div>
       </section>
@@ -58,11 +56,11 @@ const ProjectsPage = () => {
       <section className="py-16 px-4">
         <div className="container max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sortedProjects.map((project, index) => {
+            {sortedProjects.map((project) => {
               const Icon = projectIcons[project.title] || Layout;
               return (
                 <div
-                  key={index}
+                  key={project.id}
                   className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 flex flex-col h-full"
                 >
                   <div className="flex items-center justify-between mb-6">
@@ -71,22 +69,12 @@ const ProjectsPage = () => {
                     </div>
                     <div className="flex gap-2">
                       {project.github && (
-                        <a
-                          href={project.github}
-                          className="p-2 text-muted-foreground hover:text-primary transition-colors"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
+                        <a href={project.github} className="p-2 text-muted-foreground hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">
                           <Github className="h-5 w-5" />
                         </a>
                       )}
                       {project.demo && (
-                        <a
-                          href={project.demo}
-                          className="p-2 text-muted-foreground hover:text-primary transition-colors"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
+                        <a href={project.demo} className="p-2 text-muted-foreground hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">
                           <ExternalLink className="h-5 w-5" />
                         </a>
                       )}
@@ -102,39 +90,28 @@ const ProjectsPage = () => {
                   <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-muted-foreground mb-6 flex-grow">
+                  <p className="text-muted-foreground mb-6 flex-grow line-clamp-3">
                     {project.description}
                   </p>
 
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2 py-1 text-xs font-mono bg-primary/10 text-primary rounded"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+                  <div className="flex items-center justify-between mt-auto">
+                    <div className="flex flex-wrap gap-2">
+                      {project.tags.slice(0, 2).map((tag) => (
+                        <span key={tag} className="px-2 py-0.5 text-[10px] font-mono bg-primary/10 text-primary rounded">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <Button variant="link" asChild className="p-0 h-auto text-primary">
+                      <Link to={`/projekt/${project.id}`}>
+                        Více <ArrowRight className="ml-1 h-3 w-3" />
+                      </Link>
+                    </Button>
                   </div>
                 </div>
               );
             })}
           </div>
-        </div>
-      </section>
-
-      <section className="py-24 px-4 bg-primary/5">
-        <div className="container max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Chceš vidět víc?</h2>
-          <p className="text-muted-foreground mb-8 text-lg">
-            Většinu svého kódu sdílím jako open-source na GitHubu. Sleduj moji aktivitu a přispěj k mým projektům.
-          </p>
-          <Button variant="glow" size="lg" asChild>
-            <a href="https://github.com/plojharsim" target="_blank" rel="noopener noreferrer">
-              <Github className="mr-2 h-5 w-5" />
-              Můj GitHub profil
-            </a>
-          </Button>
         </div>
       </section>
 
