@@ -1,26 +1,25 @@
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Frontend",
+      title: "Webová řešení",
       skills: [
-        { name: "HTML", level: 65 },
-        { name: "Tailwind", level: 30 },
+        { name: "React / HTML / CSS", level: 85 },
+        { name: "Tailwind CSS", level: 80 },
       ],
     },
     {
-      title: "Backend",
+      title: "Automatizace & Backend",
       skills: [
-        { name: "Python", level: 85 },
-        { name: "Bash", level: 60 },
+        { name: "Python (Skripty & Boty)", level: 90 },
+        { name: "Bash & Linux servery", level: 75 },
       ],
     },
     {
-      title: "Nástroje",
+      title: "Nástroje & AI",
       skills: [
-        { name: "Git", level: 60 },
-        { name: "VS Code", level: 90 },
-        { name: "Figma", level: 45 },
-        { name: "AI", level: 85 },
+        { name: "AI Integrace & Prompty", level: 90 },
+        { name: "Git & Správa kódu", level: 75 },
+        { name: "Figma (UI Návrhy)", level: 60 },
       ],
     },
   ];
@@ -31,12 +30,12 @@ const Skills = () => {
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <h2 className="text-sm font-mono text-primary mb-4">// DOVEDNOSTI</h2>
+            <h2 className="text-sm font-mono text-primary mb-4">// TECHNOLOGICKÉ ZÁZEMÍ</h2>
             <h3 className="text-4xl md:text-5xl font-bold mb-6">
-              Moje <span className="text-gradient">technologie</span>
+              S čím <span className="text-gradient">pracuji</span>
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Technologie a nástroje, se kterými pracuji a neustále se v nich zlepšuji.
+              Spatřuji smysl v moderních technologiích, které přinášejí rychlá a efektivní řešení.
             </p>
           </div>
 
