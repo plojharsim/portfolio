@@ -18,7 +18,7 @@ const Projects = () => {
     }
   };
 
-  // Vybereme Edu a Seply pro zobrazení na hlavní stránce
+  // Vybereme pouze Edu a Seply pro zobrazení na hlavní stránce
   const featuredProjects = projects.filter(project =>
     project.title === "Edu | by plojharsim" || project.title === "Seply"
   );
@@ -35,17 +35,17 @@ const Projects = () => {
       <div className="container relative z-10 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-sm font-mono text-primary mb-4">// REÁLNÁ ŘEŠENÍ</h2>
+            <h2 className="text-sm font-mono text-primary mb-4">// PROJEKTY</h2>
             <h3 className="text-4xl md:text-5xl font-bold mb-6">
-              Ukázky mé <span className="text-gradient">práce</span>
+              Na čem <span className="text-gradient">pracuji</span>
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Ukázka vyvořených webů, systémů a aplikací pro klienty a uživatele.
+              Ukázka mých nejzajímavějších projektů.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {featuredProjects.map((project) => (
+            {featuredProjects.map((project, index) => (
               <div
                 key={project.title}
                 className="group p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 flex flex-col"
@@ -95,7 +95,7 @@ const Projects = () => {
 
           <div className="text-center mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button variant="glow" onClick={handleShowAllProjects}>
-              Zobrazit všechna řešení
+              Zobrazit všechny projekty
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
             <Button variant="outline" asChild>

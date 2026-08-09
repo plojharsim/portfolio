@@ -1,21 +1,21 @@
-import { Globe, Cpu, Wrench } from "lucide-react";
+import { Code2, Lightbulb, Rocket } from "lucide-react";
 
 const About = () => {
   const highlights = [
     {
-      icon: Globe,
-      title: "Weby na míru",
-      description: "Přehledné, rychlé a moderní webové stránky či prezentace, které zaujmou zákazníky a přinesou výsledky.",
+      icon: Code2,
+      title: "Vášeň pro kód",
+      description: "Miluji řešení problémů pomocí kódu a vytváření užitečných aplikací.",
     },
     {
-      icon: Cpu,
-      title: "Automatizace & AI",
-      description: "Šetřím váš čas. Automatizuji opakující se procesy a zapojuji chytré AI nástroje přímo do vašeho podnikání.",
+      icon: Lightbulb,
+      title: "Neustálé učení",
+      description: "Každý den se učím nové technologie a zlepšuji své dovednosti.",
     },
     {
-      icon: Wrench,
-      title: "Vlastní nástroje",
-      description: "Potřebujete specifické řešení? Navrhnu a vyvinu interní nástroje a aplikace přesně podle vašich potřeb.",
+      icon: Rocket,
+      title: "Ambiciózní cíle",
+      description: "Chci se stát profesionálním vývojářem a pracovat na zajímavých projektech.",
     },
   ];
 
@@ -27,13 +27,13 @@ const About = () => {
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <h2 className="text-sm font-mono text-primary mb-4">// JAK VÁM POMÁHÁM</h2>
+            <h2 className="text-sm font-mono text-primary mb-4">// O MNĚ</h2>
             <h3 className="text-4xl md:text-5xl font-bold mb-6">
-              Řešení pro váš <span className="text-gradient">digitální růst</span>
+              Kdo <span className="text-gradient">jsem?</span>
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Jsem Šimon Plojhar. Pomáhám jednotlivcům a malým firmám zjednodušovat práci, 
-              špatně fungující procesy nahrazovat automatizací a budovat profesionální webovou prezentaci.
+              Jsem Šimon, 15letý programátor z České republiky. Začal jsem programovat 
+              z čisté zvědavosti a teď je to moje největší vášeň.
             </p>
           </div>
 
@@ -60,16 +60,17 @@ const About = () => {
               <div className="w-3 h-3 rounded-full bg-destructive/80" />
               <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
               <div className="w-3 h-3 rounded-full bg-primary/80" />
-              <span className="ml-2 text-muted-foreground">sluzby.ts</span>
+              <span className="ml-2 text-muted-foreground">about.ts</span>
             </div>
             <pre className="text-muted-foreground overflow-x-auto">
               <code>
-{`const mojeSluzby = {
-  weby: "Prezentační i funkční weby na míru",
-  automatizace: "Propojení systémů a úspora času",
-  ai: "Zapojení AI asistentů do vašich procesů",
-  nastroje: "Interní aplikace a utility na zakázku",
-  pristup: "Osobní konzultace & hledání nejlepšího řešení"
+{`const plojharsim = {
+  jmeno: "Šimon Plojhar",
+  prezdivka: "plojharsim",
+  vek: 15,
+  lokace: "Česká republika 🇨🇿",
+  jazyky: ["Python", "HTML", "JavaScript"],
+  zajmy: ["Programování", "Selfhosting", "Turistika"]
 };`}
               </code>
             </pre>
