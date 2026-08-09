@@ -1,26 +1,30 @@
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Frontend",
+      title: "Tvorba webů",
       skills: [
-        { name: "HTML", level: 65 },
-        { name: "Tailwind", level: 30 },
+        { name: "React & TypeScript", level: 80 },
+        { name: "Tailwind CSS", level: 85 },
+        { name: "HTML5 & CSS3", level: 90 },
+        { name: "Přehledný design", level: 85 },
       ],
     },
     {
-      title: "Backend",
+      title: "Automatizace & Backend",
       skills: [
-        { name: "Python", level: 85 },
-        { name: "Bash", level: 60 },
+        { name: "Python skripty", level: 85 },
+        { name: "Bash & Linux servery", level: 70 },
+        { name: "API integrace", level: 75 },
+        { name: "Supabase & Databáze", level: 65 },
       ],
     },
     {
-      title: "Nástroje",
+      title: "AI & Nástroje",
       skills: [
-        { name: "Git", level: 60 },
-        { name: "VS Code", level: 90 },
-        { name: "Figma", level: 45 },
-        { name: "AI", level: 85 },
+        { name: "AI nástroje & integrace", level: 90 },
+        { name: "VS Code & Git", level: 85 },
+        { name: "Figma (prototypy)", level: 60 },
+        { name: "Řešení problémů", level: 90 },
       ],
     },
   ];
@@ -31,12 +35,12 @@ const Skills = () => {
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <h2 className="text-sm font-mono text-primary mb-4">// DOVEDNOSTI</h2>
+            <h2 className="text-sm font-mono text-primary mb-4">// TECHNOLOGIE & PŘÍSTUP</h2>
             <h3 className="text-4xl md:text-5xl font-bold mb-6">
-              Moje <span className="text-gradient">technologie</span>
+              Nástroje, které <span className="text-gradient">používám</span>
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Technologie a nástroje, se kterými pracuji a neustále se v nich zlepšuji.
+              Sleduji moderní trendy a používám spolehlivé technologie, které zaručují kvalitu a rychlost.
             </p>
           </div>
 
@@ -52,8 +56,8 @@ const Skills = () => {
                   {category.skills.map((skill, skillIndex) => (
                     <div key={skill.name}>
                       <div className="flex justify-between mb-2">
-                        <span className="font-medium">{skill.name}</span>
-                        <span className="text-muted-foreground font-mono text-sm">{skill.level}%</span>
+                        <span className="font-medium text-sm">{skill.name}</span>
+                        <span className="text-muted-foreground font-mono text-xs">{skill.level}%</span>
                       </div>
                       <div className="h-2 bg-muted rounded-full overflow-hidden">
                         <div

@@ -1,45 +1,44 @@
-import { Code2, Lightbulb, Rocket } from "lucide-react";
+import { Globe, Cpu, Bot } from "lucide-react";
 
 const About = () => {
-  const highlights = [
+  const services = [
     {
-      icon: Code2,
-      title: "Vášeň pro kód",
-      description: "Miluji řešení problémů pomocí kódu a vytváření užitečných aplikací.",
+      icon: Globe,
+      title: "Weby & Prezentace",
+      description: "Moderní, přehledné a rychlé webové stránky, které efektivně prezentují vaše služby a přivádí zákazníky.",
     },
     {
-      icon: Lightbulb,
-      title: "Neustálé učení",
-      description: "Každý den se učím nové technologie a zlepšuji své dovednosti.",
+      icon: Cpu,
+      title: "Automatizace & Nástroje",
+      description: "Šetřím váš čas automatizací opakujících se úkolů, propojením aplikací a tvorbou skriptů na míru.",
     },
     {
-      icon: Rocket,
-      title: "Ambiciózní cíle",
-      description: "Chci se stát profesionálním vývojářem a pracovat na zajímavých projektech.",
+      icon: Bot,
+      title: "AI Integrace & Inovace",
+      description: "Zapojení chytrých AI asistentů a technologií do vašich pracovních postupů pro vyšší produktivitu.",
     },
   ];
 
   return (
-    <section id="o-mne" className="py-24 relative">
+    <section id="co-nabizim" className="py-24 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
       
       <div className="container relative z-10 px-4">
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <h2 className="text-sm font-mono text-primary mb-4">// O MNĚ</h2>
+            <h2 className="text-sm font-mono text-primary mb-4">// CO NABÍZÍM</h2>
             <h3 className="text-4xl md:text-5xl font-bold mb-6">
-              Kdo <span className="text-gradient">jsem?</span>
+              S čím vám mohu <span className="text-gradient">pomoci?</span>
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Jsem Šimon, 15letý programátor z České republiky. Začal jsem programovat 
-              z čisté zvědavosti a teď je to moje největší vášeň.
+              Každý projekt řeším individuálně s důrazem na jednoduchost, spolehlivost a reálný přínos pro váš život nebo podnikání.
             </p>
           </div>
 
           {/* Highlights grid */}
           <div className="grid md:grid-cols-3 gap-6">
-            {highlights.map((item, index) => (
+            {services.map((item, index) => (
               <div
                 key={item.title}
                 className="group p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 hover:bg-card transition-all duration-300 card-shadow"
@@ -49,28 +48,31 @@ const About = () => {
                   <item.icon className="h-6 w-6 text-primary" />
                 </div>
                 <h4 className="text-xl font-semibold mb-2">{item.title}</h4>
-                <p className="text-muted-foreground">{item.description}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
 
-          {/* Code snippet */}
+          {/* Code snippet / Overview */}
           <div className="mt-16 p-6 rounded-xl border border-border bg-card/80 backdrop-blur-sm font-mono text-sm">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-3 h-3 rounded-full bg-destructive/80" />
               <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
               <div className="w-3 h-3 rounded-full bg-primary/80" />
-              <span className="ml-2 text-muted-foreground">about.ts</span>
+              <span className="ml-2 text-muted-foreground">sluzby.ts</span>
             </div>
             <pre className="text-muted-foreground overflow-x-auto">
               <code>
-{`const plojharsim = {
-  jmeno: "Šimon Plojhar",
-  prezdivka: "plojharsim",
-  vek: 15,
-  lokace: "Česká republika 🇨🇿",
-  jazyky: ["Python", "HTML", "JavaScript"],
-  zajmy: ["Programování", "Selfhosting", "Turistika"]
+{`const reseni = {
+  vyvojarsim: "Šimon Plojhar",
+  zamereni: "Digitální řešení pro lidi & malé firmy 🇨🇿",
+  sluzby: [
+    "Webové stránky & vizitky",
+    "Automatizace firemních procesů",
+    "Integrace AI nástrojů",
+    "Vlastní nástroje & skripty"
+  ],
+  cil: "Šetřit klientům čas a zjednodušovat technologie"
 };`}
               </code>
             </pre>
