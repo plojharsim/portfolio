@@ -32,7 +32,8 @@ const About = () => {
               Kdo <span className="text-gradient">jsem?</span>
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Jsem Šimon, 15letý programátor z České republiky. Mám vášeň pro řešení problémů a pomáhat malým firmám a lidem s digitálními výzvami.
+              Jsem Šimon, 15letý programátor z České republiky. Začal jsem programovat 
+              z čisté zvědavosti a teď je to moje největší vášeň.
             </p>
           </div>
 
