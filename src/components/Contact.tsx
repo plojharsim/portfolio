@@ -24,16 +24,14 @@ const Contact = () => {
           {/* Section header */}
           <h2 className="text-sm font-mono text-primary mb-4">// KONTAKT</h2>
           <h3 className="text-4xl md:text-5xl font-bold mb-6">
-            Pojďme <span className="text-gradient">spolupracovat</span>
+            Máte digitální <span className="text-gradient">výzvu?</span>
           </h3>
           <p className="text-lg text-muted-foreground mb-10">
-            Máš zajímavý projekt nebo nápad? Rád si popovídám! 
-            Neváhej mě kontaktovat.
+            Potřebujete nový web, automatizovat rutinní úkol nebo poradit s využitím AI ve vašem podnikání? Napište mi a společně vymyslíme řešení na míru.
           </p>
 
           {/* Contact options */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            {/* Tlačítko pro kopírování e-mailu - nyní je to čistý Button */}
             <Button 
               variant="glow" 
               size="lg" 
