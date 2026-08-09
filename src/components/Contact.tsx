@@ -1,4 +1,4 @@
-import { Github, Send, Copy } from "lucide-react";
+import { Github, Send, Copy, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 
@@ -23,17 +23,25 @@ const Contact = () => {
         <div className="max-w-2xl mx-auto text-center">
           {/* Section header */}
           <h2 className="text-sm font-mono text-primary mb-4">// KONTAKT</h2>
-          <h3 className="text-4xl md:text-5xl font-bold mb-6">
-            Pojďme <span className="text-gradient">spolupracovat</span>
+          <h3 className="text-3xl md:text-5xl font-bold mb-6">
+            Pojďme najít <span className="text-gradient">řešení</span>
           </h3>
-          <p className="text-lg text-muted-foreground mb-10">
-            Máš zajímavý projekt nebo nápad? Rád si popovídám! 
-            Neváhej mě kontaktovat.
-          </p>
+          
+          {/* Požadovaný text */}
+          <div className="p-6 rounded-2xl bg-card/60 border border-border mb-8 backdrop-blur-sm">
+            <div className="flex justify-center mb-3 text-primary">
+              <MessageSquare className="h-8 w-8" />
+            </div>
+            <p className="text-xl md:text-2xl font-semibold text-foreground mb-3">
+              Nevíte přesně, co potřebujete?
+            </p>
+            <p className="text-lg text-muted-foreground">
+              Popište mi váš problém a společně najdeme to nejlepší řešení.
+            </p>
+          </div>
 
           {/* Contact options */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            {/* Tlačítko pro kopírování e-mailu - nyní je to čistý Button */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
             <Button 
               variant="glow" 
               size="lg" 
