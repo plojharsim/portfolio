@@ -36,7 +36,7 @@ const Skills = () => {
               Moje <span className="text-gradient">technologie</span>
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Technologie a nástroje, se kterými pracuji a neustále se v nich zlepšuji.
+              Technologie a nástroje, se kterými pomáhám lidem a malým firmám řešit digitální problémy.
             </p>
           </div>
 

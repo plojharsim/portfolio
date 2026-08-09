@@ -6,8 +6,8 @@ const Contact = () => {
   const emailAddress = "plojharsim@gmail.com";
 
   const handleCopyEmail = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault(); 
-    
+    e.preventDefault();
+
     navigator.clipboard.writeText(emailAddress).then(() => {
       toast.success("E-mailová adresa zkopírována!", {
         description: emailAddress,
@@ -27,20 +27,20 @@ const Contact = () => {
             Pojďme <span className="text-gradient">spolupracovat</span>
           </h3>
           <p className="text-lg text-muted-foreground mb-10">
-            Máš zajímavý projekt nebo nápad? Rád si popovídám! 
-            Neváhej mě kontaktovat.
+            Máte digitální problém? Zjistíme, jak ho vyřešit. 
+            Neváhej mě kontaktovat s popisem vašeho projektu nebo nápadu.
           </p>
 
           {/* Contact options */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            {/* Tlačítko pro kopírování e-mailu - nyní je to čistý Button */}
+            {/* Tlačítko pro kopírování e-mailu */}
             <Button 
               variant="glow" 
               size="lg" 
               onClick={handleCopyEmail}
             >
               <Copy className="mr-2 h-5 w-5" />
-              Kopírovat e-mail
+              Pošlete mi problém
             </Button>
             
             <Button variant="outline" size="lg" asChild>

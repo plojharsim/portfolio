@@ -40,7 +40,7 @@ const Projects = () => {
               Na čem <span className="text-gradient">pracuji</span>
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Ukázka mých nejzajímavějších projektů.
+              Ukázka řešení, která pomáhají lidem a firmám řešit digitální problémy.
             </p>
           </div>
 
