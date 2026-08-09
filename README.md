@@ -1,25 +1,19 @@
-# Šimon Plojhar | Portfolio
+# Šimon Plojhar | Digitální řešení, weby a automatizace na míru
 
-Osobní webové portfolio mladého programátora z České republiky. Tento web slouží k prezentaci mých projektů, dovedností a mé cesty světem technologií.
+Osobní webové portfolio a nabídka digitálních služeb pro lidi a malé firmy. 
 
 ## O projektu
 
-Tento web je navržen jako moderní, responzivní vizitka, která reflektuje můj styl práce a technologické zaměření. Obsahuje sekce o mně, přehled mých projektů, časovou osu mého programátorského vývoje a kontaktní informace.
+Web slouží k prezentaci mých služeb – pomáhám lidem a malým firmám řešit digitální problémy (weby na míru, automatizace procesů, vlastní nástroje a využití AI).
 
 ## Použité technologie
-
-Web je postaven na moderním frontendovém stacku:
 
 - **Framework**: [React](https://reactjs.org/) s [TypeScriptem](https://www.typescriptlang.org/)
 - **Build Tool**: [Vite](https://vitejs.dev/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **UI Komponenty**: [shadcn/ui](https://ui.shadcn.com/) (postaveno na Radix UI)
+- **UI Komponenty**: [shadcn/ui](https://ui.shadcn.com/)
 - **Ikony**: [Lucide React](https://lucide.dev/)
-- **Animace**: Tailwind CSS animate a vlastní CSS keyframes
 
 ## Kontakt
 
-Pokud mě chceš kontaktovat, můžeš tak učinit skrze e-mail **plojharsim@gmail.com** nebo mě sledovat na mém [GitHubu](https://github.com/plojharsim).
-
----
-*Vytvořeno s vášní v České republice.*
+E-mail: **plojharsim@gmail.com** | GitHub: [github.com/plojharsim](https://github.com/plojharsim)
