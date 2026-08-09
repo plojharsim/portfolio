@@ -18,7 +18,7 @@ const Projects = () => {
     }
   };
 
-  // Vybereme pouze Edu a Seply pro zobrazení na hlavní stránce
+  // Vybereme pouze reprezentativní projekty
   const featuredProjects = projects.filter(project =>
     project.title === "Edu | by plojharsim" || project.title === "Seply"
   );
@@ -35,17 +35,17 @@ const Projects = () => {
       <div className="container relative z-10 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-sm font-mono text-primary mb-4">// PROJEKTY</h2>
+            <h2 className="text-sm font-mono text-primary mb-4">// PROJEKTY & REFERENCE</h2>
             <h3 className="text-4xl md:text-5xl font-bold mb-6">
-              Na čem <span className="text-gradient">pracuji</span>
+              Ukázky <span className="text-gradient">vytvořených řešení</span>
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Ukázka mých nejzajímavějších projektů.
+              Ukázka mých projektů, aplikací a webových prezentací vytvořených pro reálné použití.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {featuredProjects.map((project, index) => (
+            {featuredProjects.map((project) => (
               <div
                 key={project.title}
                 className="group p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 flex flex-col"
@@ -59,6 +59,7 @@ const Projects = () => {
                         className="text-muted-foreground hover:text-primary transition-colors"
                         target="_blank"
                         rel="noopener noreferrer"
+                        title="Otevřít web"
                       >
                         <ExternalLink className="h-5 w-5" />
                       </a>
