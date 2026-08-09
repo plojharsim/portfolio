@@ -1,22 +1,25 @@
-# Šimon Plojhar | Digitální řešení, weby & automatizace na míru
+# Šimon Plojhar | Portfolio
 
-Pomáhám lidem a malým firmám řešit digitální problémy. Weby, automatizace, vlastní nástroje, AI a další řešení na míru.
+Osobní webové portfolio mladého programátora z České republiky. Tento web slouží k prezentaci mých projektů, dovedností a mé cesty světem technologií.
 
 ## O projektu
 
-Tento web slouží jako prezentace služeb, vytvořených projektů a řešení. Je navržen tak, aby poskytl lidem a malým firmám přehled o tom, jak jim mohu pomoci zrychlit práci, zefektivnit procesy nebo vytvořit reprezentativní web.
+Tento web je navržen jako moderní, responzivní vizitka, která reflektuje můj styl práce a technologické zaměření. Obsahuje sekce o mně, přehled mých projektů, časovou osu mého programátorského vývoje a kontaktní informace.
 
-## Nabízené oblasti
+## Použité technologie
 
-- **Weby & Prezentace**: Rychlé a přehledné webové stránky
-- **Automatizace & Skripty**: Zpracování dat a propojení systémů
-- **AI & Vlastní nástroje**: Aplikace a pomůcky vytvořené na míru
-- **Konzultace & Pomoc s digitálními problémy**
+Web je postaven na moderním frontendovém stacku:
+
+- **Framework**: [React](https://reactjs.org/) s [TypeScriptem](https://www.typescriptlang.org/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **UI Komponenty**: [shadcn/ui](https://ui.shadcn.com/) (postaveno na Radix UI)
+- **Ikony**: [Lucide React](https://lucide.dev/)
+- **Animace**: Tailwind CSS animate a vlastní CSS keyframes
 
 ## Kontakt
 
-E-mail: **plojharsim@gmail.com**  
-GitHub: [github.com/plojharsim](https://github.com/plojharsim)
+Pokud mě chceš kontaktovat, můžeš tak učinit skrze e-mail **plojharsim@gmail.com** nebo mě sledovat na mém [GitHubu](https://github.com/plojharsim).
 
 ---
-*Vytvořeno v České republice.*
+*Vytvořeno s vášní v České republice.*

@@ -1,27 +1,26 @@
 const Skills = () => {
-  const serviceCategories = [
+  const skillCategories = [
     {
-      title: "Weby & Prezentace",
+      title: "Frontend",
       skills: [
-        { name: "Responzivní weby & Landing pages", level: 90 },
-        { name: "Uživatelská přívětivost (UX/UI)", level: 85 },
-        { name: "Moderní design & Tailwind CSS", level: 85 },
+        { name: "HTML", level: 65 },
+        { name: "Tailwind", level: 30 },
       ],
     },
     {
-      title: "Automatizace & Skripty",
+      title: "Backend",
       skills: [
-        { name: "Python skripty na zpracování dat", level: 90 },
-        { name: "Propojení systémů a API", level: 80 },
-        { name: "Linux & Serverový selfhosting", level: 75 },
+        { name: "Python", level: 85 },
+        { name: "Bash", level: 60 },
       ],
     },
     {
-      title: "Nástroje & AI",
+      title: "Nástroje",
       skills: [
-        { name: "Využití AI pro zrychlení procesů", level: 90 },
-        { name: "Vlastní miniaplikace na míru", level: 85 },
-        { name: "Git & Bezpečné nasazení", level: 80 },
+        { name: "Git", level: 60 },
+        { name: "VS Code", level: 90 },
+        { name: "Figma", level: 45 },
+        { name: "AI", level: 85 },
       ],
     },
   ];
@@ -32,18 +31,18 @@ const Skills = () => {
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <h2 className="text-sm font-mono text-primary mb-4">// CO DOKÁŽU VYŘEŠIT</h2>
+            <h2 className="text-sm font-mono text-primary mb-4">// DOVEDNOSTI</h2>
             <h3 className="text-4xl md:text-5xl font-bold mb-6">
-              Oblasti <span className="text-gradient">mých dovedností</span>
+              Moje <span className="text-gradient">technologie</span>
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Nástroje a technologie, které používám k řešení reálných digitálních potřeb.
+              Technologie a nástroje, se kterými pracuji a neustále se v nich zlepšuji.
             </p>
           </div>
 
           {/* Skills grid */}
           <div className="grid md:grid-cols-3 gap-8">
-            {serviceCategories.map((category, catIndex) => (
+            {skillCategories.map((category, catIndex) => (
               <div
                 key={category.title}
                 className="p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm"
@@ -53,8 +52,8 @@ const Skills = () => {
                   {category.skills.map((skill, skillIndex) => (
                     <div key={skill.name}>
                       <div className="flex justify-between mb-2">
-                        <span className="font-medium text-sm">{skill.name}</span>
-                        <span className="text-muted-foreground font-mono text-xs">{skill.level}%</span>
+                        <span className="font-medium">{skill.name}</span>
+                        <span className="text-muted-foreground font-mono text-sm">{skill.level}%</span>
                       </div>
                       <div className="h-2 bg-muted rounded-full overflow-hidden">
                         <div

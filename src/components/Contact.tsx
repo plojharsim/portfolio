@@ -1,4 +1,4 @@
-import { Github, Send, Copy, MessageSquare } from "lucide-react";
+import { Github, Send, Copy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 
@@ -20,30 +20,22 @@ const Contact = () => {
   return (
     <section id="kontakt" className="py-24 relative">
       <div className="container relative z-10 px-4">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-2xl mx-auto text-center">
           {/* Section header */}
           <h2 className="text-sm font-mono text-primary mb-4">// KONTAKT</h2>
           <h3 className="text-4xl md:text-5xl font-bold mb-6">
-            Nevíte přesně, <span className="text-gradient">co potřebujete?</span>
+            Pojďme <span className="text-gradient">spolupracovat</span>
           </h3>
-          <p className="text-xl text-foreground font-medium mb-4">
-            Popište mi problém a společně najdeme řešení.
-          </p>
-          <p className="text-muted-foreground text-base max-w-xl mx-auto mb-10">
-            Ať už hledáte nový web, zrychlení firemních procesů, automatizaci nebo pomoc s AI – napište mi a nezávazně to probereme.
+          <p className="text-lg text-muted-foreground mb-10">
+            Máš zajímavý projekt nebo nápad? Rád si popovídám! 
+            Neváhej mě kontaktovat.
           </p>
 
           {/* Contact options */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button variant="glow" size="lg" asChild>
-              <a href={`mailto:${emailAddress}?subject=Dotaz%20ohledně%20digitálního%20řešení`}>
-                <MessageSquare className="mr-2 h-5 w-5" />
-                Napsat e-mail
-              </a>
-            </Button>
-
+            {/* Tlačítko pro kopírování e-mailu - nyní je to čistý Button */}
             <Button 
-              variant="outline" 
+              variant="glow" 
               size="lg" 
               onClick={handleCopyEmail}
             >
