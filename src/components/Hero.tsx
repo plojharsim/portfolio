@@ -1,4 +1,4 @@
-import { Github, Mail, ArrowDown, Youtube } from "lucide-react";
+import { Mail, ArrowDown, Youtube, Github, Bot, Globe, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -16,37 +16,50 @@ const Hero = () => {
       <div className="container relative z-10 px-4 pt-12 md:pt-0">
         <div className="max-w-4xl mx-auto text-center">
           {/* Tag */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-4 md:mb-8 animate-fade-in">
-            <span className="text-sm font-mono text-primary">15 let • Programátor</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-4 md:mb-8 animate-fade-in">
+            <Zap className="h-4 w-4 text-primary" />
+            <span className="text-sm font-mono text-primary">Digitální řešení & Automatizace</span>
           </div>
 
-          {/* Name */}
-          <h1 className="text-4xl md:text-7xl lg:text-8xl font-bold mb-3 md:mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            <span className="text-foreground">Šimon</span>{" "}
-            <span className="text-gradient">Plojhar</span>
+          {/* Title */}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+            Pomáhám lidem a malým firmám <br className="hidden sm:inline" />
+            <span className="text-gradient">řešit digitální problémy</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-lg md:text-2xl text-muted-foreground mb-2 md:mb-4 font-mono animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            @plojharsim
+            Šimon Plojhar • @plojharsim
           </p>
 
           {/* Description */}
           <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 md:mb-10 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            Mladý vývojář s vášní pro vytváření moderních webových aplikací a učení se novým technologiím.
+            Tvořím moderní weby, automatizuji rutinní úkoly, propojuji AI nástroje a vyvíjím řešení na míru, která vám ušetří čas a posunou vaše podnikání dopředu.
           </p>
+
+          {/* Feature highlights */}
+          <div className="flex flex-wrap justify-center gap-4 mb-8 text-sm text-muted-foreground font-mono animate-fade-in" style={{ animationDelay: "0.35s" }}>
+            <span className="flex items-center gap-1 bg-card/60 px-3 py-1.5 rounded-md border border-border">
+              <Globe className="h-4 w-4 text-primary" /> Weby na míru
+            </span>
+            <span className="flex items-center gap-1 bg-card/60 px-3 py-1.5 rounded-md border border-border">
+              <Zap className="h-4 w-4 text-primary" /> Automatizace
+            </span>
+            <span className="flex items-center gap-1 bg-card/60 px-3 py-1.5 rounded-md border border-border">
+              <Bot className="h-4 w-4 text-primary" /> AI & Nástroje
+            </span>
+          </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 justify-center animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <Button variant="glow" size="lg" asChild>
-              <a href="#projekty">
-                Moje projekty
+              <a href="#kontakt">
+                Chci řešení na míru
               </a>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <a href="#kontakt">
-                <Mail className="mr-2 h-5 w-5" />
-                Kontaktuj mě
+              <a href="#projekty">
+                Ukázky práce
               </a>
             </Button>
           </div>
@@ -57,6 +70,7 @@ const Hero = () => {
               href="https://github.com/plojharsim"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub Profil"
               className="p-3 rounded-full border border-border bg-card hover:border-primary hover:bg-primary/10 transition-all duration-300"
             >
               <Github className="h-5 w-5 md:h-6 md:w-6" />
@@ -65,6 +79,7 @@ const Hero = () => {
               href="https://youtube.com/@plojharsim"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="YouTube Kanál"
               className="p-3 rounded-full border border-border bg-card hover:border-primary hover:bg-primary/10 transition-all duration-300"
             >
               <Youtube className="h-5 w-5 md:h-6 md:w-6" />
@@ -73,6 +88,7 @@ const Hero = () => {
               href="https://discord.com/invite/EpESXnmW8Y"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Discord Komunita"
               className="p-3 rounded-full border border-border bg-card hover:border-primary hover:bg-primary/10 transition-all duration-300"
             >
               <svg className="h-5 w-5 md:h-6 md:w-6" viewBox="0 0 24 24" fill="currentColor">
@@ -83,7 +99,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll indicator - positioned bottom on mobile to avoid overlap */}
+      {/* Scroll indicator */}
       <a 
         href="#o-mne" 
         className="absolute bottom-2 md:bottom-8 left-0 right-0 flex justify-center animate-bounce z-10 text-muted-foreground hover:text-primary transition-colors"
@@ -95,3 +111,88 @@ const Hero = () => {
 };
 
 export default Hero;
+</dyad-file>
+
+<dyad-write path="src/components/About.tsx" description="Přetvoření sekce 'O mně' na přehled služeb a řešení na míru.">
+import { Globe, Zap, Bot, Cpu } from "lucide-react";
+
+const About = () => {
+  const services = [
+    {
+      icon: Globe,
+      title: "Weby & Prezentace",
+      description: "Moderní, rychlé a responzivní webové stránky pro malé firmy, živnostníky i osobní projekty.",
+    },
+    {
+      icon: Zap,
+      title: "Automatizace procesů",
+      description: "Ušetřete čas automatizací opakovaných činností, propojením služeb a zefektivněním práce.",
+    },
+    {
+      icon: Bot,
+      title: "AI & Nástroje na míru",
+      description: "Zapojení umělé inteligence do vašeho workflow, vývoj vlastních aplikací a skriptů na míru.",
+    },
+  ];
+
+  return (
+    <section id="o-mne" className="py-24 relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
+      
+      <div className="container relative z-10 px-4">
+        <div className="max-w-4xl mx-auto">
+          {/* Section header */}
+          <div className="text-center mb-16">
+            <h2 className="text-sm font-mono text-primary mb-4">// SLUŽBY & ŘEŠENÍ</h2>
+            <h3 className="text-4xl md:text-5xl font-bold mb-6">
+              S čím vám mohu <span className="text-gradient">pomoci?</span>
+            </h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Ať už potřebujete nový web, chcete zautomatizovat nepřehledné procesy nebo využít AI ve vaší praxi, pomohu vám najít to nejlepší řešení.
+            </p>
+          </div>
+
+          {/* Highlights grid */}
+          <div className="grid md:grid-cols-3 gap-6">
+            {services.map((item, index) => (
+              <div
+                key={item.title}
+                className="group p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 hover:bg-card transition-all duration-300 card-shadow flex flex-col justify-between"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div>
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                    <item.icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <h4 className="text-xl font-semibold mb-2">{item.title}</h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Solution Code snippet / Summary box */}
+          <div className="mt-16 p-6 rounded-xl border border-border bg-card/80 backdrop-blur-sm font-mono text-sm">
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-3 h-3 rounded-full bg-destructive/80" />
+              <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
+              <div className="w-3 h-3 rounded-full bg-primary/80" />
+              <span className="ml-2 text-muted-foreground">reseni.ts</span>
+            </div>
+            <pre className="text-muted-foreground overflow-x-auto">
+              <code>
+{`const mojeSluzby = {
+  weby: ["Prezentační weby", "Webové aplikace", "Moderní design & SEO"],
+  automatizace: ["Aplikace na míru", "Propojení systémů", "Skripty & AI asistenti"],
+  pristup: "Osobní konzultace, řešení na míru a zaměření na reálný přínos pro vás"
+};`}
+              </code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default About;
