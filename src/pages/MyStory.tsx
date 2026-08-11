@@ -157,8 +157,8 @@ const MyStory = () => {
     },
     {
       year: "Nyní",
-      title: "Neustálé učení",
-      description: "Pokračuji v rozvoji svých dovedností a hledám nové výzvy, zejména v Reactu a TypeScriptu.",
+      title: "Neustálé učení & výzvy",
+      description: "Pokračuji v rozvoji svých dovedností a hledám nové výzvy — baví mě objevovat nové nástroje a přeměňovat digitální problémy ve funkční řešení.",
       icon: GraduationCap,
     },
   ];
@@ -174,7 +174,7 @@ const MyStory = () => {
             Můj <span className="text-gradient">Příběh</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Od zvědavého kluka k mladému programátorovi. Tady je moje cesta světem technologií.
+            Od zájmu o počítače až po řešení reálných digitálních výzev. Tady je moje cesta světem technologií.
           </p>
         </div>
       </section>

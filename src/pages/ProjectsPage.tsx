@@ -50,7 +50,7 @@ const ProjectsPage = () => {
             Moje <span className="text-gradient">Projekty</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Kompletní seznam mých prací, od webových aplikací až po drobné skripty a experimenty.
+            Přehled vytvořených webů, aplikací a skriptů řešících konkrétní potřeby.
           </p>
         </div>
       </section>

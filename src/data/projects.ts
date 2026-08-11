@@ -11,28 +11,28 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "Edu | by plojharsim",
-    description: "Moderní vzdělávací platforma, která mění učení v interaktivní zážitek. S chytrou správou znalostí a cloudovou synchronizací pomáhá studentům efektivněji zvládat studium.",
+    description: "Potřeba zefektivnit studium a organizaci poznámek vyžadovala chytřejší systém. Vytvořil jsem vzdělávací platformu se správou znalostí a synchronizací, která pomáhá studentům přehledněji zvládat výuku.",
     status: "Vydáno",
     tags: ["Web", "Android", "React", "Supabase"],
     demo: "https://edu.plojharsim.cz",
   },
   {
     title: "Panorama house Brdy",
-    description: "Webová prezentace pro soukromé ubytování v Brdech. Zaměřeno na přehlednost a jednoduchost rezervace.",
+    description: "Ubytování potřebovalo přehlednou prezentaci pro hosty a snadnou cestu k rezervačním dotazům. Vytvořil jsem rychlý a čistý web zaměřený na atmosféru místa a přímý kontakt.",
     status: "Vydáno",
     tags: ["Web", "React", "Tailwind"],
     demo: "https://phb.plojharsim.cz",
   },
   {
     title: "Seply",
-    description: "Profesionální webová prezentace pro servis plynových kotlů. Zaměřeno na konverzi a přehlednost služeb.",
+    description: "Servis plynových kotlů potřeboval srozumitelně představit služby a usnadnit zákazníkům objednávku servisu. Vytvořil jsem přehlednou prezentaci s důrazem na rychlé kontaktování.",
     status: "Vydáno",
     tags: ["Web", "HTML", "CSS"],
     demo: "https://seply.cz",
   },
   {
     title: "Veselé Vánoce",
-    description: "Vánoční webová stránka s odpočtem a interaktivními prvky, vytvořená pro sváteční náladu.",
+    description: "Zadání spočívalo ve vytvoření zábavného a svátečního prvku pro návštěvníky. Vytvořil jsem responzivní web s odpočítáváním a svátečními interaktivními efekty.",
     status: "Vydáno",
     tags: ["Next.js", "React", "TypeScript", "Firebase"],
     demo: "https://vanoce.plojharsim.cz",

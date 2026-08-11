@@ -1,4 +1,4 @@
-import { Github, Send, Copy } from "lucide-react";
+import { Github, Send, Copy, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 
@@ -24,37 +24,50 @@ const Contact = () => {
           {/* Section header */}
           <h2 className="text-sm font-mono text-primary mb-4">// KONTAKT</h2>
           <h3 className="text-4xl md:text-5xl font-bold mb-6">
-            Pojďme <span className="text-gradient">spolupracovat</span>
+            Máte problém <span className="text-gradient">nebo nápad?</span>
           </h3>
           <p className="text-lg text-muted-foreground mb-10">
-            Máš zajímavý projekt nebo nápad? Rád si popovídám! 
-            Neváhej mě kontaktovat.
+            Napište mi, i když přesně nevíte, jaké řešení potřebujete. 
+            Popište mi svůj problém a společně najdeme správnou cestu.
           </p>
 
           {/* Contact options */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            {/* Tlačítko pro kopírování e-mailu - nyní je to čistý Button */}
             <Button 
               variant="glow" 
+              size="lg" 
+              asChild
+            >
+              <a href={`mailto:${emailAddress}?subject=Popis%20probl%C3%A9mu`}>
+                Popište mi svůj problém <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
+            </Button>
+            
+            <Button 
+              variant="outline" 
               size="lg" 
               onClick={handleCopyEmail}
             >
               <Copy className="mr-2 h-5 w-5" />
               Kopírovat e-mail
             </Button>
-            
-            <Button variant="outline" size="lg" asChild>
-              <a href="https://github.com/plojharsim" target="_blank" rel="noopener noreferrer">
-                <Github className="mr-2 h-5 w-5" />
-                GitHub
-              </a>
-            </Button>
           </div>
 
-          {/* Email display */}
-          <div className="inline-flex items-center gap-3 px-6 py-4 rounded-xl border border-border bg-card/50 backdrop-blur-sm">
-            <Send className="h-5 w-5 text-primary" />
-            <span className="font-mono text-muted-foreground">{emailAddress}</span>
+          {/* Email display and GitHub */}
+          <div className="flex flex-wrap justify-center items-center gap-4">
+            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-xl border border-border bg-card/50 backdrop-blur-sm">
+              <Send className="h-5 w-5 text-primary" />
+              <span className="font-mono text-muted-foreground">{emailAddress}</span>
+            </div>
+            <a
+              href="https://github.com/plojharsim"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border bg-card/50 hover:border-primary/50 backdrop-blur-sm text-muted-foreground hover:text-primary transition-all duration-300"
+            >
+              <Github className="h-5 w-5" />
+              <span className="font-mono">GitHub</span>
+            </a>
           </div>
         </div>
       </div>

@@ -35,12 +35,12 @@ const Projects = () => {
       <div className="container relative z-10 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-sm font-mono text-primary mb-4">// PROJEKTY</h2>
+            <h2 className="text-sm font-mono text-primary mb-4">// PROJEKTY & ŘEŠENÍ</h2>
             <h3 className="text-4xl md:text-5xl font-bold mb-6">
-              Na čem <span className="text-gradient">pracuji</span>
+              Ukázky <span className="text-gradient">řešení</span>
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Ukázka mých nejzajímavějších projektů.
+              Ukázka projektů, kde jsem řešil konkrétní potřeby a zadání.
             </p>
           </div>
 

@@ -1,4 +1,4 @@
-import { Github, Mail, ArrowDown, Youtube } from "lucide-react";
+import { Github, Mail, ArrowDown, Youtube, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -17,36 +17,35 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Tag */}
           <div className="inline-flex items-center px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-4 md:mb-8 animate-fade-in">
-            <span className="text-sm font-mono text-primary">15 let • Programátor</span>
+            <span className="text-sm font-mono text-primary">15 let • Řešení digitálních problémů</span>
           </div>
 
-          {/* Name */}
-          <h1 className="text-4xl md:text-7xl lg:text-8xl font-bold mb-3 md:mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            <span className="text-foreground">Šimon</span>{" "}
-            <span className="text-gradient">Plojhar</span>
+          {/* Name & Headline */}
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-6 animate-fade-in tracking-tight" style={{ animationDelay: "0.1s" }}>
+            <span className="text-foreground">Pomáhám lidem a malým firmám řešit </span>
+            <span className="text-gradient">digitální problémy.</span>
           </h1>
 
-          {/* Subtitle */}
-          <p className="text-lg md:text-2xl text-muted-foreground mb-2 md:mb-4 font-mono animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            @plojharsim
+          {/* Author */}
+          <p className="text-base md:text-xl text-muted-foreground mb-4 md:mb-6 font-mono animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            Šimon Plojhar <span className="text-primary/70">(@plojharsim)</span>
           </p>
 
           {/* Description */}
-          <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 md:mb-10 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            Mladý vývojář s vášní pro vytváření moderních webových aplikací a učení se novým technologiím.
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-6 md:mb-10 animate-fade-in leading-relaxed" style={{ animationDelay: "0.3s" }}>
+            Od webů a automatizací až po vlastní nástroje, AI a další řešení na míru. Nevíte přesně, co potřebujete? Popište mi problém a společně najdeme řešení.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 justify-center animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <Button variant="glow" size="lg" asChild>
-              <a href="#projekty">
-                Moje projekty
+              <a href="#kontakt">
+                Popište mi problém <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <a href="#kontakt">
-                <Mail className="mr-2 h-5 w-5" />
-                Kontaktuj mě
+              <a href="#projekty">
+                Moje projekty
               </a>
             </Button>
           </div>
@@ -70,7 +69,7 @@ const Hero = () => {
               <Youtube className="h-5 w-5 md:h-6 md:w-6" />
             </a>
             <a
-              href="https://discord.com/invite/EpESXnmW8Y"
+              href="https://discord.com/users/1305887518448685078"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full border border-border bg-card hover:border-primary hover:bg-primary/10 transition-all duration-300"
