@@ -19,7 +19,7 @@ Web je postaven na moderním frontendovém stacku:
 
 ## Kontakt
 
-Pokud mě chceš kontaktovat, můžeš tak učinit skrze e-mail **plojharsim@gmail.com** nebo mě sledovat na mém [GitHubu](https://github.com/plojharsim).
+Pokud mě chceš kontaktovat, můžeš tak učinit skrze e-mail **kontakt@plojharsim.cz** nebo mě sledovat na mém [GitHubu](https://github.com/plojharsim).
 
 ---
 *Vytvořeno s vášní v České republice.*
