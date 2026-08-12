@@ -1,11 +1,46 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { ExternalLink, Github, Folder, Code2, Layout, Database, Smartphone, ShoppingCart, Gift, Home, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { projects } from "@/data/projects";
 
 const ProjectsPage = () => {
+  const projectsSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Domů",
+            "item": "https://plojharsim.cz/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projekty",
+            "item": "https://plojharsim.cz/projekty"
+          }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "name": "Projekty a digitální řešení | plojharsim",
+        "url": "https://plojharsim.cz/projekty",
+        "itemListElement": projects.map((p, i) => ({
+          "@type": "ListItem",
+          "position": i + 1,
+          "name": p.title,
+          "description": p.description,
+          "url": p.demo || "https://plojharsim.cz/projekty"
+        }))
+      }
+    ]
+  };
   // Definice barev pro statusy
   const getStatusDetails = (status: string) => {
     switch (status) {
@@ -42,6 +77,13 @@ const ProjectsPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Projekty a digitální řešení | Šimon Plojhar - plojharsim"
+        description="Ukázka reálných projektů, webových aplikací a digitálních nástrojů vytvořených Šimonem Plojharem pro lidi a malé firmy."
+        keywords="projekty, tvorba webů, webové aplikace, digitální řešení, software na míru, plojharsim, Šimon Plojhar"
+        canonicalUrl="https://plojharsim.cz/projekty"
+        schema={projectsSchema}
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 px-4">

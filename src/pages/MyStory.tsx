@@ -1,8 +1,42 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { BookOpen, Rocket, Code, Gamepad2, GraduationCap, Heart, Monitor, Printer, Keyboard, FileText, Server, Cpu } from "lucide-react";
 
 const MyStory = () => {
+  const storySchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Domů",
+            "item": "https://plojharsim.cz/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Můj příběh",
+            "item": "https://plojharsim.cz/muj-pribeh"
+          }
+        ]
+      },
+      {
+        "@type": "ProfilePage",
+        "name": "Můj příběh | Šimon Plojhar - plojharsim",
+        "url": "https://plojharsim.cz/muj-pribeh",
+        "mainEntity": {
+          "@type": "Person",
+          "name": "Šimon Plojhar",
+          "alternateName": "plojharsim",
+          "homeLocation": "Příbram, Česká republika"
+        }
+      }
+    ]
+  };
   const vzdelaniBudoucnostiLink = (
     <a 
       href="https://vzdelanibudoucnosti.cz" 
@@ -165,6 +199,14 @@ const MyStory = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Můj příběh | Šimon Plojhar - plojharsim"
+        description="Příběh 15letého tvůrce Šimona Plojhara z Příbrami. Od zvědavosti o technologie k řešení reálných digitálních výzev pro lidi a malé firmy."
+        keywords="Šimon Plojhar, plojharsim, Příbram, Příbramsko, můj příběh, zkušenosti, vývojář, technologie"
+        canonicalUrl="https://plojharsim.cz/muj-pribeh"
+        ogType="profile"
+        schema={storySchema}
+      />
       <Navigation />
       
       {/* Hero Section */}

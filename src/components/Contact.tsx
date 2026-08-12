@@ -22,13 +22,13 @@ const Contact = () => {
       <div className="container relative z-10 px-4">
         <div className="max-w-2xl mx-auto text-center">
           {/* Section header */}
-          <h2 className="text-sm font-mono text-primary mb-4">// KONTAKT</h2>
-          <h3 className="text-4xl md:text-5xl font-bold mb-6">
+          <p className="text-sm font-mono text-primary mb-4">// KONTAKT</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Máte problém <span className="text-gradient">nebo nápad?</span>
-          </h3>
+          </h2>
           <p className="text-lg text-muted-foreground mb-10">
             Napište mi, i když přesně nevíte, jaké řešení potřebujete. 
-            Popište mi svůj problém a společně najdeme správnou cestu.
+            Působím v Příbrami a řeším digitální výzvy pro lidi a malé firmy z celé ČR. Popište mi svůj problém a společně najdeme nejlepší cestu.
           </p>
 
           {/* Contact options */}

@@ -35,10 +35,10 @@ const Projects = () => {
       <div className="container relative z-10 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-sm font-mono text-primary mb-4">// PROJEKTY & ŘEŠENÍ</h2>
-            <h3 className="text-4xl md:text-5xl font-bold mb-6">
+            <p className="text-sm font-mono text-primary mb-4">// PROJEKTY & ŘEŠENÍ</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ukázky <span className="text-gradient">řešení</span>
-            </h3>
+            </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Ukázka projektů, kde jsem řešil konkrétní potřeby a zadání.
             </p>
@@ -59,6 +59,7 @@ const Projects = () => {
                         className="text-muted-foreground hover:text-primary transition-colors"
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label={`Živé demo projektu ${project.title}`}
                       >
                         <ExternalLink className="h-5 w-5" />
                       </a>
@@ -72,9 +73,9 @@ const Projects = () => {
                   </Badge>
                 </div>
 
-                <h4 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
                   {project.title}
-                </h4>
+                </h3>
                 <p className="text-muted-foreground text-sm mb-4 flex-grow">
                   {project.description}
                 </p>

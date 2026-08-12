@@ -27,12 +27,12 @@ const About = () => {
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <h2 className="text-sm font-mono text-primary mb-4">// O MNĚ</h2>
-            <h3 className="text-4xl md:text-5xl font-bold mb-6">
+            <p className="text-sm font-mono text-primary mb-4">// O MNĚ</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Kdo <span className="text-gradient">jsem?</span>
-            </h3>
+            </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Jsem Šimon, 15letý tvůrce z České republiky. Baví mě technologie, zkoušení nových věcí, 
+              Jsem Šimon, 15letý tvůrce z Příbrami v České republice. Baví mě technologie, zkoušení nových věcí, 
               hledání řešení a především přeměna problémů v něco, co spolehlivě funguje.
             </p>
           </div>
@@ -48,7 +48,7 @@ const About = () => {
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                   <item.icon className="h-6 w-6 text-primary" />
                 </div>
-                <h4 className="text-xl font-semibold mb-2">{item.title}</h4>
+                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                 <p className="text-muted-foreground">{item.description}</p>
               </div>
             ))}
@@ -68,7 +68,7 @@ const About = () => {
   jmeno: "Šimon Plojhar",
   prezdivka: "plojharsim",
   vek: 15,
-  lokace: "Česká republika 🇨🇿",
+  lokace: "Příbram, Česká republika 🇨🇿",
   zamereni: "Řešení digitálních problémů",
   nastroje: ["Weby & Aplikace", "Automatizace", "AI", "Vlastní skripty"],
   zajmy: ["Technologie", "Hledání řešení", "Selfhosting"]

@@ -1,12 +1,49 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Calendar, Clock, ArrowRight, MessageSquareOff } from "lucide-react";
 import { Link } from "react-router-dom";
 import { blogPosts } from "@/data/blog";
 
 const Blog = () => {
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Domů",
+            "item": "https://plojharsim.cz/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://plojharsim.cz/blog"
+          }
+        ]
+      },
+      {
+        "@type": "Blog",
+        "name": "Blog | plojharsim",
+        "url": "https://plojharsim.cz/blog",
+        "description": "Zkušenosti, postřehy a nápady z oblasti řešení digitálních problémů, webů, automatizací a AI od Šimona Plojhara."
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Blog o technologiích a digitálních řešeních | plojharsim"
+        description="Články, zkušenosti a postřehy o vývoji webů, webových aplikací, automatizaci a AI od Šimona Plojhara (plojharsim)."
+        keywords="blog, technologie, automatizace, AI, tvorba webů, webové aplikace, plojharsim, Šimon Plojhar"
+        canonicalUrl="https://plojharsim.cz/blog"
+        schema={blogSchema}
+      />
       <Navigation />
       
       <section className="pt-32 pb-16 px-4">

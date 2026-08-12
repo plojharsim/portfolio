@@ -55,11 +55,11 @@ const Navigation = () => {
   const shouldHaveBlur = isScrolled || isMobileMenuOpen;
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${shouldHaveBlur ? "bg-background/80 backdrop-blur-md border-b border-border" : "bg-transparent"}`}>
+    <nav aria-label="Hlavní navigace" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${shouldHaveBlur ? "bg-background/80 backdrop-blur-md border-b border-border" : "bg-transparent"}`}>
       <div className="container px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="/" onClick={(e) => handleNavClick(e, "/")} className="text-xl font-bold text-gradient">
+          <a href="/" onClick={(e) => handleNavClick(e, "/")} aria-label="plojharsim - úvodní stránka" className="text-xl font-bold text-gradient">
             plojharsim
           </a>
 
@@ -81,7 +81,11 @@ const Navigation = () => {
           </div>
 
           {/* Mobile menu button */}
-          <button className="md:hidden p-2 text-foreground" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          <button
+            className="md:hidden p-2 text-foreground"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? "Zavřít menu" : "Otevřít menu"}
+          >
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>

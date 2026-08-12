@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { Calendar, Clock, ArrowLeft, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -13,8 +14,63 @@ const BlogPost = () => {
     return <Navigate to="/blog" replace />;
   }
 
+  const postSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Domů",
+            "item": "https://plojharsim.cz/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://plojharsim.cz/blog"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": post.title,
+            "item": `https://plojharsim.cz/blog/${post.id}`
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": post.title,
+        "description": post.excerpt,
+        "url": `https://plojharsim.cz/blog/${post.id}`,
+        "datePublished": "2026-08-11",
+        "inLanguage": "cs",
+        "author": {
+          "@type": "Person",
+          "name": post.author || "Šimon Plojhar",
+          "url": "https://plojharsim.cz/"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Šimon Plojhar",
+          "url": "https://plojharsim.cz/"
+        }
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={`${post.title} | Blog plojharsim`}
+        description={post.excerpt}
+        keywords={`${post.category}, blog, plojharsim, Šimon Plojhar, digitální řešení`}
+        canonicalUrl={`https://plojharsim.cz/blog/${post.id}`}
+        ogType="article"
+        schema={postSchema}
+      />
       <Navigation />
       
       <article className="pt-32 pb-16 px-4">

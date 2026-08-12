@@ -28,10 +28,10 @@ const Skills = () => {
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <h2 className="text-sm font-mono text-primary mb-4">// NÁSTROJE & ŘEŠENÍ</h2>
-            <h3 className="text-4xl md:text-5xl font-bold mb-6">
+            <p className="text-sm font-mono text-primary mb-4">// NÁSTROJE & ŘEŠENÍ</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Moje <span className="text-gradient">nástroje</span>
-            </h3>
+            </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Technologie pro mě nejsou produktem samotným, ale nástroji, které používám k řešení konkrétních problémů.
             </p>
@@ -48,9 +48,9 @@ const Skills = () => {
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
                     <category.icon className="h-6 w-6 text-primary" />
                   </div>
-                  <h4 className="text-xl font-semibold mb-3 text-foreground group-hover:text-primary transition-colors">
+                  <h3 className="text-xl font-semibold mb-3 text-foreground group-hover:text-primary transition-colors">
                     {category.title}
-                  </h4>
+                  </h3>
                   <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
                     {category.description}
                   </p>
