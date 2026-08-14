@@ -4,18 +4,18 @@ const About = () => {
   const highlights = [
     {
       icon: Code2,
-      title: "Řešení problémů",
-      description: "Baví mě objevovat způsoby, jak pomocí technologií zjednodušit práci a každodenní fungování.",
+      title: "Vášeň pro kód",
+      description: "Miluji řešení problémů pomocí kódu a vytváření užitečných aplikací.",
     },
     {
       icon: Lightbulb,
-      title: "Moderní nástroje",
-      description: "Využívám weby, automatizace, AI i vlastní skripty podle toho, co je pro daný úkol nejlepší.",
+      title: "Neustálé učení",
+      description: "Každý den se učím nové technologie a zlepšuji své dovednosti.",
     },
     {
       icon: Rocket,
-      title: "Individuální přístup",
-      description: "Pomáhám lidem a malým firmám najít přesné řešení na míru, bez zbytečné složitosti.",
+      title: "Ambiciózní cíle",
+      description: "Chci se stát profesionálním vývojářem a pracovat na zajímavých projektech.",
     },
   ];
 
@@ -27,13 +27,13 @@ const About = () => {
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <p className="text-sm font-mono text-primary mb-4">// O MNĚ</p>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-sm font-mono text-primary mb-4">// O MNĚ</h2>
+            <h3 className="text-4xl md:text-5xl font-bold mb-6">
               Kdo <span className="text-gradient">jsem?</span>
-            </h2>
+            </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Jsem Šimon, 15letý tvůrce z Příbrami v České republice. Baví mě technologie, zkoušení nových věcí, 
-              hledání řešení a především přeměna problémů v něco, co spolehlivě funguje.
+              Jsem Šimon, 15letý programátor z České republiky. Začal jsem programovat 
+              z čisté zvědavosti a teď je to moje největší vášeň.
             </p>
           </div>
 
@@ -48,7 +48,7 @@ const About = () => {
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                   <item.icon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                <h4 className="text-xl font-semibold mb-2">{item.title}</h4>
                 <p className="text-muted-foreground">{item.description}</p>
               </div>
             ))}
@@ -68,10 +68,9 @@ const About = () => {
   jmeno: "Šimon Plojhar",
   prezdivka: "plojharsim",
   vek: 15,
-  lokace: "Příbram, Česká republika 🇨🇿",
-  zamereni: "Řešení digitálních problémů",
-  nastroje: ["Weby & Aplikace", "Automatizace", "AI", "Vlastní skripty"],
-  zajmy: ["Technologie", "Hledání řešení", "Selfhosting"]
+  lokace: "Česká republika 🇨🇿",
+  jazyky: ["Python", "HTML", "JavaScript"],
+  zajmy: ["Programování", "Selfhosting", "Turistika"]
 };`}
               </code>
             </pre>

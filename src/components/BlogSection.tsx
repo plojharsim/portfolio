@@ -26,12 +26,12 @@ const BlogSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <p className="text-sm font-mono text-primary mb-4">// BLOG</p>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-sm font-mono text-primary mb-4">// BLOG</h2>
+            <h3 className="text-4xl md:text-5xl font-bold mb-6">
               Poslední <span className="text-gradient">články</span>
-            </h2>
+            </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Sdílím své myšlenky a zkušenosti ze světa technologií a digitálních řešení.
+              Sdílím své myšlenky a zkušenosti ze světa technologií.
             </p>
           </div>
 
@@ -55,9 +55,9 @@ const BlogSection = () => {
                     </div>
                     
                     <Link to={`/blog/${post.id}`}>
-                      <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                      <h4 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors line-clamp-2">
                         {post.title}
-                      </h3>
+                      </h4>
                     </Link>
                     
                     <p className="text-muted-foreground text-sm mb-6 flex-grow line-clamp-3">

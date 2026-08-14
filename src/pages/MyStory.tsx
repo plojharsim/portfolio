@@ -1,42 +1,8 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SEO from "@/components/SEO";
 import { BookOpen, Rocket, Code, Gamepad2, GraduationCap, Heart, Monitor, Printer, Keyboard, FileText, Server, Cpu } from "lucide-react";
 
 const MyStory = () => {
-  const storySchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Domů",
-            "item": "https://plojharsim.cz/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Můj příběh",
-            "item": "https://plojharsim.cz/muj-pribeh"
-          }
-        ]
-      },
-      {
-        "@type": "ProfilePage",
-        "name": "Můj příběh | Šimon Plojhar - plojharsim",
-        "url": "https://plojharsim.cz/muj-pribeh",
-        "mainEntity": {
-          "@type": "Person",
-          "name": "Šimon Plojhar",
-          "alternateName": "plojharsim",
-          "homeLocation": "Příbram, Česká republika"
-        }
-      }
-    ]
-  };
   const vzdelaniBudoucnostiLink = (
     <a 
       href="https://vzdelanibudoucnosti.cz" 
@@ -191,22 +157,14 @@ const MyStory = () => {
     },
     {
       year: "Nyní",
-      title: "Neustálé učení & výzvy",
-      description: "Pokračuji v rozvoji svých dovedností a hledám nové výzvy — baví mě objevovat nové nástroje a přeměňovat digitální problémy ve funkční řešení.",
+      title: "Neustálé učení",
+      description: "Pokračuji v rozvoji svých dovedností a hledám nové výzvy, zejména v Reactu a TypeScriptu.",
       icon: GraduationCap,
     },
   ];
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO
-        title="Můj příběh | Šimon Plojhar - plojharsim"
-        description="Příběh 15letého tvůrce Šimona Plojhara z Příbrami. Od zvědavosti o technologie k řešení reálných digitálních výzev pro lidi a malé firmy."
-        keywords="Šimon Plojhar, plojharsim, Příbram, Příbramsko, můj příběh, zkušenosti, vývojář, technologie"
-        canonicalUrl="https://plojharsim.cz/muj-pribeh"
-        ogType="profile"
-        schema={storySchema}
-      />
       <Navigation />
       
       {/* Hero Section */}
@@ -216,7 +174,7 @@ const MyStory = () => {
             Můj <span className="text-gradient">Příběh</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Od zájmu o počítače až po řešení reálných digitálních výzev. Tady je moje cesta světem technologií.
+            Od zvědavého kluka k mladému programátorovi. Tady je moje cesta světem technologií.
           </p>
         </div>
       </section>
