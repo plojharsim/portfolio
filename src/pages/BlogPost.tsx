@@ -27,6 +27,12 @@ const BlogPost = () => {
           </Button>
 
           <header className="mb-12">
+            <div className="mb-4">
+              <span className="px-2.5 py-1 rounded-md bg-primary/10 text-primary font-mono text-xs uppercase tracking-wider">
+                {post.category}
+              </span>
+            </div>
+
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               {post.title}
             </h1>
@@ -48,7 +54,7 @@ const BlogPost = () => {
           </header>
 
           <div 
-            className="prose prose-invert prose-primary max-w-none text-lg leading-relaxed text-muted-foreground"
+            className="prose prose-invert max-w-none text-lg leading-relaxed prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-foreground prose-h2:text-2xl md:prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-4 prose-h3:text-xl md:prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-3 prose-p:my-5 prose-ul:my-5 prose-ul:list-disc prose-ul:pl-6 prose-li:my-2 prose-strong:text-foreground prose-a:text-primary hover:prose-a:underline"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 

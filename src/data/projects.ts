@@ -10,6 +10,13 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "LUGAS s.r.o.",
+    description: "Webová prezentace pro odborného revizáka plynových zařízení. Zaměřeno na přehlednost nabízených služeb a snadné sjednání revize.",
+    status: "Vydáno",
+    tags: ["Web", "React", "CSS"],
+    demo: "https://lugas.cz",
+  },
+  {
     title: "Edu | by plojharsim",
     description: "Moderní vzdělávací platforma, která mění učení v interaktivní zážitek. S chytrou správou znalostí a cloudovou synchronizací pomáhá studentům efektivněji zvládat studium.",
     status: "Vydáno",
@@ -21,7 +28,7 @@ export const projects: Project[] = [
     description: "Webová prezentace pro soukromé ubytování v Brdech. Zaměřeno na přehlednost a jednoduchost rezervace.",
     status: "Vydáno",
     tags: ["Web", "React", "Tailwind"],
-    demo: "https://phb.plojharsim.cz",
+    demo: "https://osec.cz",
   },
   {
     title: "Seply",
@@ -35,6 +42,5 @@ export const projects: Project[] = [
     description: "Vánoční webová stránka s odpočtem a interaktivními prvky, vytvořená pro sváteční náladu.",
     status: "Vydáno",
     tags: ["Next.js", "React", "TypeScript", "Firebase"],
-    demo: "https://vanoce.plojharsim.cz",
   },
 ];

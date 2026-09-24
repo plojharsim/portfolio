@@ -1,4 +1,4 @@
-import { ExternalLink, Folder, ArrowRight } from "lucide-react";
+import { ExternalLink, Folder, ArrowRight, Flame, Layout } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
@@ -18,9 +18,15 @@ const Projects = () => {
     }
   };
 
-  // Vybereme pouze Edu a Seply pro zobrazení na hlavní stránce
+  const projectIcons: Record<string, React.ComponentType<{ className?: string }>> = {
+    "LUGAS s.r.o.": Flame,
+    "Lugas": Flame,
+    "Seply": Layout,
+  };
+
+  // Vybereme pouze LUGAS s.r.o. a Seply pro zobrazení na hlavní stránce
   const featuredProjects = projects.filter(project =>
-    project.title === "Edu | by plojharsim" || project.title === "Seply"
+    project.title === "LUGAS s.r.o." || project.title === "Seply"
   );
 
   const handleShowAllProjects = () => {
@@ -45,13 +51,15 @@ const Projects = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {featuredProjects.map((project, index) => (
-              <div
-                key={project.title}
-                className="group p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 flex flex-col"
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <Folder className="h-10 w-10 text-primary" />
+            {featuredProjects.map((project) => {
+              const Icon = projectIcons[project.title] || Folder;
+              return (
+                <div
+                  key={project.title}
+                  className="group p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 flex flex-col"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <Icon className="h-10 w-10 text-primary" />
                   <div className="flex gap-2">
                     {project.demo && (
                       <a
@@ -90,7 +98,8 @@ const Projects = () => {
                   ))}
                 </div>
               </div>
-            ))}
+            );
+          })}
           </div>
 
           <div className="text-center mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
