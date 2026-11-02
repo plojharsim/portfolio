@@ -1,4 +1,4 @@
-import { ExternalLink, Folder, ArrowRight, Flame, Layout } from "lucide-react";
+import { ExternalLink, Folder, ArrowRight, Flame, Layout, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
@@ -22,11 +22,12 @@ const Projects = () => {
     "LUGAS s.r.o.": Flame,
     "Lugas": Flame,
     "Seply": Layout,
+    "Classmate": Users,
   };
 
-  // Vybereme pouze LUGAS s.r.o. a Seply pro zobrazení na hlavní stránce
+  // Vybereme pouze Classmate (vlevo) a LUGAS s.r.o. (vpravo) pro zobrazení na hlavní stránce
   const featuredProjects = projects.filter(project =>
-    project.title === "LUGAS s.r.o." || project.title === "Seply"
+    project.title === "Classmate" || project.title === "LUGAS s.r.o."
   );
 
   const handleShowAllProjects = () => {
