@@ -1,4 +1,5 @@
 import { Code2, Lightbulb, Rocket } from "lucide-react";
+import { getAge } from "@/lib/age";
 
 const About = () => {
   const highlights = [
@@ -32,7 +33,7 @@ const About = () => {
               Kdo <span className="text-gradient">jsem?</span>
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Jsem Šimon, 15letý programátor z České republiky. Začal jsem programovat 
+              Jsem Šimon, {getAge()}letý programátor z České republiky. Začal jsem programovat 
               z čisté zvědavosti a teď je to moje největší vášeň.
             </p>
           </div>
@@ -67,7 +68,7 @@ const About = () => {
 {`const plojharsim = {
   jmeno: "Šimon Plojhar",
   prezdivka: "plojharsim",
-  vek: 15,
+  vek: ${getAge()},
   lokace: "Česká republika 🇨🇿",
   jazyky: ["Python", "HTML", "JavaScript"],
   zajmy: ["Programování", "Selfhosting", "Turistika"]

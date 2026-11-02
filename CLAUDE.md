@@ -1,6 +1,6 @@
 # Portfolio – plojharsim.cz
 
-Osobní portfolio Šimona Plojhara (15 let, programátor z ČR). Web je česky (`lang="cs"`), veškerý obsah a texty piš česky se správnou mluvnicí.
+Osobní portfolio Šimona Plojhara (narozen 16. 9. 2010, věk se počítá automaticky přes `src/lib/age.ts`; v `index.html` se `%AGE%` doplní při buildu). Web je česky (`lang="cs"`), veškerý obsah a texty piš česky se správnou mluvnicí.
 
 ## Nasazení
 - GitHub: `plojharsim/portfolio`, větev `main`.
