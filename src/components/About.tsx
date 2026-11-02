@@ -71,7 +71,7 @@ const About = () => {
   vek: ${getAge()},
   lokace: "Česká republika 🇨🇿",
   jazyky: ["Python", "HTML", "JavaScript"],
-  zajmy: ["Programování", "Selfhosting", "Turistika"]
+  zajmy: ["Vibecoding", "Selfhosting", "Turistika"]
 };`}
               </code>
             </pre>
