@@ -1,30 +1,47 @@
-const Skills = () => {
-  const skillCategories = [
-    {
-      title: "Frontend",
-      skills: [
-        { name: "HTML", level: 65 },
-        { name: "Tailwind", level: 30 },
-      ],
-    },
-    {
-      title: "Backend",
-      skills: [
-        { name: "Python", level: 85 },
-        { name: "Bash", level: 60 },
-      ],
-    },
-    {
-      title: "Nástroje",
-      skills: [
-        { name: "Git", level: 60 },
-        { name: "VS Code", level: 90 },
-        { name: "Figma", level: 45 },
-        { name: "AI", level: 85 },
-      ],
-    },
-  ];
+type Frequency = "Každodenně" | "Pravidelně" | "Učím se";
 
+interface Skill {
+  name: string;
+  use: string;
+  frequency: Frequency;
+}
+
+const frequencyStyles: Record<Frequency, string> = {
+  "Každodenně": "bg-emerald-500/10 text-emerald-500 border-emerald-500/20",
+  "Pravidelně": "bg-primary/10 text-primary border-primary/20",
+  "Učím se": "bg-amber-500/10 text-amber-500 border-amber-500/20",
+};
+
+const skillCategories: { title: string; skills: Skill[] }[] = [
+  {
+    title: "Frontend",
+    skills: [
+      { name: "React", use: "Webové prezentace i aplikace jako Classmate", frequency: "Pravidelně" },
+      { name: "HTML", use: "Základ každého webu, který stavím", frequency: "Pravidelně" },
+      { name: "Tailwind", use: "Rychlé stylování rozhraní", frequency: "Učím se" },
+      { name: "TypeScript", use: "Typově bezpečný kód v Reactu", frequency: "Učím se" },
+    ],
+  },
+  {
+    title: "Backend a systémy",
+    skills: [
+      { name: "Python", use: "Můj první jazyk, skripty a nástroje", frequency: "Každodenně" },
+      { name: "Bash", use: "Práce v terminálu a správa serverů", frequency: "Pravidelně" },
+      { name: "Linux", use: "Desktop i server, Raspberry Pi, selfhosting", frequency: "Každodenně" },
+    ],
+  },
+  {
+    title: "Nástroje",
+    skills: [
+      { name: "AI a vibecoding", use: "Vývoj s AI asistenty, včetně MCP", frequency: "Každodenně" },
+      { name: "VS Code", use: "Hlavní editor", frequency: "Každodenně" },
+      { name: "Git a GitHub", use: "Verzování a nasazení přes Vercel", frequency: "Pravidelně" },
+      { name: "Figma", use: "Návrhy rozhraní", frequency: "Učím se" },
+    ],
+  },
+];
+
+const Skills = () => {
   return (
     <section id="dovednosti" className="py-24 relative">
       <div className="container relative z-10 px-4">
@@ -42,28 +59,24 @@ const Skills = () => {
 
           {/* Skills grid */}
           <div className="grid md:grid-cols-3 gap-8">
-            {skillCategories.map((category, catIndex) => (
+            {skillCategories.map((category) => (
               <div
                 key={category.title}
                 className="p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm"
               >
                 <h4 className="text-xl font-semibold mb-6 text-primary">{category.title}</h4>
                 <div className="space-y-5">
-                  {category.skills.map((skill, skillIndex) => (
+                  {category.skills.map((skill) => (
                     <div key={skill.name}>
-                      <div className="flex justify-between mb-2">
+                      <div className="flex items-center justify-between gap-2 mb-1">
                         <span className="font-medium">{skill.name}</span>
-                        <span className="text-muted-foreground font-mono text-sm">{skill.level}%</span>
+                        <span
+                          className={`px-2 py-0.5 rounded-full border text-xs font-mono whitespace-nowrap ${frequencyStyles[skill.frequency]}`}
+                        >
+                          {skill.frequency}
+                        </span>
                       </div>
-                      <div className="h-2 bg-muted rounded-full overflow-hidden">
-                        <div
-                          className="h-full bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-1000"
-                          style={{
-                            width: `${skill.level}%`,
-                            animationDelay: `${catIndex * 0.2 + skillIndex * 0.1}s`,
-                          }}
-                        />
-                      </div>
+                      <p className="text-sm text-muted-foreground">{skill.use}</p>
                     </div>
                   ))}
                 </div>

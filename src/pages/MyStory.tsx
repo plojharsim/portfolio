@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { BookOpen, Rocket, Code, Gamepad2, GraduationCap, Heart, Monitor, Printer, Keyboard, FileText, Server, Cpu } from "lucide-react";
+import { BookOpen, Rocket, Code, Gamepad2, GraduationCap, Heart, Monitor, Gift, Printer, Keyboard, FileText, Server, Cpu } from "lucide-react";
 
 const MyStory = () => {
   const vzdelaniBudoucnostiLink = (
@@ -154,6 +154,36 @@ const MyStory = () => {
       title: "První kroky s desktopovým Linuxem",
       description: "Začal jsem využívat desktopové distribuce Linuxu jako svůj hlavní systém pro vývoj a každodenní práci.",
       icon: Server,
+    },
+    {
+      year: "Prosinec 2025",
+      title: "Veselé Vánoce",
+      description: "Vytvořil jsem malý vánoční projekt: webovou stránku s odpočtem a interaktivními prvky.",
+      icon: Gift,
+    },
+    {
+      year: "Únor 2026",
+      title: "Vytvořil jsem Edu | by plojharsim",
+      description: "Postavil jsem vzdělávací platformu, která mění učení v interaktivní zážitek, s chytrou správou znalostí a cloudovou synchronizací.",
+      icon: Rocket,
+    },
+    {
+      year: "Květen 2026",
+      title: "Přijali mě na SSPŠ",
+      description: "Dostal jsem se na SSPŠ, což pro mě znamenalo začátek další kapitoly.",
+      icon: GraduationCap,
+    },
+    {
+      year: "Září 2026",
+      title: "Nástup na SSPŠ",
+      description: "Nastoupil jsem na SSPŠ a začal studovat.",
+      icon: BookOpen,
+    },
+    {
+      year: "Říjen 2026",
+      title: "Postavil jsem Classmate",
+      description: "Vytvořil jsem Classmate, aplikaci pro celou třídu nebo školu s rozvrhem z Bakalářů, společnými úkoly, testy a poznámkami.",
+      icon: Rocket,
     },
     {
       year: "Nyní",
