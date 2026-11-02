@@ -1,6 +1,6 @@
 # Šimon Plojhar | Portfolio
 
-Osobní webové portfolio programátora z České republiky – [plojharsim.cz](https://plojharsim.cz). Prezentuje moje projekty, dovednosti, příběh a blog.
+Osobní webové portfolio studenta z České republiky – [plojharsim.cz](https://plojharsim.cz). Prezentuje moje projekty, dovednosti, příběh a blog.
 
 ## Technologie
 

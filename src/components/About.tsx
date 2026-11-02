@@ -33,7 +33,7 @@ const About = () => {
               Kdo <span className="text-gradient">jsem?</span>
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Jsem Šimon, {getAge()}letý programátor z České republiky. Začal jsem programovat 
+              Jsem Šimon, {getAge()}letý student z České republiky. Začal jsem programovat 
               z čisté zvědavosti a teď je to moje největší vášeň.
             </p>
           </div>

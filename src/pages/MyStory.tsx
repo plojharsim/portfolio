@@ -204,7 +204,7 @@ const MyStory = () => {
             Můj <span className="text-gradient">Příběh</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Od zvědavého kluka k mladému programátorovi. Tady je moje cesta světem technologií.
+            Od zvědavého kluka ke studentovi a tvůrci webů a aplikací. Tady je moje cesta světem technologií.
           </p>
         </div>
       </section>
