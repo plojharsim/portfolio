@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 
 const Contact = () => {
-  const emailAddress = "plojharsim@gmail.com";
+  const emailAddress = "kontakt@plojharsim.cz";
 
   const handleCopyEmail = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault(); 

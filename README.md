@@ -1,25 +1,27 @@
 # Šimon Plojhar | Portfolio
 
-Osobní webové portfolio mladého programátora z České republiky. Tento web slouží k prezentaci mých projektů, dovedností a mé cesty světem technologií.
+Osobní webové portfolio programátora z České republiky – [plojharsim.cz](https://plojharsim.cz). Prezentuje moje projekty, dovednosti, příběh a blog.
 
-## O projektu
+## Technologie
 
-Tento web je navržen jako moderní, responzivní vizitka, která reflektuje můj styl práce a technologické zaměření. Obsahuje sekce o mně, přehled mých projektů, časovou osu mého programátorského vývoje a kontaktní informace.
+- [React](https://reactjs.org/) + [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/) a [shadcn/ui](https://ui.shadcn.com/) (Radix UI)
+- [React Router](https://reactrouter.com/), [Lucide](https://lucide.dev/)
 
-## Použité technologie
+## Vývoj
 
-Web je postaven na moderním frontendovém stacku:
+```bash
+npm install
+npm run dev      # dev server na http://localhost:8080
+npm run build    # produkční build do dist/
+npm run lint
+```
 
-- **Framework**: [React](https://reactjs.org/) s [TypeScriptem](https://www.typescriptlang.org/)
-- **Build Tool**: [Vite](https://vitejs.dev/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **UI Komponenty**: [shadcn/ui](https://ui.shadcn.com/) (postaveno na Radix UI)
-- **Ikony**: [Lucide React](https://lucide.dev/)
-- **Animace**: Tailwind CSS animate a vlastní CSS keyframes
+## Nasazení
+
+Repozitář je napojený na Vercel – každý push do větve `main` se automaticky nasadí na plojharsim.cz. Soubor `vercel.json` zajišťuje, že přímé odkazy na podstránky (`/blog`, `/projekty`…) fungují i po obnovení stránky.
 
 ## Kontakt
 
-Pokud mě chceš kontaktovat, můžeš tak učinit skrze e-mail **plojharsim@gmail.com** nebo mě sledovat na mém [GitHubu](https://github.com/plojharsim).
-
----
-*Vytvořeno s vášní v České republice.*
+E-mail: **kontakt@plojharsim.cz** · [GitHub](https://github.com/plojharsim)

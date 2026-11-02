@@ -11,7 +11,9 @@
 • **Icons**: Lucide React for consistent iconography
 • **Animations**: Tailwind CSS animations and custom CSS keyframes
 • **Code Quality**: ESLint with TypeScript rules for code consistency
-• **Deployment**: Lovable platform with automatic GitHub integration
+• **Deployment**: Vercel (automatický deploy z větve `main` na plojharsim.cz), SPA rewrite ve `vercel.json`
+• **Package manager**: npm (`package-lock.json`)
+• **Jazyk webu**: čeština – veškeré texty piš česky a gramaticky správně
 
 ## Library Usage Rules
 
