@@ -10,6 +10,13 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Classmate",
+    description: "Aplikace pro celou třídu nebo školu s Bakaláři. Rozvrh se změnami v reálném čase, společné úkoly a testy, kalendář, známky a poznámky s nahrávkami z hodin na jednom místě. Funguje na telefonu i počítači, bez reklam, s dvoufázovým ověřením a podporou AI asistentů přes MCP.",
+    status: "Vydáno",
+    tags: ["Web", "PWA", "Bakaláři", "MCP"],
+    demo: "https://classmate.cz",
+  },
+  {
     title: "LUGAS s.r.o.",
     description: "Webová prezentace pro odborného revizáka plynových zařízení. Zaměřeno na přehlednost nabízených služeb a snadné sjednání revize.",
     status: "Vydáno",
