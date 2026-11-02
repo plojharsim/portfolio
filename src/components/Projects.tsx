@@ -41,7 +41,7 @@ const Projects = () => {
 
       <div className="container relative z-10 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
+          <div data-reveal className="text-center mb-16">
             <h2 className="text-sm font-mono text-primary mb-4">// PROJEKTY</h2>
             <h3 className="text-4xl md:text-5xl font-bold mb-6">
               Na čem <span className="text-gradient">pracuji</span>
@@ -57,7 +57,7 @@ const Projects = () => {
               return (
                 <div
                   key={project.title}
-                  className="group p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 flex flex-col"
+                  data-reveal className="spotlight group p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 flex flex-col"
                 >
                   <div className="flex items-center justify-between mb-4">
                     <Icon className="h-10 w-10 text-primary" />

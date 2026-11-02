@@ -1,7 +1,9 @@
+import { usePageTitle } from "@/hooks/use-page-title";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
 const NotFound = () => {
+  usePageTitle("Stránka nenalezena");
   const location = useLocation();
 
   useEffect(() => {

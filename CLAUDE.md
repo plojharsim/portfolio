@@ -30,3 +30,5 @@ Vite 5 + React 18 + TypeScript, Tailwind 3, shadcn/ui (Radix) v `src/components/
 - Alias `@/` → `src/`. Stylování jen Tailwind třídami, ikony z lucide-react, formuláře React Hook Form + Zod.
 - SEO meta je v `index.html` (canonical `https://plojharsim.cz`). Sitemapa ani JSON-LD záměrně nejsou (dřívější verze se vědomě nevracejí).
 - Kontaktní e-mail: kontakt@plojharsim.cz (`src/components/Contact.tsx`).
+- Efekty: prvek s atributem `data-reveal` se plynule odhalí při scrollu, třída `spotlight` přidá světlo za kurzorem (obojí řeší `src/components/EffectsProvider.tsx`, styly v `src/index.css`). Respektuje se `prefers-reduced-motion`.
+- Stránky kromě úvodní se načítají lazy (`React.lazy` v `App.tsx`); titulek stránky nastavuje `usePageTitle`.

@@ -25,7 +25,7 @@ const BlogSection = () => {
       <div className="container relative z-10 px-4">
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
-          <div className="text-center mb-16">
+          <div data-reveal className="text-center mb-16">
             <h2 className="text-sm font-mono text-primary mb-4">// BLOG</h2>
             <h3 className="text-4xl md:text-5xl font-bold mb-6">
               Poslední <span className="text-gradient">články</span>
@@ -42,7 +42,7 @@ const BlogSection = () => {
                 {featuredPosts.map((post) => (
                   <article
                     key={post.id}
-                    className="group p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 flex flex-col"
+                    data-reveal className="spotlight group p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 flex flex-col"
                   >
                     <div className="flex items-center gap-3 mb-4">
                       <span className="px-2 py-1 rounded bg-primary/10 text-primary font-mono text-[10px] uppercase">

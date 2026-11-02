@@ -1,3 +1,4 @@
+import { usePageTitle } from "@/hooks/use-page-title";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useParams, Link, Navigate } from "react-router-dom";
@@ -8,6 +9,7 @@ import { blogPosts } from "@/data/blog";
 const BlogPost = () => {
   const { id } = useParams();
   const post = blogPosts.find((p) => p.id === id);
+  usePageTitle(post?.title);
 
   if (!post) {
     return <Navigate to="/blog" replace />;

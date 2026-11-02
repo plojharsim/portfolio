@@ -1,3 +1,4 @@
+import { usePageTitle } from "@/hooks/use-page-title";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Calendar, Clock, ArrowRight, MessageSquareOff } from "lucide-react";
@@ -5,6 +6,7 @@ import { Link } from "react-router-dom";
 import { blogPosts } from "@/data/blog";
 
 const Blog = () => {
+  usePageTitle("Blog");
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -27,7 +29,7 @@ const Blog = () => {
               {blogPosts.map((post) => (
                 <article
                   key={post.id}
-                  className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300"
+                  data-reveal className="spotlight group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300"
                 >
                   <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-4">
                     <span className="px-2 py-1 rounded bg-primary/10 text-primary font-mono text-xs uppercase">

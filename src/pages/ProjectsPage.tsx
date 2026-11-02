@@ -1,3 +1,4 @@
+import { usePageTitle } from "@/hooks/use-page-title";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { ExternalLink, Github, Folder, Code2, Layout, Database, Smartphone, ShoppingCart, Gift, Home, GraduationCap, Flame, Users } from "lucide-react";
@@ -6,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { projects } from "@/data/projects";
 
 const ProjectsPage = () => {
+  usePageTitle("Projekty");
   // Definice barev pro statusy
   const getStatusDetails = (status: string) => {
     switch (status) {
@@ -68,7 +70,7 @@ const ProjectsPage = () => {
               return (
                 <div
                   key={index}
-                  className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 flex flex-col h-full"
+                  data-reveal className="spotlight group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 flex flex-col h-full"
                 >
                   <div className="flex items-center justify-between mb-6">
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">

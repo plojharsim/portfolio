@@ -1,15 +1,36 @@
 import { Github, Mail, ArrowDown, Youtube } from "lucide-react";
 import { getAge } from "@/lib/age";
 import { Button } from "@/components/ui/button";
+import Typewriter from "@/components/Typewriter";
+
+const roles = ["student", "vibecoder", "tvůrce webů", "tvůrce Classmate", "selfhoster"];
 
 const Hero = () => {
+  const handleMove = (e: React.MouseEvent<HTMLElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    e.currentTarget.style.setProperty("--mx", `${e.clientX - rect.left}px`);
+    e.currentTarget.style.setProperty("--my", `${e.clientY - rect.top}px`);
+  };
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-10 md:py-0">
+    <section
+      onMouseMove={handleMove}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden py-10 md:py-0"
+    >
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-secondary/20" />
       
-      {/* Glowing orb */}
+      {/* Glowing orbs */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] animate-pulse-glow" />
+      <div className="absolute top-1/3 -left-24 w-[320px] h-[320px] bg-accent/20 rounded-full blur-[100px] animate-drift" />
+      <div className="absolute bottom-10 -right-24 w-[360px] h-[360px] bg-primary/10 rounded-full blur-[110px] animate-drift" style={{ animationDelay: "-7s" }} />
+
+      {/* Světlo sledující kurzor */}
+      <div
+        className="absolute inset-0 pointer-events-none hidden md:block"
+        style={{ background: "radial-gradient(480px circle at var(--mx, 50%) var(--my, 40%), hsl(var(--primary) / 0.09), transparent 70%)" }}
+        aria-hidden="true"
+      />
       
       {/* Grid pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--primary)/0.03)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--primary)/0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
@@ -18,6 +39,10 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Tag */}
           <div className="inline-flex items-center px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-4 md:mb-8 animate-fade-in">
+            <span className="relative flex h-2 w-2 mr-3">
+              <span className="absolute inline-flex h-full w-full rounded-full bg-primary opacity-75 animate-status-ping" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
+            </span>
             <span className="text-sm font-mono text-primary">{getAge()} let • Student</span>
           </div>
 
@@ -29,7 +54,7 @@ const Hero = () => {
 
           {/* Subtitle */}
           <p className="text-lg md:text-2xl text-muted-foreground mb-2 md:mb-4 font-mono animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            @plojharsim
+            <span className="text-primary">&gt;</span> jsem <Typewriter words={roles} />
           </p>
 
           {/* Description */}
@@ -86,7 +111,8 @@ const Hero = () => {
 
       {/* Scroll indicator - positioned bottom on mobile to avoid overlap */}
       <a 
-        href="#o-mne" 
+        href="#o-mne"
+        aria-label="Přejít na sekci O mně"
         className="absolute bottom-2 md:bottom-8 left-0 right-0 flex justify-center animate-bounce z-10 text-muted-foreground hover:text-primary transition-colors"
       >
         <ArrowDown className="h-6 w-6" />

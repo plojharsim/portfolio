@@ -1,8 +1,10 @@
+import { usePageTitle } from "@/hooks/use-page-title";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { BookOpen, Rocket, Code, Gamepad2, GraduationCap, Heart, Monitor, Gift, Printer, Keyboard, FileText, Server, Cpu } from "lucide-react";
 
 const MyStory = () => {
+  usePageTitle("Můj příběh");
   const vzdelaniBudoucnostiLink = (
     <a 
       href="https://vzdelanibudoucnosti.cz" 
@@ -225,7 +227,7 @@ const MyStory = () => {
               >
                 {/* Content */}
                 <div className={`flex-1 ml-20 md:ml-0 ${index % 2 === 0 ? "md:text-right md:pr-16" : "md:pl-16"}`}>
-                  <div className="p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 group">
+                  <div data-reveal className="spotlight p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 group">
                     <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-mono mb-3">
                       {item.year}
                     </span>

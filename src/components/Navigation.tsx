@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ScrollProgress from "@/components/ScrollProgress";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -13,7 +14,8 @@ const Navigation = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -70,7 +72,12 @@ const Navigation = () => {
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                aria-current={location.pathname === link.href ? "page" : undefined}
+                className={`relative text-sm transition-colors after:absolute after:-bottom-1 after:left-0 after:h-px after:bg-primary after:transition-all after:duration-300 ${
+                  location.pathname === link.href
+                    ? "text-primary after:w-full"
+                    : "text-muted-foreground hover:text-primary after:w-0 hover:after:w-full"
+                }`}
               >
                 {link.label}
               </a>
@@ -81,7 +88,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile menu button */}
-          <button className="md:hidden p-2 text-foreground" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          <button className="md:hidden p-2 text-foreground" aria-label={isMobileMenuOpen ? "Zavřít menu" : "Otevřít menu"} aria-expanded={isMobileMenuOpen} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
@@ -95,7 +102,8 @@ const Navigation = () => {
                   key={link.href}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className="text-muted-foreground hover:text-primary transition-colors"
+                  aria-current={location.pathname === link.href ? "page" : undefined}
+                  className={`transition-colors ${location.pathname === link.href ? "text-primary" : "text-muted-foreground hover:text-primary"}`}
                 >
                   {link.label}
                 </a>
@@ -109,6 +117,7 @@ const Navigation = () => {
           </div>
         )}
       </div>
+      <ScrollProgress />
     </nav>
   );
 };
