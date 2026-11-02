@@ -18,7 +18,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Tag */}
           <div className="inline-flex items-center px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-4 md:mb-8 animate-fade-in">
-            <span className="text-sm font-mono text-primary">{getAge()} let • Programátor</span>
+            <span className="text-sm font-mono text-primary">{getAge()} let • Student</span>
           </div>
 
           {/* Name */}
