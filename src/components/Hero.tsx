@@ -1,4 +1,4 @@
-import { Github, Mail, ArrowDown, Youtube } from "lucide-react";
+import { Github, Mail, ArrowDown, Youtube, Sparkles } from "lucide-react";
 import { getAge } from "@/lib/age";
 import { Button } from "@/components/ui/button";
 import Typewriter from "@/components/Typewriter";
@@ -76,6 +76,16 @@ const Hero = () => {
               </a>
             </Button>
           </div>
+
+          {/* Teaser */}
+          <a
+            href="#brzy"
+            className="inline-flex items-center gap-2 mt-6 md:mt-8 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 text-sm text-primary hover:bg-primary/10 transition-colors animate-fade-in"
+            style={{ animationDelay: "0.45s" }}
+          >
+            <Sparkles className="h-4 w-4" />
+            Po Novém roce se chystá něco velkého
+          </a>
 
           {/* Social links */}
           <div className="flex justify-center gap-4 mt-6 md:mt-10 animate-fade-in" style={{ animationDelay: "0.5s" }}>
