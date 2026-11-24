@@ -106,7 +106,7 @@ const Hero = () => {
               <Youtube className="h-5 w-5 md:h-6 md:w-6" />
             </a>
             <a
-              href="https://discord.com/invite/EpESXnmW8Y"
+              href="https://discord.gg/wzbZyXtwJX"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full border border-border bg-card hover:border-primary hover:bg-primary/10 transition-all duration-300"
