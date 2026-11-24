@@ -182,6 +182,18 @@ const MyStory = () => {
       icon: BookOpen,
     },
     {
+      year: "Říjen 2026",
+      title: "Postavil jsem Classmate",
+      description: "Vytvořil jsem Classmate, aplikaci pro celou třídu nebo školu s rozvrhem z Bakalářů, společnými úkoly, testy a poznámkami.",
+      icon: Rocket,
+    },
+    {
+      year: "Listopad 2026",
+      title: "Classmate byl ukončen",
+      description: "Classmate jsem ukončil a projekt už dál nepokračuje.",
+      icon: Rocket,
+    },
+    {
       year: "Nyní",
       title: "Neustálé učení",
       description: "Pokračuji v rozvoji svých dovedností a hledám nové výzvy, zejména v Reactu a TypeScriptu.",
