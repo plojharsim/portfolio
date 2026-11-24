@@ -1,7 +1,7 @@
 export interface Project {
   title: string;
   description: string;
-  status: "Vydáno" | "Ve vývoji" | "Plánováno";
+  status: "Vydáno" | "Ve vývoji" | "Plánováno" | "Ukončeno";
   tags: string[];
   demo?: string;
   github?: string;
@@ -12,7 +12,7 @@ export const projects: Project[] = [
   {
     title: "Classmate",
     description: "Aplikace pro celou třídu nebo školu s Bakaláři. Rozvrh se změnami v reálném čase, společné úkoly a testy, kalendář, známky a poznámky s nahrávkami z hodin na jednom místě. Funguje na telefonu i počítači, bez reklam, s dvoufázovým ověřením a podporou AI asistentů přes MCP.",
-    status: "Vydáno",
+    status: "Ukončeno",
     tags: ["Web", "PWA", "Bakaláři", "MCP"],
     demo: "https://classmate.cz",
   },
@@ -47,7 +47,7 @@ export const projects: Project[] = [
   {
     title: "Veselé Vánoce",
     description: "Vánoční webová stránka s odpočtem a interaktivními prvky, vytvořená pro sváteční náladu.",
-    status: "Vydáno",
+    status: "Ukončeno",
     tags: ["Next.js", "React", "TypeScript", "Firebase"],
   },
 ];

@@ -16,7 +16,7 @@ const skillCategories: { title: string; skills: Skill[] }[] = [
   {
     title: "Frontend",
     skills: [
-      { name: "React", use: "Webové prezentace i aplikace jako Classmate", frequency: "Pravidelně" },
+      { name: "React", use: "Webové prezentace a webové aplikace", frequency: "Pravidelně" },
       { name: "HTML", use: "Základ každého webu, který stavím", frequency: "Pravidelně" },
       { name: "Tailwind", use: "Rychlé stylování rozhraní", frequency: "Učím se" },
       { name: "TypeScript", use: "Typově bezpečný kód v Reactu", frequency: "Učím se" },

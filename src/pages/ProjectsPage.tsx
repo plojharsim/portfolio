@@ -41,6 +41,7 @@ const ProjectsPage = () => {
     "Vydáno": 1,
     "Ve vývoji": 2,
     "Plánováno": 3,
+    "Ukončeno": 4,
   };
 
   const sortedProjects = [...projects].sort((a, b) => {

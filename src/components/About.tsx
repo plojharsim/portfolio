@@ -24,7 +24,7 @@ const About = () => {
 
   const stats = [
     { value: new Date().getFullYear() - 2021, suffix: "", label: "let programuji" },
-    { value: projects.filter((p) => p.status === "Vydáno").length, suffix: "", label: "vydaných projektů" },
+    { value: projects.filter((p) => p.status === "Vydáno" || p.status === "Ukončeno").length, suffix: "", label: "vydaných projektů" },
     { value: 6, suffix: "", label: "certifikátů z kroužků" },
   ];
 

@@ -3,7 +3,7 @@ import { getAge } from "@/lib/age";
 import { Button } from "@/components/ui/button";
 import Typewriter from "@/components/Typewriter";
 
-const roles = ["student", "vibecoder", "tvůrce webů", "tvůrce Classmate", "selfhoster"];
+const roles = ["student", "vibecoder", "tvůrce webů", "selfhoster"];
 
 const Hero = () => {
   const handleMove = (e: React.MouseEvent<HTMLElement>) => {
