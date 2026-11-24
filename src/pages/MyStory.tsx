@@ -190,7 +190,7 @@ const MyStory = () => {
     {
       year: "Listopad 2026",
       title: "Classmate byl ukončen",
-      description: "Classmate jsem ukončil a projekt už dál nepokračuje.",
+      description: "Po více než měsíci provozu jsem Classmate ukončil a projekt už dál nepokračuje.",
       icon: Rocket,
     },
     {

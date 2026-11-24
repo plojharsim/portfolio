@@ -14,7 +14,6 @@ export const projects: Project[] = [
     description: "Aplikace pro celou třídu nebo školu s Bakaláři. Rozvrh se změnami v reálném čase, společné úkoly a testy, kalendář, známky a poznámky s nahrávkami z hodin na jednom místě. Funguje na telefonu i počítači, bez reklam, s dvoufázovým ověřením a podporou AI asistentů přes MCP.",
     status: "Ukončeno",
     tags: ["Web", "PWA", "Bakaláři", "MCP"],
-    demo: "https://classmate.cz",
   },
   {
     title: "LUGAS s.r.o.",
